@@ -4,6 +4,8 @@
 
 > **Decisions so far**
 > - **Audience:** direct to patients (consumer app downloaded from the App Store). It is not prescribed by or tied to a clinic.
+> - **Content:** Claude drafts the medical content, exercise instructions and video scripts, and the product owner reviews them. Each item records who reviewed it, the date, and its sources, and is re-reviewed yearly.
+> - **Scope:** lower back pain and spine only. There will be no stroke module, so the app's structure is built around the spine and does not need to be condition-agnostic.
 > - **Market:** United States only at launch. This means US drug names and label doses (acetaminophen, not paracetamol), US crisis resources (988, 911), English first (Spanish is a likely second language), and US privacy and FDA rules.
 
 An iPhone app that helps patients with lower back pain (LBP) track symptoms, follow a rehab plan, manage self-care, and keep an accurate record of their spine history. It does this in a way that also helps their clinicians.
@@ -231,9 +233,7 @@ Because the app is direct to patients, there is no clinician portal. Instead the
 
 ## Open Questions for the Product Owner
 
-Resolved: audience (direct to patients) and market (US only).
+Resolved: audience (direct to patients), market (US only), content (drafted by Claude, reviewed by the product owner), and scope (spine only, no stroke module).
 
-1. **Content:** who will author and review the exercise videos and medical content?
-2. **Scope of the "Stroke" in Stroke & Spine:** is there a future stroke-rehab module, so the architecture should stay condition-agnostic?
-3. **Minimum iOS version and devices:** iPhone only, or iPad as well?
-4. **Monetization:** is the free + premium subscription model in §16 the right starting point?
+1. **Minimum iOS version and devices:** iPhone only, or iPad as well?
+2. **Monetization:** is the free + premium subscription model in §16 the right starting point?
