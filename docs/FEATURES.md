@@ -1,6 +1,10 @@
 # Stroke & Spine — Lower Back Pain iPhone App
 
-## Feature Ideas (Draft v0.1)
+## Feature Ideas (Draft v0.2)
+
+> **Decisions so far**
+> - **Audience:** direct to patients (consumer app downloaded from the App Store). It is not prescribed by or tied to a clinic.
+> - **Market:** United States only at launch. This means US drug names and label doses (acetaminophen, not paracetamol), US crisis resources (988, 911), English first (Spanish is a likely second language), and US privacy and FDA rules.
 
 An iPhone app that helps patients with lower back pain (LBP) track symptoms, follow a rehab plan, manage self-care, and keep an accurate record of their spine history. It does this in a way that also helps their clinicians.
 
@@ -20,7 +24,7 @@ An iPhone app that helps patients with lower back pain (LBP) track symptoms, fol
 - **Red-flag screening at setup, with re-screening periodically** (see §11).
 - **Health background:** age, conditions that affect OTC medication safety (kidney disease, stomach ulcers or GI bleeding, liver disease, heart disease, high blood pressure, pregnancy, blood thinners), allergies, and current medications.
 - **Goals:** for example "walk 30 min," "sit through a workday," "lift my child," "return to golf." Goals drive the progress dashboard.
-- **Care team:** names and contacts of the GP, spine surgeon, PT, pain clinic and pharmacist.
+- **Care team (optional):** names and contacts of the primary care doctor, spine surgeon, PT, pain clinic and pharmacist. These are used for one-tap calling and for sending the patient's own reports. The app does not connect to them.
 
 ## 2. Pain Monitoring
 
@@ -55,7 +59,7 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
   - **Pain Catastrophizing Scale (PCS)** and **Tampa Scale of Kinesiophobia** (fear of movement).
   - **Pain Self-Efficacy Questionnaire (PSEQ)**.
 - **Mood journal:** a daily emoji/slider mood check and an optional free-text journal.
-- **Safety handling:** if the patient endorses PHQ-9 item 9 (thoughts of self-harm), the app **immediately** shows crisis resources (e.g., 988 Suicide & Crisis Lifeline in the US, with localized equivalents) and suggests contacting their clinician. It never relies on the app alone.
+- **Safety handling:** if the patient endorses PHQ-9 item 9 (thoughts of self-harm), the app **immediately** shows crisis resources: one-tap call or text to **988** (Suicide & Crisis Lifeline), text HOME to 741741 (Crisis Text Line), and 911. It also suggests contacting their clinician. It never relies on the app alone.
 - **Pain neuroscience education (PNE):** short lessons on "hurt ≠ harm," how pain sensitization works, and why movement is safe.
 - **CBT / ACT-based modules:** pacing, reframing catastrophic thoughts, values-based goals, and graded exposure to feared movements.
 - **Relaxation tools:** guided breathing, progressive muscle relaxation, body scan, and mindfulness audio.
@@ -81,7 +85,7 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
   - Hip and glute strengthening, hamstring flexibility
 - **Personalized programs:**
   - An app-generated starter program based on profile, risk group and post-op status.
-  - **Clinician-assigned programs:** a PT can push a custom plan (via a clinician portal, a QR code, or a share link).
+  - **"My PT's program":** patients who already see a physical therapist can enter their home exercise program themselves (pick exercises from the library, set reps and frequency) or scan the PT's handout. The app then tracks it like any other program.
 - **Guided sessions:** a timer, rep counter, voice coaching, and rest periods.
 - **Post-session check:** pain before and after, difficulty (RPE), and "this exercise hurt" flags that automatically suggest a regression.
 - **Progression and regression logic:** advance when exercises are easy and pain-free, and step back when pain flares.
@@ -112,6 +116,7 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
 - **Non-drug alternatives:** heat (evidence supports it for acute LBP), ice, movement, and TENS.
 - **"Talk to your pharmacist/doctor if…" prompts:** e.g., using OTC analgesics on most days for more than 10 days.
 - **Reminders** for scheduled doses.
+- **US label data:** dose limits follow US over-the-counter Drug Facts labels (e.g., the 3,000 or 4,000 mg/day acetaminophen ceilings that different brands use, and OTC naproxen at 660 mg/day). The app always defers to the label and to the patient's doctor.
 - **Prescription meds (optional):** can also be logged so the record is complete for clinicians. Supports Apple Health's **Medications** feature where available.
 - **Effectiveness insights:** "Naproxen reduced your pain by about 2 points on average in the 2 hours after you took it."
 
@@ -144,7 +149,7 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
 - **Weekly summary:** key changes, wins, and gentle suggestions.
 - **Correlation engine (on-device):** relationships between pain and sleep, steps, mood, medications, weather, and sitting time.
 - **Pre-appointment report:** a one-tap PDF covering scores over time (NRS, ODI, PHQ-9, GAD-7, ISI), medications, flares, adherence, and surgical history. Shared via AirDrop, email or print.
-- **FHIR / Apple Health Records integration (future):** import clinical records and possibly export PROMs to EHRs.
+- **Apple Health Records import (future):** many US health systems let patients download their own records into the Health app. The app can read these (with permission) to pre-fill surgery, procedure, imaging and medication history.
 
 ## 11. Safety: Red-Flag Screening
 
@@ -176,16 +181,32 @@ The app re-asks the short red-flag checklist when pain or the body map changes m
 ## 14. Privacy, Security & Compliance
 
 - On-device storage by default (SwiftData/Core Data with file protection), Face ID / passcode app lock, and optional end-to-end encrypted iCloud sync.
-- No ad tracking or sale of data. Clear consent for any sharing.
-- If used with clinics: a **HIPAA**-compliant backend (US), **GDPR/UK GDPR** (EU/UK), and BAAs with vendors.
-- **Regulatory consideration:** dose calculators, risk scoring and clinical decision support may make the app **Software as a Medical Device (SaMD)**. Keep v1 to general wellness and education where possible, and get regulatory advice before adding diagnostic or treatment-recommending features.
+- No ads, no ad tracking, and no sale of data. Clear consent for any sharing. Apple's App Store rules already forbid using HealthKit data for advertising or selling it.
+- **US privacy rules for a consumer health app:**
+  - **HIPAA usually does not apply** to an app patients download themselves, because the app is not acting for a doctor, hospital or insurer. Do not claim to be "HIPAA compliant" in marketing unless that is actually true.
+  - The **FTC Health Breach Notification Rule** does apply. Any unauthorized disclosure of health data (including sharing it with analytics or ad SDKs without consent) must be reported to users and the FTC.
+  - **State consumer health data laws:** Washington's My Health My Data Act, Nevada's and Connecticut's similar laws, and California's CCPA/CPRA. These require explicit opt-in consent to collect health data, a separate health-data privacy policy, and the right to delete. Designing for Washington's rules covers most states.
+  - The simplest way to stay low-risk: **keep data on the device, collect no accounts in v1**, and use privacy-preserving analytics only (or none).
+- **FDA:** under the FDA's *General Wellness* and *Policy for Device Software Functions* guidance, symptom tracking, logging, education and general exercise content are generally low-risk or not regulated. Features that **diagnose, triage, or recommend specific treatment or doses** may make the app a regulated medical device. For v1:
+  - Red-flag screens say "these symptoms need prompt medical attention." They do not say what the condition is.
+  - The medication feature tracks totals against the patient's own label limits. It does not recommend doses.
+  - Get a short FDA regulatory review before launch.
+- **Medical disclaimer and age gate:** the app is for adults (18+), and a clear "not medical advice / not for emergencies" notice is shown at onboarding.
 - Medical content reviewed by clinicians (spine surgeon, PT, pain psychologist, pharmacist), with citations and review dates.
 
-## 15. Clinician-Facing Features (Phase 2+)
+## 15. Sharing With Your Own Doctors (Patient-Controlled)
 
-- A web portal where PTs and surgeons can view consenting patients' PROMs, assign exercise programs, and see adherence.
-- Remote Therapeutic Monitoring (RTM) support (US billing codes), which is a possible business model for clinics.
-- Pre- and post-op outcome tracking for surgical practices.
+Because the app is direct to patients, there is no clinician portal. Instead the patient decides what to share and when:
+- **Pre-appointment PDF** (see §10), sent by AirDrop, email, Messages, print, or uploaded to their health system's patient portal (e.g., MyChart).
+- **"Show my doctor" mode:** a clean, full-screen summary to hand the phone across during a visit.
+- **Export all data** (CSV/JSON) at any time, and delete all data in one tap.
+
+## 16. Business Model (Direct to Patients)
+
+- **Free core:** daily check-ins, scores, red-flag safety, medication log with limits, surgery history, and basic trends. Safety features are never behind a paywall.
+- **Premium subscription** (monthly or annual, with a free trial): personalized rehab programs and progressions, the full exercise video library, CBT/ACT coping courses, advanced insights, and the full PDF report.
+- **No ads and no data sales.** This is both a trust feature and a legal simplifier.
+- Optional later: an HSA/FSA-eligible plan if there is a qualifying route, and partnerships with US PT networks for referrals.
 
 ---
 
@@ -196,7 +217,7 @@ The app re-asks the short red-flag checklist when pain or the body map changes m
 | **MVP (v1)** | Onboarding + red flags, daily pain/sleep/mood check-in, ODI/PHQ-9/GAD-7/ISI, HealthKit (steps, sleep), OTC medication log with dose limits, surgery & procedure log with document attachments, starter exercise library, trends dashboard, PDF report, local storage + Face ID |
 | **v1.1** | STarT Back stratification, personalized and progressive rehab programs, post-op recovery tracks, education library, widgets and Apple Watch |
 | **v2** | Correlation insights engine, CBT/ACT modules, diet scoring, OCR document import, iCloud sync |
-| **v3** | Clinician portal, assigned programs, FHIR/Health Records, pose-estimated form feedback |
+| **v3** | Apple Health Records import, pose-estimated form feedback, Spanish localization |
 
 ## Proposed Tech Stack
 
@@ -210,9 +231,9 @@ The app re-asks the short red-flag checklist when pain or the body map changes m
 
 ## Open Questions for the Product Owner
 
-1. **Audience:** is this direct-to-consumer, or will clinics or practices (e.g., a Stroke & Spine clinic) prescribe it to their patients?
-2. **Clinician involvement:** should v1 include clinician sharing or assignment, or should it be patient-only?
-3. **Region:** US-only at first (which affects HIPAA, 988, and drug naming such as acetaminophen vs. paracetamol)?
-4. **Content:** who will author and review the exercise videos and medical content?
-5. **Scope of the "Stroke" in Stroke & Spine:** is there a future stroke-rehab module, so the architecture should stay condition-agnostic?
-6. **Minimum iOS version and devices:** iPhone only, or iPad as well?
+Resolved: audience (direct to patients) and market (US only).
+
+1. **Content:** who will author and review the exercise videos and medical content?
+2. **Scope of the "Stroke" in Stroke & Spine:** is there a future stroke-rehab module, so the architecture should stay condition-agnostic?
+3. **Minimum iOS version and devices:** iPhone only, or iPad as well?
+4. **Monetization:** is the free + premium subscription model in §16 the right starting point?
