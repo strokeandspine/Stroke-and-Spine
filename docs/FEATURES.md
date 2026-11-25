@@ -234,6 +234,6 @@ Because the app is direct to patients, there is no clinician portal. Instead the
 
 ## Open Questions for the Product Owner
 
-Resolved: audience (direct to patients), market (US only), content (drafted by Claude, reviewed by the product owner), scope (spine only, no stroke module), and devices (iPhone only).
+All initial questions are resolved: audience (direct to patients), market (US only), content (drafted by Claude, reviewed by the product owner), scope (spine only, no stroke module), devices (iPhone only) and monetization (freemium, as in §16).
 
-1. **Monetization:** is the free + premium subscription model in §16 the right starting point?
+Still to arrange before release: questionnaire licences (see `LICENSING.md`) and a short FDA regulatory review.

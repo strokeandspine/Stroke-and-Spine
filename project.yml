@@ -1,0 +1,57 @@
+# XcodeGen spec. On a Mac: `brew install xcodegen && xcodegen generate`, then open SpineCare.xcodeproj.
+name: SpineCare
+options:
+  bundleIdPrefix: com.strokeandspine
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1" # iPhone only
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  SpineCare:
+    type: application
+    platform: iOS
+    sources:
+      - path: SpineCare
+    info:
+      path: SpineCare/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "Stroke & Spine"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+        ITSAppUsesNonExemptEncryption: false
+        NSHealthShareUsageDescription: "Stroke & Spine reads your steps and sleep from Apple Health to show how activity and sleep relate to your back pain. Your data stays on your iPhone."
+        NSHealthUpdateUsageDescription: "Stroke & Spine does not write to Apple Health."
+        NSFaceIDUsageDescription: "Use Face ID to keep your health information private."
+        NSPhotoLibraryUsageDescription: "Attach photos of surgery notes, discharge instructions or imaging reports to your spine history."
+    entitlements:
+      path: SpineCare/Resources/SpineCare.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.spinecare
+        ENABLE_PREVIEWS: true
+  SpineCareTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SpineCareTests
+    dependencies:
+      - target: SpineCare
+schemes:
+  SpineCare:
+    build:
+      targets:
+        SpineCare: all
+        SpineCareTests: [test]
+    test:
+      targets:
+        - SpineCareTests
