@@ -209,9 +209,63 @@ final class RedFlagCheck {
     var urgency: Urgency { Urgency(rawValue: urgencyRaw) ?? .none }
 }
 
+/// The program the person is following and where they are in it.
+@Model
+final class RehabEnrollment {
+    var programID: String
+    var stageIndex: Int
+    var startedAt: Date
+    var isActive: Bool
+    var surgeonClearanceConfirmedAt: Date?
+
+    init(programID: String) {
+        self.programID = programID
+        stageIndex = 0
+        startedAt = Date()
+        isActive = true
+    }
+
+    var program: RehabProgram? { RehabPrograms.program(programID) }
+}
+
+@Model
+final class ExerciseSession {
+    var date: Date
+    var programID: String
+    var stageIndex: Int
+    var completedIDs: [String]
+    var skippedIDs: [String]
+    var hurtIDs: [String]
+    var painBefore: Int
+    var painAfter: Int
+    var difficultyRaw: Int
+    var durationSeconds: Int
+
+    init(date: Date = Date(), programID: String, stageIndex: Int, completedIDs: [String], skippedIDs: [String],
+         hurtIDs: [String], painBefore: Int, painAfter: Int, difficulty: Difficulty, durationSeconds: Int) {
+        self.date = date
+        self.programID = programID
+        self.stageIndex = stageIndex
+        self.completedIDs = completedIDs
+        self.skippedIDs = skippedIDs
+        self.hurtIDs = hurtIDs
+        self.painBefore = painBefore
+        self.painAfter = painAfter
+        difficultyRaw = difficulty.rawValue
+        self.durationSeconds = durationSeconds
+    }
+
+    var difficulty: Difficulty { Difficulty(rawValue: difficultyRaw) ?? .aboutRight }
+
+    var summary: SessionSummary {
+        SessionSummary(date: date, stageIndex: stageIndex, painBefore: painBefore, painAfter: painAfter,
+                       difficulty: difficulty, hurtExerciseIDs: hurtIDs)
+    }
+}
+
 enum AppSchema {
     static let models: [any PersistentModel.Type] = [
         PatientProfile.self, DailyCheckIn.self, QuestionnaireResponse.self, MedicationDose.self,
-        SpineHistoryEntry.self, HistoryAttachment.self, RedFlagCheck.self,
+        SpineHistoryEntry.self, HistoryAttachment.self, RedFlagCheck.self, RehabEnrollment.self, ExerciseSession.self,
     ]
 }

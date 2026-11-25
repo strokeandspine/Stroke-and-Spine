@@ -5,7 +5,9 @@ import Charts
 struct TrendsView: View {
     @Query(sort: \DailyCheckIn.date) private var checkIns: [DailyCheckIn]
     @Query(sort: \QuestionnaireResponse.date) private var responses: [QuestionnaireResponse]
+    @Environment(Store.self) private var store
     @State private var rangeDays = 30
+    @State private var showingPaywall = false
 
     private var startDate: Date {
         Calendar.current.date(byAdding: .day, value: -rangeDays, to: Date()) ?? Date()
@@ -14,15 +16,20 @@ struct TrendsView: View {
     private var recent: [DailyCheckIn] { checkIns.filter { $0.date >= startDate } }
 
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
                     Picker("Range", selection: $rangeDays) {
                         Text("30 days").tag(30)
-                        Text("90 days").tag(90)
-                        Text("1 year").tag(365)
+                        Text(store.isPremium ? "90 days" : "90 days 🔒").tag(90)
+                        Text(store.isPremium ? "1 year" : "1 year 🔒").tag(365)
                     }
                     .pickerStyle(.segmented)
+                    .onChange(of: rangeDays) { _, days in
+                        if days > 30 && !PremiumFeature.longTrends.isAvailable(isPremium: store.isPremium) {
+                            rangeDays = 30
+                            showingPaywall = true
+                        }
+                    }
 
                     if recent.isEmpty {
                         ContentUnavailableView("No check-ins yet", systemImage: "chart.xyaxis.line",
@@ -30,7 +37,7 @@ struct TrendsView: View {
                     } else {
                         painChart
                         sleepMoodChart
-                        if let note = correlationNote { Card { Label("Pattern", systemImage: "lightbulb").font(.headline); Text(note) } }
+                        if store.isPremium, let note = correlationNote { Card { Label("Pattern", systemImage: "lightbulb").font(.headline); Text(note) } }
                     }
                     questionnaireCharts
                 }
@@ -38,7 +45,7 @@ struct TrendsView: View {
             }
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Trends")
-        }
+            .sheet(isPresented: $showingPaywall) { PaywallView() }
     }
 
     private var painChart: some View {

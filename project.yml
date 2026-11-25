@@ -17,6 +17,8 @@ targets:
     platform: iOS
     sources:
       - path: SpineCare
+        excludes:
+          - "Resources/Products.storekit"
     info:
       path: SpineCare/Resources/Info.plist
       properties:
@@ -52,6 +54,8 @@ schemes:
       targets:
         SpineCare: all
         SpineCareTests: [test]
+    run:
+      storeKitConfiguration: SpineCare/Resources/Products.storekit
     test:
       targets:
         - SpineCareTests

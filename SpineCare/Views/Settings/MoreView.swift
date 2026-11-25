@@ -8,6 +8,7 @@ struct MoreView: View {
         NavigationStack {
             List {
                 Section("Track") {
+                    NavigationLink { TrendsView() } label: { Label("Trends", systemImage: "chart.xyaxis.line") }
                     NavigationLink { QuestionnaireListView() } label: { Label("Questionnaires", systemImage: "list.clipboard") }
                     NavigationLink { RedFlagCheckLauncher() } label: { Label("Check warning signs", systemImage: "exclamationmark.shield") }
                 }
@@ -16,6 +17,9 @@ struct MoreView: View {
                 }
                 Section("Support") {
                     NavigationLink { CrisisResourcesView() } label: { Label("Crisis support (988)", systemImage: "heart.circle") }
+                }
+                Section("Premium") {
+                    NavigationLink { SubscriptionStatusView() } label: { Label("Subscription", systemImage: "star.circle") }
                 }
                 Section("Settings") {
                     NavigationLink { ProfileSettingsView(profile: profile) } label: { Label("Profile and health conditions", systemImage: "person.crop.circle") }
@@ -205,6 +209,8 @@ enum DataExport {
         try? context.delete(model: HistoryAttachment.self)
         try? context.delete(model: SpineHistoryEntry.self)
         try? context.delete(model: RedFlagCheck.self)
+        try? context.delete(model: ExerciseSession.self)
+        try? context.delete(model: RehabEnrollment.self)
         try? context.delete(model: PatientProfile.self)
         try? context.save()
     }

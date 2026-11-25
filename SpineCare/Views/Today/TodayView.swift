@@ -39,6 +39,16 @@ struct TodayView: View {
                             Text(summary)
                         }
                     }
+                    NavigationLink { TrendsView() } label: {
+                        Card {
+                            HStack {
+                                Label("See your trends", systemImage: "chart.xyaxis.line").font(.headline)
+                                Spacer()
+                                Image(systemName: "chevron.right").foregroundStyle(.tertiary)
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
                     healthCard
                     if !dueQuestionnaires.isEmpty { questionnairesCard }
                     quickActions

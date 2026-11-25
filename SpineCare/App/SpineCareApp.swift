@@ -3,9 +3,12 @@ import SwiftData
 
 @main
 struct SpineCareApp: App {
+    @State private var store = Store()
+
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environment(store)
         }
         .modelContainer(for: AppSchema.models)
     }
@@ -42,8 +45,8 @@ struct MainTabView: View {
         TabView {
             TodayView(profile: profile)
                 .tabItem { Label("Today", systemImage: "sun.max") }
-            TrendsView()
-                .tabItem { Label("Trends", systemImage: "chart.xyaxis.line") }
+            ExerciseHomeView()
+                .tabItem { Label("Exercise", systemImage: "figure.walk") }
             MedicationsView(profile: profile)
                 .tabItem { Label("Medicines", systemImage: "pills") }
             HistoryListView()
