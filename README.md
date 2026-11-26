@@ -33,6 +33,19 @@ Unit tests for scoring, warning signs, medication safety and insights are in `Sp
 
 HealthKit needs a paid Apple Developer account to run on a real iPhone. The rest of the app works in the simulator without one.
 
+## Launch paperwork (drafts)
+
+| Document | File |
+|---|---|
+| App Store Connect setup and all listing text (name, subtitle, description, keywords, subscriptions, review notes, privacy answers, screenshots) | `docs/APP_STORE_CONNECT.md` |
+| Privacy policy, including the consumer health data section required by Washington and similar state laws | `docs/legal/PRIVACY_POLICY.md` |
+| Terms of use, including the medical disclaimer and subscription terms | `docs/legal/TERMS_OF_USE.md` |
+| Support page | `docs/legal/SUPPORT.md` |
+| Web-ready pages to upload (built with `python3 docs/site/build.py`) | `docs/site/privacy.html`, `terms.html`, `support.html` |
+| Questionnaire licence requests (ODI, ISI) | `docs/legal/LICENCE_REQUESTS.md` |
+
+Set the published URLs in `AppLinks` in `SpineCare/App/AppServices.swift`.
+
 ## Subscription setup (App Store Connect)
 
 1. Create the app in App Store Connect with bundle ID `com.strokeandspine.spinecare`.
@@ -41,7 +54,9 @@ HealthKit needs a paid Apple Developer account to run on a real iPhone. The rest
    - `com.strokeandspine.spinecare.premium.annual`: 1 year
 3. Add a 1-week free-trial introductory offer to each, then set prices. The local test file uses $9.99 a month and $59.99 a year as placeholders.
 4. Fill in the subscription display names, descriptions and review screenshot, and sign the Paid Applications agreement.
-5. Replace `Store.privacyURL` in `SpineCare/App/Store.swift` with your real privacy policy URL.
+5. Set the privacy, terms and support URLs in `AppLinks` (`SpineCare/App/AppServices.swift`).
+
+The full field-by-field walkthrough is in `docs/APP_STORE_CONNECT.md`.
 
 While developing, the scheme uses `SpineCare/Resources/Products.storekit`, so purchases work in the simulator without App Store Connect. Use **Debug → StoreKit → Manage Transactions** in Xcode to refund or expire test subscriptions.
 

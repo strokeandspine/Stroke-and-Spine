@@ -159,8 +159,18 @@ struct AboutView: View {
                 Text("PHQ-9 and GAD-7 were developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. The Oswestry Disability Index and Insomnia Severity Index are used under licence.")
                     .font(.footnote)
             }
+            Section("Sources") {
+                ForEach(Sources.all, id: \.self) { Text($0).font(.footnote) }
+            }
+            Section("Legal and support") {
+                Link("Privacy Policy", destination: AppLinks.privacy)
+                Link("Terms of Use", destination: AppLinks.terms)
+                Link("Apple's Standard EULA", destination: AppLinks.appleEULA)
+                Link("Contact support", destination: AppLinks.support)
+            }
             Section("Version") {
                 Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—")
+                Text("Exercise content: \(ExerciseContent.version)").font(.caption).foregroundStyle(.secondary)
             }
         }
         .navigationTitle("About")

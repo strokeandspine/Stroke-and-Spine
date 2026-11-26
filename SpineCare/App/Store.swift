@@ -18,9 +18,8 @@ final class Store {
     static let productIDs = [monthlyID, annualID]
     static let subscriptionGroupName = "Premium"
 
-    static let termsURL = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
-    /// TODO: replace with the real privacy policy URL before submission.
-    static let privacyURL = URL(string: "https://example.com/privacy")!
+    static var termsURL: URL { AppLinks.terms }
+    static var privacyURL: URL { AppLinks.privacy }
 
     private(set) var isPremium = false
     private(set) var activeProductID: String?

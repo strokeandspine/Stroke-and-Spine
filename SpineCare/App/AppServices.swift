@@ -18,6 +18,32 @@ enum AppText {
     """
 }
 
+/// Public web pages. Upload docs/site/*.html to your website, then set these URLs.
+enum AppLinks {
+    // TODO: replace example.com with your website before submitting to the App Store.
+    static let privacy = URL(string: "https://example.com/privacy")!
+    static let terms = URL(string: "https://example.com/terms")!
+    static let support = URL(string: "https://example.com/support")!
+    static let appleEULA = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
+}
+
+/// Sources behind the app's health content (App Review Guideline 1.4.1).
+enum Sources {
+    static let all: [String] = [
+        "Qaseem A, Wilt TJ, McLean RM, Forciea MA. Noninvasive treatments for acute, subacute, and chronic low back pain: a clinical practice guideline from the American College of Physicians. Ann Intern Med. 2017;166(7):514–530.",
+        "National Institute for Health and Care Excellence (NICE). Low back pain and sciatica in over 16s: assessment and management (NG59). 2016, updated 2020.",
+        "Finucane LM, et al. International framework for red flags for potential serious spinal pathologies. J Orthop Sports Phys Ther. 2020;50(7):350–372.",
+        "Fairbank JC, Pynsent PB. The Oswestry Disability Index. Spine. 2000;25(22):2940–2952.",
+        "Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606–613.",
+        "Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166(10):1092–1097.",
+        "Bastien CH, Vallières A, Morin CM. Validation of the Insomnia Severity Index as an outcome measure for insomnia research. Sleep Med. 2001;2(4):297–307.",
+        "Ostelo RW, et al. Interpreting change scores for pain and functional status in low back pain: towards international consensus regarding minimal important change. Spine. 2008;33(1):90–94.",
+        "Brinjikji W, et al. Systematic literature review of imaging features of spinal degeneration in asymptomatic populations. AJNR Am J Neuroradiol. 2015;36(4):811–816.",
+        "French SD, et al. Superficial heat or cold for low back pain. Cochrane Database Syst Rev. 2006;(1):CD004750.",
+        "US Food and Drug Administration. Over-the-counter Drug Facts labels for acetaminophen, ibuprofen, naproxen sodium and aspirin; and FDA Drug Safety Communication on NSAID use at 20 weeks of pregnancy or later (2020).",
+    ]
+}
+
 // MARK: - App lock
 
 enum AppLock {
