@@ -6,14 +6,16 @@ An iPhone app and a web app for people who optimise for longevity, training and 
 
 | Section | What's in it |
 |---|---|
-| Supplements (100) | Typical evidence-based dose, timing, evidence grade (A strong → D weak), cautions and interactions, linked goals |
-| Prescription and clinical (25) | Reference-only entries (GLP-1s, metformin, SGLT2 inhibitors, rapamycin, statins, PCSK9 antibodies, hormone therapies and others): regulatory status, approved uses, how it works, evidence, key risks and labs to monitor. **No doses.** Dosing is for the prescriber |
+| Supplements (110) | Typical evidence-based dose, timing, evidence grade (A strong → D weak), cautions and interactions, linked goals |
+| Nootropics (41) | Own section: 27 over-the-counter supplements with doses (theanine, citicoline, bacopa, paraxanthine, phosphatidylserine and others) and 14 prescription or unapproved compounds as reference only (modafinil, armodafinil, stimulants, racetams, memantine, nicotine; warnings on phenibut and tianeptine) |
+| Peptides (16) | Own section with a short guide. Approved peptide medicines (GLP-1s, tesamorelin, bremelanotide, teriparatide, setmelanotide, elamipretide and others) and peptides in clinical trials (retatrutide, CagriSema, kisspeptin): status, sport rules, approved use, mechanism, evidence, risks and labs. No doses |
+| Prescription and clinical (38) | Reference-only entries (GLP-1s, metformin, SGLT2 inhibitors, rapamycin, statins, PCSK9 antibodies, hormone therapies and others): regulatory status, approved uses, how it works, evidence, key risks and labs to monitor. **No doses.** Dosing is for the prescriber |
 | Goals (16) | Longevity, strength, muscle growth, endurance, recovery, body composition, sleep, cognition, stress, heart, metabolic, joints, immunity, hormonal health, gut, skin |
 | Data apps (30) | Wearables, CGMs, lab-testing, biological-age, training and nutrition services, with links |
 
-Anabolic steroids, SARMs, growth hormone secretagogues and grey-market "research" peptides are intentionally not included.
+Anabolic steroids, SARMs and unapproved "research" peptides are intentionally not included.
 
-Edit content in `tools/build_catalog.py`, then run:
+Edit content in `tools/build_catalog.py` (nootropics and peptides: `tools/catalog_extra.py`), then run:
 
 ```
 python3 BioStack/tools/build_catalog.py   # regenerates Resources/catalog.json

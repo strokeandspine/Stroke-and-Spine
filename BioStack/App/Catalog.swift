@@ -23,9 +23,10 @@ enum Evidence: String, CaseIterable {
 struct Compound: Codable, Identifiable, Hashable {
     let id: String
     let name: String
-    let kind: String          // "supplement" | "clinical"
+    let kind: String          // "supplement" | "clinical" | "peptide"
     let category: String
     let goals: [String]
+    let sections: [String]
     // Supplements
     let dose: String?
     let timing: String?
@@ -38,9 +39,20 @@ struct Compound: Codable, Identifiable, Hashable {
     let evidence_text: String?
     let risks: String?
     let labs: String?
+    // Peptides
+    let tier: String?        // "approved" | "trial" | "unapproved"
+    let sport: String?
 
-    var isClinical: Bool { kind == "clinical" }
+    /// Reference-only entries (no doses): clinical compounds and peptides.
+    var isClinical: Bool { kind != "supplement" }
+    var isPeptide: Bool { kind == "peptide" }
+    var isUnapprovedPeptide: Bool { isPeptide && tier != "approved" }
     var grade: Evidence? { evidence.flatMap(Evidence.init(rawValue:)) }
+}
+
+struct GuideNote: Codable, Hashable {
+    let title: String
+    let text: String
 }
 
 struct DataApp: Codable, Identifiable, Hashable {
@@ -56,19 +68,24 @@ final class Catalog {
     let goals: [Goal]
     let supplements: [Compound]
     let clinical: [Compound]
+    let peptides: [Compound]
+    let peptideGuide: [GuideNote]
     let apps: [DataApp]
 
-    var all: [Compound] { supplements + clinical }
+    var all: [Compound] { supplements + clinical + peptides }
+    func section(_ id: String) -> [Compound] { all.filter { $0.sections.contains(id) } }
     func goal(_ id: String) -> Goal? { goals.first { $0.id == id } }
     func compound(_ id: String) -> Compound? { all.first { $0.id == id } }
     func compounds(for goal: String) -> [Compound] { all.filter { $0.goals.contains(goal) } }
 
     private struct File: Codable {
-        let goals: [Goal]; let supplements: [Compound]; let clinical: [Compound]; let apps: [DataApp]
+        let goals: [Goal]; let supplements: [Compound]; let clinical: [Compound]
+        let peptides: [Compound]; let peptide_guide: [GuideNote]; let apps: [DataApp]
     }
 
-    init(goals: [Goal], supplements: [Compound], clinical: [Compound], apps: [DataApp]) {
-        self.goals = goals; self.supplements = supplements; self.clinical = clinical; self.apps = apps
+    init(goals: [Goal], supplements: [Compound], clinical: [Compound], peptides: [Compound], peptideGuide: [GuideNote], apps: [DataApp]) {
+        self.goals = goals; self.supplements = supplements; self.clinical = clinical
+        self.peptides = peptides; self.peptideGuide = peptideGuide; self.apps = apps
     }
 
     static func load(bundle: Bundle = .main) -> Catalog {
@@ -76,8 +93,9 @@ final class Catalog {
               let data = try? Data(contentsOf: url),
               let file = try? JSONDecoder().decode(File.self, from: data) else {
             assertionFailure("catalog.json missing or invalid")
-            return Catalog(goals: [], supplements: [], clinical: [], apps: [])
+            return Catalog(goals: [], supplements: [], clinical: [], peptides: [], peptideGuide: [], apps: [])
         }
-        return Catalog(goals: file.goals, supplements: file.supplements, clinical: file.clinical, apps: file.apps)
+        return Catalog(goals: file.goals, supplements: file.supplements, clinical: file.clinical,
+                       peptides: file.peptides, peptideGuide: file.peptide_guide, apps: file.apps)
     }
 }

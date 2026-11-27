@@ -52,7 +52,7 @@ label { display: grid; gap: 4px; font-size: .85rem; color: var(--muted); }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--surface); border-color: var(--accent); }
 .ev { font: 600 .72rem/1 var(--mono); padding: 4px 6px; border-radius: 4px; color: var(--surface); flex: none; }
 .ev-A { background: var(--ev-a); } .ev-B { background: var(--ev-b); } .ev-C { background: var(--ev-c); } .ev-D { background: var(--ev-d); }
-.ev-Rx { background: var(--ink); }
+.ev-Rx { background: var(--ink); } .ev-Tr { background: var(--warn); } .ev-Ex { background: var(--bad); }
 .list { display: grid; gap: 0; }
 .item { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 10px 4px; border-top: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-bottom: 0; border-radius: 0; text-align: left; width: 100%; }
 .item:hover { background: var(--accent-soft); }
@@ -97,7 +97,7 @@ dialog::backdrop { background: rgb(0 0 0 / .45); }
 <header><div class="wrap bar">
   <div class="brand"><i></i>BioStack</div>
   <nav aria-label="Views">
-    <a href="#today">Today</a><a href="#library">Library</a><a href="#goals">Goals</a><a href="#labs">Labs</a><a href="#log">Log</a><a href="#apps">Data apps</a>
+    <a href="#today">Today</a><a href="#library">Library</a><a href="#nootropics">Nootropics</a><a href="#peptides">Peptides</a><a href="#goals">Goals</a><a href="#labs">Labs</a><a href="#log">Log</a><a href="#apps">Data apps</a>
   </nav>
 </div></header>
 
@@ -109,7 +109,8 @@ dialog::backdrop { background: rgb(0 0 0 / .45); }
 <script>
 const CATALOG = __CATALOG__;
 const GOALS = Object.fromEntries(CATALOG.goals.map(g => [g.id, g]));
-const ALL = [...CATALOG.supplements, ...CATALOG.clinical];
+const ALL = [...CATALOG.supplements, ...CATALOG.clinical, ...CATALOG.peptides];
+const TIER = { approved: ["Rx", "Approved medicine (somewhere)"], trial: ["Tr", "In clinical trials"], unapproved: ["Ex", "Unapproved, experimental"] };
 const BYID = Object.fromEntries(ALL.map(c => [c.id, c]));
 const EV_TEXT = { A: "Strong evidence", B: "Moderate evidence", C: "Limited or mixed evidence", D: "Weak or mostly preclinical evidence" };
 const LAB_MARKERS = ["25(OH) Vitamin D","ApoB","LDL-C","HDL-C","Triglycerides","Lp(a)","HbA1c","Fasting glucose","Fasting insulin","hs-CRP","Ferritin","Vitamin B12","Homocysteine","TSH","Free T4","Total testosterone","Estradiol","Haematocrit","Hemoglobin","ALT","AST","eGFR","Creatinine","Cystatin C","Uric acid","Omega-3 index","Resting heart rate","HRV (rMSSD)","VO2 max","Body fat %","Lean mass","Weight","Blood pressure (systolic)","Grip strength","Biological age (epigenetic)"];
@@ -140,7 +141,9 @@ let state = load() || seed();
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2200); }
-const evBadge = c => c.kind === "clinical" ? `<span class="ev ev-Rx" title="Clinical / prescription reference">Rx</span>` : `<span class="ev ev-${c.evidence}" title="${EV_TEXT[c.evidence]}">${c.evidence}</span>`;
+const evBadge = c => c.kind === "peptide" ? `<span class="ev ev-${TIER[c.tier][0]}" title="${TIER[c.tier][1]}">${TIER[c.tier][0]}</span>`
+  : c.kind === "clinical" ? `<span class="ev ev-Rx" title="Clinical / prescription reference">Rx</span>` : `<span class="ev ev-${c.evidence}" title="${EV_TEXT[c.evidence]}">${c.evidence}</span>`;
+const sub = c => c.kind === "supplement" ? c.dose : c.status;
 const goalChips = ids => ids.map(g => `<a class="chip" href="#library" data-goal="${g}">${esc(GOALS[g].name)}</a>`).join("");
 function clearExamples() {
   state.stack = state.stack.filter(x => !x.example); state.log = state.log.filter(x => !x.example);
@@ -191,25 +194,25 @@ function viewToday() {
 
 function filtered() {
   const q = filters.q.toLowerCase();
-  return ALL.filter(c => (filters.kind === "all" || c.kind === filters.kind)
+  return ALL.filter(c => (filters.kind === "all" || c.sections.includes(filters.kind))
     && (!filters.goal || c.goals.includes(filters.goal))
     && (filters.ev === "all" || c.evidence === filters.ev)
-    && (!q || (c.name + " " + c.category + " " + (c.notes || c.uses || "")).toLowerCase().includes(q)));
+    && (!q || (c.name + " " + c.category + " " + (c.notes || "") + " " + (c.uses || "")).toLowerCase().includes(q)));
 }
 function viewLibrary() {
   const items = filtered();
   const kindBtn = (k, label) => `<button class="chip" data-kind="${k}" aria-pressed="${filters.kind === k}">${label}</button>`;
   const evBtn = (e, label) => `<button class="chip" data-ev="${e}" aria-pressed="${filters.ev === e}">${label}</button>`;
-  return `<div><p class="eyebrow">${CATALOG.supplements.length} supplements · ${CATALOG.clinical.length} clinical references</p><h1>Library</h1></div>
+  return `<div><p class="eyebrow">${CATALOG.supplements.length} supplements · ${CATALOG.peptides.length} peptides · ${CATALOG.clinical.length} clinical references</p><h1>Library</h1></div>
   <section class="panel">
     <label>Search<input id="q" type="search" value="${esc(filters.q)}" placeholder="Name, category or keyword"></label>
-    <div class="chips">${kindBtn("all", "Everything")}${kindBtn("supplement", "Supplements")}${kindBtn("clinical", "Prescription & clinical")}</div>
+    <div class="chips">${kindBtn("all", "Everything")}${kindBtn("supplements", "Supplements")}${kindBtn("nootropics", "Nootropics")}${kindBtn("peptides", "Peptides")}${kindBtn("clinical", "Prescription & clinical")}</div>
     <div class="chips">${evBtn("all", "Any evidence")}${["A", "B", "C", "D"].map(e => evBtn(e, `Grade ${e}`)).join("")}</div>
     <div class="chips"><span class="eyebrow" style="align-self:center">Goal</span>${CATALOG.goals.map(g => `<button class="chip" data-goalf="${g.id}" aria-pressed="${filters.goal === g.id}">${esc(g.name)}</button>`).join("")}</div>
-    <div class="legend"><span><i class="ev ev-A">A</i>Strong</span><span><i class="ev ev-B">B</i>Moderate</span><span><i class="ev ev-C">C</i>Limited</span><span><i class="ev ev-D">D</i>Weak</span><span><i class="ev ev-Rx">Rx</i>Clinician-managed, reference only</span></div>
+    <div class="legend"><span><i class="ev ev-A">A</i>Strong</span><span><i class="ev ev-B">B</i>Moderate</span><span><i class="ev ev-C">C</i>Limited</span><span><i class="ev ev-D">D</i>Weak</span><span><i class="ev ev-Rx">Rx</i>Prescription / approved, reference only</span><span><i class="ev ev-Tr">Tr</i>In trials</span></div>
   </section>
   <section class="panel"><p class="muted" style="font-size:.85rem">${items.length} result${items.length === 1 ? "" : "s"}</p>
-    <div class="list">${items.map(c => `<button class="item" data-open="${c.id}">${evBadge(c)}<div><b style="font-weight:600">${esc(c.name)}</b><div class="sub">${esc(c.category)} · ${c.goals.map(g => GOALS[g].name).join(", ")}</div></div><span class="dose">${esc(c.kind === "clinical" ? c.status : c.dose)}</span></button>`).join("") || `<div class="empty">No matches. Try removing a filter.</div>`}</div>
+    <div class="list">${items.map(c => `<button class="item" data-open="${c.id}">${evBadge(c)}<div><b style="font-weight:600">${esc(c.name)}</b><div class="sub">${esc(c.category)} · ${c.goals.map(g => GOALS[g].name).join(", ")}</div></div><span class="dose">${esc(sub(c))}</span></button>`).join("") || `<div class="empty">No matches. Try removing a filter.</div>`}</div>
   </section>`;
 }
 
@@ -217,18 +220,43 @@ function detail(c) {
   const inStack = state.stack.some(s => s.itemId === c.id);
   const facts = c.kind === "supplement"
     ? [["Typical dose", c.dose], ["Timing", c.timing], ["Evidence", `Grade ${c.evidence}: ${EV_TEXT[c.evidence]}`], ["Notes & cautions", c.notes]]
+    : c.kind === "peptide" ? [["Status", c.status], ["In sport", c.sport], ["Approved use or claims", c.uses], ["How it works", c.mechanism], ["Human evidence", c.evidence_text], ["Key risks", c.risks], ["Labs to monitor", c.labs], ["Dosing", "BioStack doesn't provide doses, administration or sourcing for peptides. Approved peptides are prescribed and dosed by a clinician."]]
     : [["Status", c.status], ["Approved uses", c.uses], ["How it works", c.mechanism], ["Evidence", c.evidence_text], ["Key risks", c.risks], ["Labs to monitor", c.labs], ["Dosing", "Set by your prescribing clinician. BioStack doesn't provide doses for prescription or clinical compounds."]];
   return `<div class="row" style="align-items:center">${evBadge(c)}<h2 style="flex:5">${esc(c.name)}</h2><button data-close style="flex:0 0 auto" aria-label="Close">Close</button></div>
     <p class="eyebrow">${esc(c.category)}</p>
     <dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
     <div><p class="eyebrow" style="margin-bottom:8px">Linked goals</p><div class="chips">${goalChips(c.goals)}</div></div>
-    <form id="addStack" class="panel" style="background:var(--bg)">
+    ${c.kind === "peptide" && c.tier !== "approved" ? `<div class="notice">Unapproved peptide: no approved human use, unknown long-term safety and unregulated product quality. See the <a href="#peptides">peptide guide</a>.</div>` : `<form id="addStack" class="panel" style="background:var(--bg)">
       <h3>${inStack ? "Add another schedule" : "Add to my stack"}</h3>
-      <div class="row"><label>Dose you take<input id="asDose" required placeholder="${c.kind === "supplement" ? "e.g. " + esc(c.dose.split(",")[0]) : "As prescribed"}"></label>
+      <div class="row"><label>Dose you take<input id="asDose" required placeholder="${c.kind === "supplement" ? "e.g. " + esc(c.dose.split(",")[0]) : "As prescribed by your clinician"}"></label>
       <label>Time<input id="asTime" type="time" value="08:00" required></label></div>
       <button class="primary" type="submit">Add to stack</button>
-    </form>
+    </form>`}
     <p class="muted" style="font-size:.8rem">General information, not medical advice. Check with a clinician before starting anything, especially if you take medication, are pregnant, or have a health condition. Choose third-party tested products (NSF Certified for Sport, Informed Sport, USP).</p>`;
+}
+
+const rowList = items => `<div class="list">${items.map(c => `<button class="item" data-open="${c.id}">${evBadge(c)}<div><b style="font-weight:600">${esc(c.name)}</b><div class="sub">${esc(c.category)}</div></div><span class="dose">${esc(sub(c))}</span></button>`).join("")}</div>`;
+
+function viewNootropics() {
+  const noot = ALL.filter(c => c.sections.includes("nootropics"));
+  const supp = noot.filter(c => c.kind === "supplement").sort((a, b) => a.evidence.localeCompare(b.evidence) || a.name.localeCompare(b.name));
+  const ref = noot.filter(c => c.kind !== "supplement");
+  return `<div><p class="eyebrow">${noot.length} compounds</p><h1>Nootropics</h1><p class="muted" style="max-width:65ch">Compounds used for focus, memory, alertness and mood. In healthy, well-rested people most effects are small; sleep, exercise and caffeine timing usually matter more.</p></div>
+  <div class="grid2">
+    <section class="panel"><h2>Supplements</h2><p class="muted" style="font-size:.88rem">Over-the-counter, sorted by strength of evidence. Typical doses are on each entry.</p>${rowList(supp)}</section>
+    <section class="panel"><h2>Prescription & unapproved</h2><p class="muted" style="font-size:.88rem">Reference only: status, evidence and risks. Prescription stimulants and wakefulness drugs need a diagnosis and a prescriber; several unapproved products carry FDA warnings.</p>${rowList(ref)}</section>
+  </div>`;
+}
+
+function viewPeptides() {
+  const peps = ALL.filter(c => c.sections.includes("peptides"));
+  const groups = [
+    ["Approved medicines", "Approved somewhere for a specific condition and prescribed by clinicians.", peps.filter(c => c.kind === "clinical" && !/Investigational/.test(c.status) || c.tier === "approved")],
+    ["In clinical trials", "Promising but not yet approved.", peps.filter(c => c.tier === "trial" || (c.kind === "clinical" && /Investigational/.test(c.status)))],
+  ];
+  return `<div><p class="eyebrow">${peps.length} peptides</p><h1>Peptides</h1><p class="muted" style="max-width:65ch">What each peptide is, its legal and sport status, how strong the human evidence is, how it works, known risks and which labs a clinician would monitor. BioStack doesn't provide doses, administration or sourcing for peptides.</p></div>
+  <section class="panel"><h2>Before you read the list</h2><dl class="facts">${CATALOG.peptide_guide.map(g => `<dt>${esc(g.title)}</dt><dd>${esc(g.text)}</dd>`).join("")}</dl></section>
+  ${groups.map(([t, d, items]) => `<section class="panel"><div><h2>${t} <span class="muted" style="font:400 .9rem var(--mono)">${items.length}</span></h2><p class="muted" style="font-size:.88rem">${d}</p></div>${rowList(items)}</section>`).join("")}`;
 }
 
 function viewGoals() {
@@ -236,10 +264,10 @@ function viewGoals() {
   <div class="goals">${CATALOG.goals.map(g => {
     const items = ALL.filter(c => c.goals.includes(g.id));
     const counts = ["A", "B", "C", "D"].map(e => items.filter(c => c.evidence === e).length);
-    const rx = items.filter(c => c.kind === "clinical").length;
+    const rx = items.filter(c => c.kind !== "supplement").length;
     const tot = items.length || 1;
     const top = items.filter(c => c.evidence === "A" || c.evidence === "B").slice(0, 4).map(c => c.name).join(", ");
-    return `<button class="goal panel" data-goalview="${g.id}"><b>${esc(g.name)}</b><span class="n">${items.length - rx} supplements · ${rx} clinical</span>
+    return `<button class="goal panel" data-goalview="${g.id}"><b>${esc(g.name)}</b><span class="n">${items.length - rx} supplements · ${rx} peptides & clinical</span>
       <div class="bars">${counts.map((n, i) => `<span style="width:${100 * n / tot}%;background:var(--ev-${"abcd"[i]})"></span>`).join("")}<span style="width:${100 * rx / tot}%;background:var(--ink)"></span></div>
       <span class="muted" style="font-size:.82rem">${top ? "Best supported: " + esc(top) : "Evidence is limited for this goal."}</span></button>`;
   }).join("")}</div>`;
@@ -294,7 +322,7 @@ function manageStack() {
 }
 
 // ---------- routing & events ----------
-const VIEWS = { today: viewToday, library: viewLibrary, goals: viewGoals, labs: viewLabs, log: viewLog, apps: viewApps };
+const VIEWS = { today: viewToday, library: viewLibrary, nootropics: viewNootropics, peptides: viewPeptides, goals: viewGoals, labs: viewLabs, log: viewLog, apps: viewApps };
 function route() { const h = location.hash.slice(1); return VIEWS[h] ? h : "today"; }
 function render() {
   const r = route();

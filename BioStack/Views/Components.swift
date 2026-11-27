@@ -3,7 +3,13 @@ import SwiftUI
 struct EvidenceBadge: View {
     let compound: Compound
     var body: some View {
-        let (text, color): (String, Color) = compound.isClinical ? ("Rx", .primary) : {
+        let (text, color): (String, Color) = compound.isPeptide ? {
+            switch compound.tier {
+            case "approved": ("Rx", .primary)
+            case "trial": ("Tr", .orange)
+            default: ("Ex", .red)
+            }
+        }() : compound.isClinical ? ("Rx", .primary) : {
             switch compound.grade {
             case .A: ("A", .teal)
             case .B: ("B", .green)
@@ -13,10 +19,10 @@ struct EvidenceBadge: View {
         }()
         Text(text)
             .font(.caption.monospaced().weight(.semibold))
-            .foregroundStyle(compound.isClinical ? Color(.systemBackground) : .white)
+            .foregroundStyle(text == "Rx" ? Color(.systemBackground) : .white)
             .frame(width: 26, height: 22)
             .background(color, in: RoundedRectangle(cornerRadius: 5))
-            .accessibilityLabel(compound.isClinical ? "Clinical reference" : compound.grade?.label ?? "")
+            .accessibilityLabel(text == "Rx" ? "Approved medicine, reference only" : text == "Tr" ? "In clinical trials" : text == "Ex" ? "Unapproved, experimental" : compound.grade?.label ?? "")
     }
 }
 

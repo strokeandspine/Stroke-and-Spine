@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "goals": [
   {
    "id": "longevity",
@@ -91,6 +91,10 @@
    "dose": "3–5 g daily",
    "timing": "Any time; consistency matters more than timing",
    "evidence": "A",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "strength",
     "hypertrophy",
@@ -107,6 +111,9 @@
    "dose": "20–40 g per serving, toward 1.6–2.2 g protein/kg/day in total",
    "timing": "After training or with meals",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy",
     "strength",
@@ -123,6 +130,9 @@
    "dose": "30–40 g",
    "timing": "Before bed",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy",
     "recovery"
@@ -137,6 +147,9 @@
    "dose": "25–40 g per serving",
    "timing": "With meals",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy",
     "bodycomp"
@@ -151,6 +164,9 @@
    "dose": "10–15 g",
    "timing": "Around training",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy",
     "recovery"
@@ -165,6 +181,9 @@
    "dose": "5–10 g",
    "timing": "Around training",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "recovery"
    ],
@@ -178,6 +197,9 @@
    "dose": "2–3 g per meal",
    "timing": "With lower-protein meals",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy"
    ],
@@ -191,6 +213,9 @@
    "dose": "3 g daily, split",
    "timing": "With meals",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hypertrophy",
     "recovery"
@@ -205,6 +230,10 @@
    "dose": "3–6 mg/kg",
    "timing": "30–60 minutes before exercise",
    "evidence": "A",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "endurance",
     "strength",
@@ -221,6 +250,10 @@
    "dose": "100–200 mg",
    "timing": "With caffeine, or in the evening",
    "evidence": "B",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "stress",
@@ -236,6 +269,9 @@
    "dose": "3.2–6.4 g daily in 0.8–1.6 g doses",
    "timing": "With meals, daily for 4+ weeks",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance",
     "strength"
@@ -250,6 +286,9 @@
    "dose": "6–8 g",
    "timing": "60 minutes before training",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance",
     "strength",
@@ -265,6 +304,9 @@
    "dose": "0.2–0.3 g/kg",
    "timing": "60–180 minutes before high-intensity events",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance"
    ],
@@ -278,6 +320,9 @@
    "dose": "6–8 mmol nitrate (~400–500 mg)",
    "timing": "2–3 hours before exercise",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance",
     "heart"
@@ -292,6 +337,9 @@
    "dose": "2.5 g daily",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "strength",
     "metabolic"
@@ -306,6 +354,9 @@
    "dose": "1–3 g daily",
    "timing": "Any time",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance",
     "heart",
@@ -321,6 +372,9 @@
    "dose": "30–60 g/hour; up to 90 g/hour glucose+fructose for long events",
    "timing": "During sessions over 60–90 minutes",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance"
    ],
@@ -334,6 +388,9 @@
    "dose": "300–600 mg sodium per hour of sweating",
    "timing": "During long or hot sessions",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance"
    ],
@@ -347,6 +404,10 @@
    "dose": "10–25 g",
    "timing": "30–60 minutes before",
    "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "endurance",
     "cognition"
@@ -361,6 +422,10 @@
    "dose": "5–15 g, building up slowly",
    "timing": "With food",
    "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "bodycomp"
@@ -375,6 +440,9 @@
    "dose": "1–2 g daily",
    "timing": "With carbohydrate-containing meals",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "recovery"
    ],
@@ -388,6 +456,10 @@
    "dose": "500–2,000 mg",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "stress"
@@ -402,6 +474,9 @@
    "dose": "480 mg extract or 30 ml concentrate twice daily",
    "timing": "Around hard training blocks",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "recovery",
     "sleep"
@@ -416,6 +491,9 @@
    "dose": "10–15 g with ~50 mg vitamin C",
    "timing": "30–60 minutes before tendon/joint loading",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "skin",
@@ -431,6 +509,9 @@
    "dose": "5–10 g",
    "timing": "Any time",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "gut",
     "recovery"
@@ -445,6 +526,9 @@
    "dose": "1,000–4,000 IU daily, guided by 25(OH)D blood level",
    "timing": "With a meal containing fat",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "immunity",
     "joints",
@@ -461,6 +545,9 @@
    "dose": "90–200 mcg",
    "timing": "With fat-containing food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "heart"
@@ -475,6 +562,9 @@
    "dose": "200–1,000 mg",
    "timing": "Split through the day",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "immunity",
     "skin"
@@ -489,6 +579,9 @@
    "dose": "250–1,000 mcg",
    "timing": "Daily",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "cognition",
     "longevity"
@@ -503,6 +596,9 @@
    "dose": "400 mcg DFE",
    "timing": "Daily",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart",
     "cognition"
@@ -517,6 +613,9 @@
    "dose": "About 100% of daily values",
    "timing": "Morning with food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "cognition",
     "stress"
@@ -531,6 +630,9 @@
    "dose": "15 mg (22 IU) daily from food and supplements",
    "timing": "With food",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "skin"
    ],
@@ -544,6 +646,9 @@
    "dose": "1 serving daily",
    "timing": "With breakfast",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "cognition",
@@ -559,6 +664,9 @@
    "dose": "18–65 mg elemental, only when ferritin or iron is low",
    "timing": "Alternate days, with vitamin C, away from coffee, tea and calcium",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance"
    ],
@@ -572,6 +680,9 @@
    "dose": "200–400 mg elemental",
    "timing": "Evening",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep",
     "stress",
@@ -587,6 +698,10 @@
    "dose": "1.5–2 g compound (~144 mg magnesium)",
    "timing": "Evening",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "sleep"
@@ -601,6 +716,9 @@
    "dose": "8–11 mg; 15–30 mg if low",
    "timing": "With food",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "immunity",
     "hormones",
@@ -616,6 +734,9 @@
    "dose": "Enough to reach 1,000–1,200 mg/day including diet",
    "timing": "No more than 500 mg at a time",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints"
    ],
@@ -629,6 +750,9 @@
    "dose": "Food first; supplements are limited to 99 mg per pill in the US",
    "timing": "With meals",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart"
    ],
@@ -642,6 +766,9 @@
    "dose": "150 mcg",
    "timing": "Daily",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hormones"
    ],
@@ -655,6 +782,9 @@
    "dose": "55–100 mcg",
    "timing": "Daily",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "immunity",
     "hormones"
@@ -669,6 +799,9 @@
    "dose": "3–10 mg",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "hormones"
@@ -683,6 +816,9 @@
    "dose": "200–1,000 mcg",
    "timing": "With meals",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "metabolic"
    ],
@@ -696,6 +832,10 @@
    "dose": "1–3 g combined EPA+DHA",
    "timing": "With meals",
    "evidence": "A",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "heart",
     "longevity",
@@ -713,6 +853,9 @@
    "dose": "1.5–3 g daily",
    "timing": "With meals",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart"
    ],
@@ -726,6 +869,9 @@
    "dose": "5–10 g with a full glass of water",
    "timing": "Before meals",
    "evidence": "A",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart",
     "metabolic",
@@ -742,6 +888,9 @@
    "dose": "1.2–2.4 g, standardised products only",
    "timing": "Evening",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart"
    ],
@@ -755,6 +904,9 @@
    "dose": "600–1,200 mg",
    "timing": "With food",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart",
     "immunity"
@@ -769,6 +921,10 @@
    "dose": "500–900 mg flavanols",
    "timing": "Daily",
    "evidence": "B",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "heart",
     "cognition"
@@ -783,6 +939,9 @@
    "dose": "100–300 mg",
    "timing": "With a meal containing fat",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart",
     "longevity",
@@ -798,6 +957,9 @@
    "dose": "500 mg 2–3 times daily",
    "timing": "With meals",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "metabolic",
     "heart",
@@ -813,6 +975,9 @@
    "dose": "300–600 mg",
    "timing": "On an empty stomach",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "metabolic"
    ],
@@ -826,6 +991,9 @@
    "dose": "2–4 g",
    "timing": "Split doses",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "metabolic",
     "hormones",
@@ -841,6 +1009,9 @@
    "dose": "1–3 g",
    "timing": "With meals",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "metabolic"
    ],
@@ -854,6 +1025,9 @@
    "dose": "250–500 mg EGCG",
    "timing": "With food, never fasted",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "bodycomp",
     "metabolic"
@@ -868,6 +1042,9 @@
    "dose": "500–1,000 mg",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "recovery",
@@ -883,6 +1060,9 @@
    "dose": "1–2 g",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "recovery",
     "gut"
@@ -897,6 +1077,9 @@
    "dose": "100–250 mg AKBA-standardised extract",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints"
    ],
@@ -910,6 +1093,9 @@
    "dose": "1,500 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints"
    ],
@@ -923,6 +1109,9 @@
    "dose": "800–1,200 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints"
    ],
@@ -936,6 +1125,9 @@
    "dose": "1.5–3 g",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "recovery"
@@ -950,6 +1142,9 @@
    "dose": "120–200 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "joints",
     "skin"
@@ -964,6 +1159,9 @@
    "dose": "4–12 mg",
    "timing": "With fat-containing food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "skin",
     "recovery"
@@ -978,6 +1176,9 @@
    "dose": "10 mg lutein + 2 mg zeaxanthin",
    "timing": "With food",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "skin",
     "cognition"
@@ -992,6 +1193,9 @@
    "dose": "600–1,200 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "immunity"
@@ -1006,6 +1210,9 @@
    "dose": "250–1,000 mg",
    "timing": "Daily",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1019,6 +1226,9 @@
    "dose": "300–1,000 mg",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1032,6 +1242,9 @@
    "dose": "250–1,000 mg",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1045,6 +1258,9 @@
    "dose": "150–500 mg",
    "timing": "With fat-containing food",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "heart"
@@ -1059,6 +1275,9 @@
    "dose": "500–1,000 mg",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "immunity"
@@ -1073,6 +1292,9 @@
    "dose": "100–500 mg",
    "timing": "With fat-containing food",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1086,6 +1308,9 @@
    "dose": "1–6 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "skin"
@@ -1100,6 +1325,9 @@
    "dose": "500–1,000 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity",
     "endurance"
@@ -1114,6 +1342,9 @@
    "dose": "1 g",
    "timing": "Daily",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1127,6 +1358,9 @@
    "dose": "10–40 mg sulforaphane, or glucoraphanin with myrosinase",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "longevity"
    ],
@@ -1140,6 +1374,9 @@
    "dose": "100–200 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "heart",
     "skin"
@@ -1154,6 +1391,9 @@
    "dose": "300–600 mg standardised extract",
    "timing": "Daily or evening",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "stress",
     "sleep",
@@ -1169,6 +1409,10 @@
    "dose": "200–600 mg (3% rosavins)",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "stress",
     "endurance",
@@ -1184,6 +1428,10 @@
    "dose": "200–400 mg extract",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "immunity",
@@ -1199,6 +1447,9 @@
    "dose": "200–400 mg standardised extract",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hormones",
     "stress"
@@ -1213,6 +1464,9 @@
    "dose": "500–600 mg",
    "timing": "With food",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hormones",
     "metabolic"
@@ -1227,6 +1481,9 @@
    "dose": "1.5–3 g",
    "timing": "Daily",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hormones",
     "stress"
@@ -1241,6 +1498,9 @@
    "dose": "250–500 mg purified",
    "timing": "Daily",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "hormones",
     "endurance"
@@ -1255,6 +1515,10 @@
    "dose": "30 mg",
    "timing": "Daily",
    "evidence": "B",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "stress",
     "sleep"
@@ -1269,6 +1533,10 @@
    "dose": "500–3,000 mg",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition"
    ],
@@ -1282,6 +1550,9 @@
    "dose": "1–3 g",
    "timing": "Daily",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "endurance"
    ],
@@ -1295,6 +1566,9 @@
    "dose": "1–3 g",
    "timing": "Evening",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep",
     "immunity"
@@ -1309,6 +1583,10 @@
    "dose": "300 mg (50% bacosides)",
    "timing": "With fat-containing food, for 8–12 weeks",
    "evidence": "B",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "stress"
@@ -1323,6 +1601,10 @@
    "dose": "300–600 mg",
    "timing": "Morning or before training",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "strength"
@@ -1337,6 +1619,10 @@
    "dose": "250–500 mg",
    "timing": "Morning",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition"
    ],
@@ -1350,6 +1636,10 @@
    "dose": "500–2,000 mg",
    "timing": "60 minutes before demanding tasks",
    "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
    "goals": [
     "cognition",
     "stress"
@@ -1364,6 +1654,9 @@
    "dose": "50–200 mg",
    "timing": "Evening",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "stress",
     "sleep"
@@ -1378,6 +1671,9 @@
    "dose": "0.3–3 mg",
    "timing": "30–60 minutes before bed",
    "evidence": "B",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep"
    ],
@@ -1391,6 +1687,9 @@
    "dose": "3 g",
    "timing": "Before bed",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep"
    ],
@@ -1404,6 +1703,9 @@
    "dose": "50 mg",
    "timing": "Before bed",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep"
    ],
@@ -1417,6 +1719,9 @@
    "dose": "100–300 mg",
    "timing": "Before bed",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "sleep",
     "stress"
@@ -1431,6 +1736,9 @@
    "dose": "Per strain, typically 1–10 billion CFU",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "gut",
     "immunity"
@@ -1445,6 +1753,9 @@
    "dose": "10–20 g",
    "timing": "Daily",
    "evidence": "C",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "gut",
     "immunity"
@@ -1459,6 +1770,9 @@
    "dose": "As labelled",
    "timing": "With meals",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "gut"
    ],
@@ -1472,10 +1786,189 @@
    "dose": "As labelled",
    "timing": "During colds",
    "evidence": "D",
+   "sections": [
+    "supplements"
+   ],
    "goals": [
     "immunity"
    ],
    "notes": "May shorten colds slightly. Never eat raw berries."
+  },
+  {
+   "id": "phosphatidylserine",
+   "name": "Phosphatidylserine",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "100–300 mg",
+   "timing": "With meals",
+   "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition",
+    "stress"
+   ],
+   "notes": "Some evidence for memory in older adults and for blunting cortisol after hard exercise."
+  },
+  {
+   "id": "ginkgo-biloba-egb-761",
+   "name": "Ginkgo biloba (EGb 761)",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "120–240 mg standardised extract",
+   "timing": "Split with meals",
+   "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition"
+   ],
+   "notes": "Large trials (GEM) did not prevent dementia. Increases bleeding risk with anticoagulants and antiplatelets."
+  },
+  {
+   "id": "huperzine-a",
+   "name": "Huperzine A",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "50–200 mcg",
+   "timing": "Morning",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition"
+   ],
+   "notes": "Acetylcholinesterase inhibitor with a long half-life. Can cause nausea, slow heart rate and muscle cramps; avoid with dementia drugs or before anaesthesia."
+  },
+  {
+   "id": "uridine-monophosphate",
+   "name": "Uridine monophosphate",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "250–500 mg",
+   "timing": "Daily",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition"
+   ],
+   "notes": "Studied with omega-3 and choline (Souvenaid) in early Alzheimer's with modest effects."
+  },
+  {
+   "id": "choline-bitartrate",
+   "name": "Choline bitartrate",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "250–500 mg",
+   "timing": "With food",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition"
+   ],
+   "notes": "Cheap choline source; less brain-targeted than alpha-GPC or citicoline. Fishy body odour at high doses."
+  },
+  {
+   "id": "sulbutiamine",
+   "name": "Sulbutiamine",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "200–600 mg",
+   "timing": "Morning",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition",
+    "stress"
+   ],
+   "notes": "Fat-soluble vitamin B1 derivative. Small studies on fatigue only."
+  },
+  {
+   "id": "paraxanthine",
+   "name": "Paraxanthine",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "100–300 mg",
+   "timing": "Morning or before training",
+   "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition",
+    "endurance"
+   ],
+   "notes": "The main metabolite of caffeine; early trials suggest similar alertness with fewer jitters."
+  },
+  {
+   "id": "theacrine",
+   "name": "Theacrine",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "100–200 mg",
+   "timing": "Morning",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition",
+    "stress"
+   ],
+   "notes": "Caffeine-like compound with less tolerance build-up in small studies. Can raise heart rate."
+  },
+  {
+   "id": "gotu-kola",
+   "name": "Gotu kola",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "500–1,000 mg extract",
+   "timing": "With food",
+   "evidence": "D",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "cognition",
+    "skin"
+   ],
+   "notes": "Rare liver injury reported."
+  },
+  {
+   "id": "nicotinamide-vitamin-b3",
+   "name": "Nicotinamide (vitamin B3)",
+   "kind": "supplement",
+   "category": "Nootropic",
+   "dose": "500 mg",
+   "timing": "With food",
+   "evidence": "C",
+   "sections": [
+    "supplements",
+    "nootropics"
+   ],
+   "goals": [
+    "skin",
+    "longevity"
+   ],
+   "notes": "Reduced new skin cancers in high-risk people (ONTRAC). Doses above 3 g/day can harm the liver."
   }
  ],
  "clinical": [
@@ -1489,6 +1982,9 @@
    "mechanism": "Lowers liver glucose output and improves insulin sensitivity.",
    "evidence_text": "TAME trial is testing it as an ageing drug. May blunt muscle and VO2 max gains from training in healthy people.",
    "risks": "GI upset, B12 deficiency, rare lactic acidosis (mainly kidney disease).",
+   "sections": [
+    "clinical"
+   ],
    "labs": "HbA1c, fasting glucose, B12, kidney function (eGFR)",
    "goals": [
     "metabolic",
@@ -1505,6 +2001,10 @@
    "mechanism": "Mimics GLP-1 to slow stomach emptying, cut appetite and improve insulin release.",
    "evidence_text": "SELECT trial: 20% fewer major cardiovascular events. 15% average weight loss in obesity trials.",
    "risks": "Nausea, vomiting, muscle and lean-mass loss, gallbladder disease, pancreatitis; avoid with personal/family history of medullary thyroid cancer.",
+   "sections": [
+    "clinical",
+    "peptides"
+   ],
    "labs": "HbA1c, lipids, body composition (DEXA), kidney function",
    "goals": [
     "bodycomp",
@@ -1523,6 +2023,10 @@
    "mechanism": "Acts on both GIP and GLP-1 receptors to reduce appetite and improve glucose control.",
    "evidence_text": "SURMOUNT trials: about 20% average weight loss.",
    "risks": "Similar to semaglutide: GI effects, lean-mass loss, gallbladder and pancreatitis risk.",
+   "sections": [
+    "clinical",
+    "peptides"
+   ],
    "labs": "HbA1c, lipids, body composition",
    "goals": [
     "bodycomp",
@@ -1540,6 +2044,10 @@
    "mechanism": "Daily GLP-1 agonist.",
    "evidence_text": "Less weight loss than weekly agents; cardiovascular benefit shown (LEADER).",
    "risks": "GI effects, gallbladder and pancreatitis risk.",
+   "sections": [
+    "clinical",
+    "peptides"
+   ],
    "labs": "HbA1c, weight",
    "goals": [
     "bodycomp",
@@ -1556,6 +2064,10 @@
    "mechanism": "Adds glucagon-receptor activity to raise energy expenditure.",
    "evidence_text": "Phase 2: about 24% weight loss at 48 weeks.",
    "risks": "Long-term safety unknown. Not legally available outside trials.",
+   "sections": [
+    "clinical",
+    "peptides"
+   ],
    "labs": "Trial-managed",
    "goals": [
     "bodycomp",
@@ -1572,6 +2084,9 @@
    "mechanism": "Makes the kidneys excrete glucose.",
    "evidence_text": "Strong heart and kidney protection; extended lifespan in male mice (ITP, canagliflozin).",
    "risks": "Genital infections, dehydration, rare ketoacidosis.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Kidney function, glucose, ketones if unwell",
    "goals": [
     "metabolic",
@@ -1589,6 +2104,9 @@
    "mechanism": "Slows carbohydrate digestion to blunt glucose spikes.",
    "evidence_text": "Extended lifespan in mice (ITP).",
    "risks": "Gas, bloating, diarrhoea.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Glucose, HbA1c, liver enzymes",
    "goals": [
     "metabolic",
@@ -1605,6 +2123,9 @@
    "mechanism": "Inhibits mTOR, a central nutrient-sensing growth pathway.",
    "evidence_text": "Most robust lifespan extension in mice. Human longevity trials (e.g. PEARL) are small and early.",
    "risks": "Immune suppression, mouth ulcers, raised lipids and glucose, impaired wound healing.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Lipids, glucose, blood count, drug levels where applicable",
    "goals": [
     "longevity"
@@ -1620,6 +2141,9 @@
    "mechanism": "Blocks cholesterol production in the liver.",
    "evidence_text": "Decades of outcome data for heart attack and stroke prevention.",
    "risks": "Muscle aches, small rise in diabetes risk, rare liver injury.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Lipid panel, ApoB, liver enzymes, CK if symptoms, HbA1c",
    "goals": [
     "heart",
@@ -1636,6 +2160,9 @@
    "mechanism": "Blocks cholesterol absorption in the gut.",
    "evidence_text": "Adds to statins (IMPROVE-IT).",
    "risks": "Generally well tolerated.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Lipid panel, ApoB",
    "goals": [
     "heart"
@@ -1651,6 +2178,9 @@
    "mechanism": "Increases LDL receptor recycling in the liver.",
    "evidence_text": "Lowers LDL 50–60%; fewer cardiovascular events.",
    "risks": "Injection-site reactions; cost.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Lipid panel, ApoB",
    "goals": [
     "heart",
@@ -1667,6 +2197,9 @@
    "mechanism": "Blocks cholesterol production upstream of statins without muscle effects.",
    "evidence_text": "CLEAR Outcomes: fewer cardiovascular events.",
    "risks": "Raised uric acid, gout, tendon rupture (rare).",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Lipids, uric acid",
    "goals": [
     "heart"
@@ -1682,6 +2215,9 @@
    "mechanism": "Irreversibly inhibits platelet COX-1.",
    "evidence_text": "No longer advised for routine primary prevention in older adults (ASPREE).",
    "risks": "Gastrointestinal and brain bleeding.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Blood count if bleeding",
    "goals": [
     "heart"
@@ -1697,6 +2233,9 @@
    "mechanism": "Blocks angiotensin II; partial PPAR-gamma activity.",
    "evidence_text": "Strong blood pressure outcome data.",
    "risks": "High potassium, dizziness, kidney effects; not in pregnancy.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Blood pressure, potassium, kidney function",
    "goals": [
     "heart",
@@ -1713,6 +2252,9 @@
    "mechanism": "Replaces testosterone when the body makes too little.",
    "evidence_text": "Improves symptoms in confirmed deficiency. TRAVERSE trial: no increase in major cardiovascular events in men with hypogonadism.",
    "risks": "Raised haematocrit, infertility and testicular shrinkage, acne, sleep apnoea, prostate effects. Use without a diagnosis is illegal and unsafe.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Total and free testosterone, haematocrit, PSA, estradiol, lipids",
    "goals": [
     "hormones"
@@ -1728,6 +2270,9 @@
    "mechanism": "Replaces estrogen (plus progestogen if you have a uterus).",
    "evidence_text": "Best for symptoms when started within 10 years of menopause or before age 60.",
    "risks": "Blood clots and stroke (lower with skin patches), breast cancer risk with combined therapy.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Mammography, blood pressure, bone density",
    "goals": [
     "hormones",
@@ -1744,6 +2289,9 @@
    "mechanism": "Replaces thyroxine (T4).",
    "evidence_text": "Standard treatment for deficiency only.",
    "risks": "Over-treatment causes arrhythmia and bone loss.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "TSH, free T4",
    "goals": [
     "hormones"
@@ -1759,6 +2307,9 @@
    "mechanism": "Converted into testosterone and estrogen.",
    "evidence_text": "Benefits in healthy people are inconsistent.",
    "risks": "Acne, hair loss, hormone-sensitive cancer concerns.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "DHEA-S, sex hormones",
    "goals": [
     "hormones"
@@ -1774,6 +2325,9 @@
    "mechanism": "Lowers DHT.",
    "evidence_text": "Effective for hair loss.",
    "risks": "Sexual side effects, mood changes; lowers PSA readings.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "PSA (interpret ×2)",
    "goals": [
     "skin"
@@ -1789,6 +2343,9 @@
    "mechanism": "Prolongs the hair growth phase.",
    "evidence_text": "Effective for hair loss.",
    "risks": "Scalp irritation; oral form can cause fluid retention and fast heart rate.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Blood pressure, heart rate (oral)",
    "goals": [
     "skin"
@@ -1804,6 +2361,9 @@
    "mechanism": "Increases blood flow by boosting cGMP.",
    "evidence_text": "Approved indications only; no proven performance benefit.",
    "risks": "Headache, flushing; dangerous with nitrates.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Blood pressure",
    "goals": [
     "heart",
@@ -1820,6 +2380,9 @@
    "mechanism": "Brief opioid-receptor blockade with possible anti-inflammatory effects.",
    "evidence_text": "Small trials only.",
    "risks": "Vivid dreams, insomnia; blocks opioid painkillers.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "None routine",
    "goals": [
     "stress",
@@ -1836,6 +2399,10 @@
    "mechanism": "Increases dopamine and other wake-promoting signals.",
    "evidence_text": "Modest cognitive effects in sleep-deprived people.",
    "risks": "Insomnia, headache, rare severe skin reactions; reduces hormonal contraceptive effect.",
+   "sections": [
+    "clinical",
+    "nootropics"
+   ],
    "labs": "None routine",
    "goals": [
     "cognition"
@@ -1851,6 +2418,9 @@
    "mechanism": "Clears senescent cells in animal models.",
    "evidence_text": "Small human pilot studies only.",
    "risks": "Dasatinib: low blood counts, fluid around the lungs, bleeding.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Trial-managed",
    "goals": [
     "longevity"
@@ -1866,11 +2436,515 @@
    "mechanism": "Increases blood flow by boosting cGMP.",
    "evidence_text": "Approved indications only.",
    "risks": "Headache, visual changes; dangerous with nitrates.",
+   "sections": [
+    "clinical"
+   ],
    "labs": "Blood pressure",
    "goals": [
     "heart",
     "hormones"
    ]
+  },
+  {
+   "id": "armodafinil",
+   "name": "Armodafinil",
+   "kind": "clinical",
+   "category": "Wakefulness-promoting agent",
+   "status": "Prescription, controlled (US Schedule IV); banned in sport (WADA)",
+   "uses": "Narcolepsy, shift-work disorder, residual sleepiness in sleep apnoea",
+   "mechanism": "The longer-acting R-isomer of modafinil; increases dopamine signalling.",
+   "evidence_text": "Similar to modafinil: improves wakefulness in sleep-deprived people; small effects in rested healthy people.",
+   "risks": "Insomnia, headache, anxiety, rare serious skin reactions; reduces hormonal contraceptive effectiveness.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "adrafinil",
+   "name": "Adrafinil",
+   "kind": "clinical",
+   "category": "Modafinil prodrug",
+   "status": "Not approved in the US; withdrawn in France; banned in sport (WADA)",
+   "uses": "None approved",
+   "mechanism": "Converted to modafinil in the liver.",
+   "evidence_text": "Little direct human research.",
+   "risks": "Raised liver enzymes with regular use; same risks as modafinil.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Liver enzymes (ALT, AST)",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "methylphenidate",
+   "name": "Methylphenidate",
+   "kind": "clinical",
+   "category": "Stimulant",
+   "status": "Prescription, controlled (US Schedule II); banned in competition (WADA)",
+   "uses": "ADHD, narcolepsy",
+   "mechanism": "Blocks dopamine and noradrenaline reuptake.",
+   "evidence_text": "Clear benefit in ADHD. In healthy people, effects are small and people tend to overestimate them.",
+   "risks": "Raised heart rate and blood pressure, insomnia, appetite loss, dependence and misuse; dangerous with heart conditions.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Blood pressure, heart rate, weight",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "amphetamine-salts",
+   "name": "Amphetamine salts",
+   "kind": "clinical",
+   "category": "Stimulant",
+   "status": "Prescription, controlled (US Schedule II); banned in competition (WADA)",
+   "uses": "ADHD, narcolepsy",
+   "mechanism": "Releases dopamine and noradrenaline.",
+   "evidence_text": "Clear benefit in ADHD; limited and mixed benefit for healthy people.",
+   "risks": "Raised heart rate and blood pressure, insomnia, anxiety, psychosis at high doses, dependence; cardiac risk.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Blood pressure, heart rate, weight",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "piracetam",
+   "name": "Piracetam",
+   "kind": "clinical",
+   "category": "Racetam",
+   "status": "Not approved in the US and cannot be sold as a supplement; prescription in parts of Europe",
+   "uses": "Myoclonus and some cognitive conditions (Europe)",
+   "mechanism": "Thought to modulate AMPA receptors and membrane fluidity; not fully understood.",
+   "evidence_text": "No convincing benefit in healthy adults. Mixed results in older people with cognitive impairment.",
+   "risks": "Agitation, insomnia, increased bleeding with anticoagulants.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "aniracetam",
+   "name": "Aniracetam",
+   "kind": "clinical",
+   "category": "Racetam",
+   "status": "Not approved in the US; FDA has warned sellers",
+   "uses": "None approved in the US",
+   "mechanism": "AMPA receptor modulator.",
+   "evidence_text": "Very limited human evidence.",
+   "risks": "Anxiety, headache, insomnia. Product quality is unregulated.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "cognition",
+    "stress"
+   ]
+  },
+  {
+   "id": "phenylpiracetam",
+   "name": "Phenylpiracetam",
+   "kind": "clinical",
+   "category": "Racetam (stimulant)",
+   "status": "Prescription in Russia; not approved in the US; banned in competition (WADA)",
+   "uses": "Asthenia (Russia)",
+   "mechanism": "Racetam with stimulant properties.",
+   "evidence_text": "Mostly Russian-language studies; little independent data.",
+   "risks": "Insomnia, irritability, raised blood pressure, tolerance.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Blood pressure",
+   "goals": [
+    "cognition",
+    "endurance"
+   ]
+  },
+  {
+   "id": "noopept",
+   "name": "Noopept",
+   "kind": "clinical",
+   "category": "Racetam-like peptide derivative",
+   "status": "Prescription/OTC in Russia; not approved in the US; FDA has warned sellers",
+   "uses": "Cognitive impairment (Russia)",
+   "mechanism": "Proposed to raise BDNF and NGF; acts on AMPA receptors.",
+   "evidence_text": "Small, mostly Russian-language trials.",
+   "risks": "Headache, irritability, sleep problems. Unregulated product quality.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "memantine",
+   "name": "Memantine",
+   "kind": "clinical",
+   "category": "NMDA receptor antagonist",
+   "status": "Prescription (US)",
+   "uses": "Moderate-to-severe Alzheimer's disease",
+   "mechanism": "Blocks excessive glutamate signalling.",
+   "evidence_text": "Modest benefit in Alzheimer's; no shown benefit in healthy people.",
+   "risks": "Dizziness, headache, confusion.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Kidney function",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "nicotine-replacement-therapy",
+   "name": "Nicotine (replacement therapy)",
+   "kind": "clinical",
+   "category": "Nicotinic receptor agonist",
+   "status": "Gum, lozenges and patches are OTC (US) for smoking cessation; on WADA's monitoring programme, not banned",
+   "uses": "Stopping smoking",
+   "mechanism": "Activates nicotinic acetylcholine receptors.",
+   "evidence_text": "Improves attention and fine motor speed in small studies, including non-smokers.",
+   "risks": "Highly addictive; raises heart rate and blood pressure; nausea. Avoid in pregnancy and heart disease.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "Blood pressure",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "vinpocetine",
+   "name": "Vinpocetine",
+   "kind": "clinical",
+   "category": "Periwinkle alkaloid derivative",
+   "status": "Sold as a supplement in the US; FDA warns against use in pregnancy; prescription in some countries",
+   "uses": "Cerebrovascular disorders (outside the US)",
+   "mechanism": "PDE1 inhibitor that may increase brain blood flow.",
+   "evidence_text": "Weak, older trials.",
+   "risks": "Miscarriage and fetal harm risk; low blood pressure; bleeding with anticoagulants.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "phenibut",
+   "name": "Phenibut",
+   "kind": "clinical",
+   "category": "GABA-B agonist",
+   "status": "Not approved in the US; FDA has warned against it; controlled in several countries",
+   "uses": "Anxiety and insomnia (Russia)",
+   "mechanism": "Acts like baclofen at GABA-B receptors.",
+   "evidence_text": "Little quality evidence.",
+   "risks": "Rapid tolerance, dependence and severe withdrawal (seizures, psychosis); dangerous with alcohol or sedatives. Poison-centre calls have risen sharply.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "stress",
+    "sleep"
+   ]
+  },
+  {
+   "id": "tianeptine",
+   "name": "Tianeptine",
+   "kind": "clinical",
+   "category": "Atypical antidepressant",
+   "status": "Not approved in the US; FDA has issued repeated warnings; prescription in some countries",
+   "uses": "Depression (outside the US)",
+   "mechanism": "Opioid-receptor agonist at higher exposure.",
+   "evidence_text": "Effective antidepressant at prescribed doses where approved.",
+   "risks": "Opioid-like dependence, withdrawal, overdose and death have been reported with US gas-station products.",
+   "sections": [
+    "nootropics"
+   ],
+   "labs": "None routine",
+   "goals": [
+    "stress"
+   ]
+  }
+ ],
+ "peptides": [
+  {
+   "id": "tesamorelin",
+   "name": "Tesamorelin",
+   "kind": "peptide",
+   "category": "Growth hormone–releasing hormone (GHRH) analogue",
+   "tier": "approved",
+   "status": "Prescription (US, FDA-approved as Egrifta)",
+   "sport": "Prohibited at all times (WADA S2, peptide hormones and growth factors)",
+   "uses": "Reducing excess abdominal fat in HIV-associated lipodystrophy",
+   "mechanism": "Stimulates the pituitary to release growth hormone, raising IGF-1.",
+   "evidence_text": "Randomised trials show less visceral fat and liver fat in HIV. Not studied as a performance or anti-ageing drug.",
+   "risks": "Joint pain, fluid retention, raised blood sugar, injection-site reactions; avoid with active cancer.",
+   "labs": "IGF-1, glucose, HbA1c",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "bodycomp",
+    "metabolic"
+   ]
+  },
+  {
+   "id": "sermorelin",
+   "name": "Sermorelin",
+   "kind": "peptide",
+   "category": "GHRH analogue (first 29 amino acids)",
+   "tier": "approved",
+   "status": "Previously FDA-approved; brand discontinued in the US in 2008; sometimes compounded",
+   "sport": "Prohibited at all times (WADA S2, peptide hormones and growth factors)",
+   "uses": "Growth hormone deficiency in children (historical)",
+   "mechanism": "Stimulates natural growth hormone release.",
+   "evidence_text": "Older paediatric data; little adult outcome data.",
+   "risks": "Flushing, headache, injection-site reactions; long-term adult safety not established.",
+   "labs": "IGF-1, glucose",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "bodycomp",
+    "sleep"
+   ]
+  },
+  {
+   "id": "bremelanotide-pt-141",
+   "name": "Bremelanotide (PT-141)",
+   "kind": "peptide",
+   "category": "Melanocortin receptor agonist",
+   "tier": "approved",
+   "status": "Prescription (US, FDA-approved as Vyleesi)",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances) outside approved medical use",
+   "uses": "Low sexual desire in premenopausal women",
+   "mechanism": "Activates melanocortin-4 receptors in the brain.",
+   "evidence_text": "Modest improvement in desire in phase 3 trials.",
+   "risks": "Nausea (common), flushing, temporary rise in blood pressure, skin darkening.",
+   "labs": "Blood pressure",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "hormones"
+   ]
+  },
+  {
+   "id": "afamelanotide",
+   "name": "Afamelanotide",
+   "kind": "peptide",
+   "category": "Alpha-MSH analogue",
+   "tier": "approved",
+   "status": "Prescription implant (US/EU, approved as Scenesse)",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances) outside approved medical use",
+   "uses": "Erythropoietic protoporphyria (light sensitivity)",
+   "mechanism": "Activates melanocortin-1 receptors to increase skin melanin.",
+   "evidence_text": "Increased pain-free sun exposure in trials.",
+   "risks": "Nausea, headache, darkening of moles; needs skin checks.",
+   "labs": "Skin examinations",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "skin"
+   ]
+  },
+  {
+   "id": "setmelanotide",
+   "name": "Setmelanotide",
+   "kind": "peptide",
+   "category": "Melanocortin-4 receptor agonist",
+   "tier": "approved",
+   "status": "Prescription (US, approved as Imcivree)",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances) outside approved medical use",
+   "uses": "Obesity from specific rare genetic conditions",
+   "mechanism": "Restores appetite signalling in MC4R pathway defects.",
+   "evidence_text": "Significant weight loss in those genetic conditions only.",
+   "risks": "Skin darkening, nausea, depression and suicidal thoughts.",
+   "labs": "Mood monitoring",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "bodycomp"
+   ]
+  },
+  {
+   "id": "teriparatide-abaloparatide",
+   "name": "Teriparatide / abaloparatide",
+   "kind": "peptide",
+   "category": "Parathyroid hormone analogues",
+   "tier": "approved",
+   "status": "Prescription (US, Forteo / Tymlos)",
+   "sport": "Prohibited at all times (WADA S2, peptide hormones and growth factors)",
+   "uses": "Osteoporosis with high fracture risk",
+   "mechanism": "Intermittent PTH signalling builds new bone.",
+   "evidence_text": "Large reductions in spine fractures.",
+   "risks": "Dizziness, leg cramps, raised calcium. Usually limited to two years.",
+   "labs": "Calcium, bone density",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "joints"
+   ]
+  },
+  {
+   "id": "oxytocin",
+   "name": "Oxytocin",
+   "kind": "peptide",
+   "category": "Neuropeptide hormone",
+   "tier": "approved",
+   "status": "Prescription (US) for labour induction; nasal use is off-label/experimental",
+   "sport": "Prohibited at all times (WADA S2, peptide hormones and growth factors)",
+   "uses": "Inducing labour, postpartum bleeding",
+   "mechanism": "Acts on oxytocin receptors in the uterus and brain.",
+   "evidence_text": "Social-behaviour effects of nasal oxytocin are inconsistent and many early findings did not replicate.",
+   "risks": "Low sodium, blood pressure changes.",
+   "labs": "Sodium",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "stress"
+   ]
+  },
+  {
+   "id": "thymosin-alpha-1",
+   "name": "Thymosin alpha-1",
+   "kind": "peptide",
+   "category": "Thymic peptide",
+   "tier": "approved",
+   "status": "Approved in some countries (Zadaxin) for hepatitis B and as an immune adjuvant; not approved in the US",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances)",
+   "uses": "Hepatitis B, immune support (outside the US)",
+   "mechanism": "Enhances T-cell function.",
+   "evidence_text": "Mixed results; some trials in sepsis and hepatitis.",
+   "risks": "Injection-site reactions; generally well tolerated in trials.",
+   "labs": "Blood count, liver enzymes",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "immunity"
+   ]
+  },
+  {
+   "id": "elamipretide-ss-31",
+   "name": "Elamipretide (SS-31)",
+   "kind": "peptide",
+   "category": "Mitochondria-targeted peptide",
+   "tier": "approved",
+   "status": "FDA accelerated approval (2025) for Barth syndrome only; otherwise investigational",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances) outside approved medical use",
+   "uses": "Barth syndrome",
+   "mechanism": "Binds cardiolipin in the inner mitochondrial membrane to stabilise energy production.",
+   "evidence_text": "Benefit in Barth syndrome; trials in mitochondrial myopathy and heart failure missed main endpoints.",
+   "risks": "Injection-site reactions.",
+   "labs": "Trial or specialist-managed",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "longevity",
+    "endurance"
+   ]
+  },
+  {
+   "id": "cerebrolysin",
+   "name": "Cerebrolysin",
+   "kind": "peptide",
+   "category": "Porcine brain-derived peptide mixture",
+   "tier": "approved",
+   "status": "Approved in parts of Europe and Asia; not approved in the US",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances)",
+   "uses": "Stroke and dementia (outside the US)",
+   "mechanism": "Mixture of neurotrophic peptide fragments.",
+   "evidence_text": "Systematic reviews show little or no benefit after stroke.",
+   "risks": "Dizziness, agitation, allergic reactions.",
+   "labs": "Specialist-managed",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "cognition"
+   ]
+  },
+  {
+   "id": "cagrilintide-with-semaglutide-cagrisema",
+   "name": "Cagrilintide (with semaglutide: CagriSema)",
+   "kind": "peptide",
+   "category": "Amylin analogue",
+   "tier": "trial",
+   "status": "Investigational — phase 3 trials",
+   "sport": "Prohibited at all times (WADA S0, non-approved substances)",
+   "uses": "Obesity and type 2 diabetes (trials)",
+   "mechanism": "Mimics amylin to increase fullness; combined with semaglutide.",
+   "evidence_text": "Phase 3 (REDEFINE): about 20–23% average weight loss.",
+   "risks": "GI side effects similar to GLP-1 drugs; long-term safety still being studied.",
+   "labs": "Trial-managed",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "bodycomp",
+    "metabolic"
+   ]
+  },
+  {
+   "id": "kisspeptin",
+   "name": "Kisspeptin",
+   "kind": "peptide",
+   "category": "Reproductive neuropeptide",
+   "tier": "trial",
+   "status": "Research use in fertility trials; not approved",
+   "sport": "Prohibited at all times (WADA S2, peptide hormones and growth factors)",
+   "uses": "Fertility research; claimed for testosterone",
+   "mechanism": "Stimulates GnRH, LH and FSH release.",
+   "evidence_text": "Human research studies in reproductive medicine show reliable LH release.",
+   "risks": "Research-setting only; effects on long-term fertility unknown.",
+   "labs": "LH, FSH, testosterone, estradiol",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "hormones"
+   ]
+  }
+ ],
+ "peptide_guide": [
+  {
+   "title": "What counts as a peptide",
+   "text": "Chains of 2–50 amino acids. Insulin, GLP-1 drugs, oxytocin and parathyroid hormone analogues are peptides."
+  },
+  {
+   "title": "What's included",
+   "text": "Peptides approved as medicines somewhere, and peptides in registered clinical trials. Unapproved 'research peptides' are not included."
+  },
+  {
+   "title": "Research peptides",
+   "text": "Products labelled 'not for human consumption' have no approval, usually no controlled human data, and testing regularly finds wrong amounts, other substances and contamination. Almost all are banned in sport."
+  },
+  {
+   "title": "Talking to a clinician",
+   "text": "Approved peptides are prescribed, dosed and monitored by a clinician. Bring this page to an appointment to discuss options and which labs to track."
   }
  ],
  "apps": [

@@ -10,7 +10,7 @@ struct LibraryView: View {
 
     private var results: [Compound] {
         catalog.all.filter { c in
-            (kind == "all" || c.kind == kind)
+            (kind == "all" || c.sections.contains(kind))
             && (goalFilter == nil || c.goals.contains(goalFilter!))
             && (grade == nil || c.evidence == grade)
             && (search.isEmpty || c.name.localizedCaseInsensitiveContains(search) || c.category.localizedCaseInsensitiveContains(search))
@@ -19,13 +19,20 @@ struct LibraryView: View {
 
     var body: some View {
         let list = List {
+            if goalFilter == nil && search.isEmpty {
+                Section("Guides") {
+                    NavigationLink { NootropicsView() } label: { Label("Nootropics", systemImage: "brain") }
+                    NavigationLink { PeptidesView() } label: { Label("Peptides", systemImage: "allergens") }
+                }
+            }
             Section {
                 Picker("Type", selection: $kind) {
-                    Text("All").tag("all")
-                    Text("Supplements").tag("supplement")
-                    Text("Clinical").tag("clinical")
+                    Text("Everything").tag("all")
+                    Text("Supplements").tag("supplements")
+                    Text("Nootropics").tag("nootropics")
+                    Text("Peptides").tag("peptides")
+                    Text("Prescription & clinical").tag("clinical")
                 }
-                .pickerStyle(.segmented)
                 Picker("Evidence", selection: $grade) {
                     Text("Any evidence").tag(String?.none)
                     ForEach(Evidence.allCases, id: \.self) { Text("Grade \($0.rawValue): \($0.label)").tag(Optional($0.rawValue)) }
@@ -58,7 +65,16 @@ struct CompoundDetailView: View {
             Section {
                 HStack { EvidenceBadge(compound: compound); Text(compound.category).foregroundStyle(.secondary) }
             }
-            if compound.isClinical {
+            if compound.isPeptide {
+                fact("Status", compound.status)
+                fact("In sport", compound.sport)
+                fact("Approved use or claims", compound.uses)
+                fact("How it works", compound.mechanism)
+                fact("Human evidence", compound.evidence_text)
+                fact("Key risks", compound.risks)
+                fact("Labs to monitor", compound.labs)
+                fact("Dosing", "BioStack doesn't provide doses, administration or sourcing for peptides. Approved peptides are prescribed and dosed by a clinician.")
+            } else if compound.isClinical {
                 fact("Status", compound.status)
                 fact("Approved uses", compound.uses)
                 fact("How it works", compound.mechanism)
@@ -78,7 +94,12 @@ struct CompoundDetailView: View {
                 }
             }
             Section {
-                Button { adding = true } label: { Label("Add to my stack", systemImage: "plus.circle.fill") }
+                if compound.isUnapprovedPeptide {
+                    Label("Unapproved peptide: no approved human use, unknown long-term safety and unregulated product quality.", systemImage: "exclamationmark.triangle")
+                        .foregroundStyle(.orange)
+                } else {
+                    Button { adding = true } label: { Label("Add to my stack", systemImage: "plus.circle.fill") }
+                }
             } footer: {
                 Text("General information, not medical advice. Choose third-party tested products (NSF Certified for Sport, Informed Sport, USP).")
             }
@@ -106,7 +127,7 @@ struct AddToStackView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField(compound.isClinical ? "Dose as prescribed" : "Your dose", text: $dose)
+                    TextField(compound.isClinical ? "Dose as prescribed by your clinician" : "Your dose", text: $dose)
                 } footer: {
                     if let d = compound.dose { Text("Typical range: \(d)") }
                 }

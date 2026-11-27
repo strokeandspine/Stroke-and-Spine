@@ -2,6 +2,7 @@
 iPhone app and the web app.
 
 Usage: python3 BioStack/tools/build_catalog.py
+(nootropic and peptide content lives in catalog_extra.py)
 
 Supplement rows: name | category | dose | timing | evidence | goals | notes
 Evidence: A = strong (multiple RCTs/meta-analyses), B = moderate, C = limited/mixed,
@@ -9,6 +10,8 @@ D = weak or mostly preclinical.
 """
 import json
 import re
+from catalog_extra import (NOOTROPIC_SUPPLEMENTS, NOOTROPIC_TAGS, CLINICAL_TAGS,
+                           NOOTROPIC_REFERENCE, PEPTIDES, PEPTIDE_GUIDE)
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "Resources" / "catalog.json"
@@ -250,30 +253,51 @@ def slug(s):
 
 def main():
     supplements = []
-    for line in S.strip().splitlines():
+    for line in (S.strip() + "\n" + NOOTROPIC_SUPPLEMENTS.strip()).splitlines():
         name, cat, dose, timing, ev, goals, notes = [p.strip() for p in line.split("|")]
+        sections = ["supplements"] + (["nootropics"] if cat == "Nootropic" or name in NOOTROPIC_TAGS else [])
         supplements.append({"id": slug(name), "name": name, "kind": "supplement", "category": cat,
-                            "dose": dose, "timing": timing, "evidence": ev,
+                            "dose": dose, "timing": timing, "evidence": ev, "sections": sections,
                             "goals": goals.split(","), "notes": notes})
     rx = []
     for name, cls, status, uses, mech, evid, risks, labs, goals in RX:
         rx.append({"id": slug(name), "name": name, "kind": "clinical", "category": cls, "status": status,
                    "uses": uses, "mechanism": mech, "evidence_text": evid, "risks": risks,
+                   "sections": ["clinical"] + CLINICAL_TAGS.get(name, []),
                    "labs": labs, "goals": goals.split(",")})
+    for name, cls, status, uses, mech, evid, risks, labs, goals in NOOTROPIC_REFERENCE:
+        rx.append({"id": slug(name), "name": name, "kind": "clinical", "category": cls, "status": status,
+                   "uses": uses, "mechanism": mech, "evidence_text": evid, "risks": risks,
+                   "sections": ["nootropics"], "labs": labs, "goals": goals.split(",")})
+    peptides = []
+    for name, cls, tier, status, sport, uses, mech, evid, risks, labs, goals in PEPTIDES:
+        peptides.append({"id": slug(name), "name": name, "kind": "peptide", "category": cls, "tier": tier,
+                         "status": status, "sport": sport, "uses": uses, "mechanism": mech,
+                         "evidence_text": evid, "risks": risks, "labs": labs,
+                         "sections": ["peptides"], "goals": goals.split(",")})
     goal_ids = {g[0] for g in GOALS}
-    for item in supplements + rx:
+    ids = set()
+    for item in supplements + rx + peptides:
         bad = set(item["goals"]) - goal_ids
         assert not bad, (item["name"], bad)
+        assert item["id"] not in ids, item["id"]
+        ids.add(item["id"])
+    missing = NOOTROPIC_TAGS - {s["name"] for s in supplements}
+    assert not missing, missing
     catalog = {
-        "version": 1,
+        "version": 2,
         "goals": [{"id": i, "name": n, "symbol": s} for i, n, s in GOALS],
         "supplements": supplements,
         "clinical": rx,
+        "peptides": peptides,
+        "peptide_guide": [{"title": t, "text": x} for t, x in PEPTIDE_GUIDE],
         "apps": [{"name": n, "category": c, "description": d, "url": u} for n, c, d, u in APPS],
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(catalog, ensure_ascii=False, indent=1))
-    print(f"{len(supplements)} supplements, {len(rx)} clinical, {len(APPS)} apps -> {OUT}")
+    noot = sum("nootropics" in x["sections"] for x in supplements + rx)
+    print(f"{len(supplements)} supplements, {len(rx)} clinical, {len(peptides)} peptides, "
+          f"{noot} nootropics, {len(APPS)} apps -> {OUT}")
 
 if __name__ == "__main__":
     main()
