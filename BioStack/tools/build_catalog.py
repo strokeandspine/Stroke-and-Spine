@@ -11,7 +11,8 @@ D = weak or mostly preclinical.
 import json
 import re
 from catalog_extra import (NOOTROPIC_SUPPLEMENTS, NOOTROPIC_TAGS, CLINICAL_TAGS,
-                           NOOTROPIC_REFERENCE, PEPTIDES, PEPTIDE_GUIDE)
+                           NOOTROPIC_REFERENCE, PEPTIDES, PEPTIDE_GUIDE,
+                           RESEARCH_WARNING, RESOURCES)
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "Resources" / "catalog.json"
@@ -291,6 +292,8 @@ def main():
         "clinical": rx,
         "peptides": peptides,
         "peptide_guide": [{"title": t, "text": x} for t, x in PEPTIDE_GUIDE],
+        "research_warning": [{"title": t, "text": x} for t, x in RESEARCH_WARNING],
+        "resources": [{"name": n, "description": d, "url": u} for n, d, u in RESOURCES],
         "apps": [{"name": n, "category": c, "description": d, "url": u} for n, c, d, u in APPS],
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -47,8 +47,10 @@ struct PeptidesView: View {
                     .padding(.vertical, 2)
                 }
             }
+            ResearchWarningSection()
             group("Approved medicines", approved, "Approved somewhere for a specific condition and prescribed by clinicians.")
             group("In clinical trials", trials, "Promising but not yet approved.")
+            ResourcesSection()
         }
         .navigationTitle("Peptides")
     }
@@ -57,5 +59,39 @@ struct PeptidesView: View {
         Section {
             ForEach(items) { c in NavigationLink(value: c) { CompoundRow(compound: c) } }
         } header: { Text("\(title) (\(items.count))") } footer: { Text(footer) }
+    }
+}
+
+struct ResearchWarningSection: View {
+    @Environment(Catalog.self) private var catalog
+    var body: some View {
+        Section {
+            ForEach(catalog.researchWarning, id: \.title) { g in
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(g.title).font(.subheadline.weight(.semibold))
+                    Text(g.text).font(.callout)
+                }
+            }
+        } header: {
+            Label("Warning: research peptides", systemImage: "exclamationmark.triangle.fill").foregroundStyle(.orange)
+        } footer: {
+            Text("Unapproved \"research use only\" peptides aren't listed in BioStack. Emergency: call 911. US Poison Control: 1-800-222-1222.")
+        }
+    }
+}
+
+struct ResourcesSection: View {
+    @Environment(Catalog.self) private var catalog
+    var body: some View {
+        Section("Safety and regulation resources") {
+            ForEach(catalog.resources) { r in
+                Link(destination: r.url) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(r.name).foregroundStyle(.primary)
+                        Text(r.description).font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+            }
+        }
     }
 }

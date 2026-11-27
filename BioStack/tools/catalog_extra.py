@@ -151,6 +151,65 @@ PEPTIDES = [
 PEPTIDE_GUIDE = [
     ("What counts as a peptide", "Chains of 2–50 amino acids. Insulin, GLP-1 drugs, oxytocin and parathyroid hormone analogues are peptides."),
     ("What's included", "Peptides approved as medicines somewhere, and peptides in registered clinical trials. Unapproved 'research peptides' are not included."),
-    ("Research peptides", "Products labelled 'not for human consumption' have no approval, usually no controlled human data, and testing regularly finds wrong amounts, other substances and contamination. Almost all are banned in sport."),
+    ("Research peptides", "Products labelled 'not for human consumption' aren't listed here. See the warnings below before considering any of them."),
     ("Talking to a clinician", "Approved peptides are prescribed, dosed and monitored by a clinician. Bring this page to an appointment to discuss options and which labs to track."),
+]
+
+# More approved and in-trial peptides (reference only).
+PEPTIDES += [
+    ("Insulin analogues", "Peptide hormone analogues", "approved",
+     "Prescription (US)", "Prohibited at all times outside documented medical need (WADA S4); therapeutic use exemption available for diabetes",
+     "Type 1 and type 2 diabetes",
+     "Replace or supplement the body's insulin to move glucose into cells.",
+     "Essential, life-saving treatment in diabetes.",
+     "Severe low blood sugar, which can cause seizures, coma and death. Misuse by non-diabetic people for muscle gain has caused deaths.",
+     "Glucose (CGM or finger-prick), HbA1c", "metabolic"),
+    ("Pramlintide", "Amylin analogue", "approved",
+     "Prescription (US, approved as Symlin)", "Prohibited at all times (WADA S0) outside approved medical use",
+     "Type 1 and type 2 diabetes, alongside mealtime insulin",
+     "Mimics amylin to slow stomach emptying, reduce glucagon and increase fullness.",
+     "Lowers HbA1c modestly and reduces weight slightly in trials.",
+     "Severe low blood sugar when combined with insulin; nausea.", "Glucose, HbA1c", "metabolic,bodycomp"),
+    ("Vosoritide", "C-type natriuretic peptide analogue", "approved",
+     "Prescription (US, approved as Voxzogo)", "Prohibited at all times (WADA S0) outside approved medical use",
+     "Increasing growth in children with achondroplasia whose growth plates are open",
+     "Counteracts overactive FGFR3 signalling in growth plates.",
+     "Increased yearly growth in children with achondroplasia.",
+     "Low blood pressure, injection-site reactions.", "Specialist-managed", "joints"),
+    ("Teduglutide", "GLP-2 analogue", "approved",
+     "Prescription (US, approved as Gattex)", "Prohibited at all times (WADA S0) outside approved medical use",
+     "Short bowel syndrome",
+     "Stimulates growth of the intestinal lining to improve absorption.",
+     "Reduces the need for IV nutrition in short bowel syndrome.",
+     "Gut obstruction, gallbladder and pancreas problems; may speed growth of existing bowel polyps or cancers.",
+     "Colonoscopy before and during treatment", "gut"),
+    ("Orforglipron", "Oral GLP-1 receptor agonist (small molecule, grouped with GLP-1 peptides)", "trial",
+     "Investigational when this was written; the maker has applied for FDA approval. Check current status", "Prohibited at all times (WADA S0) until approved",
+     "Obesity and type 2 diabetes (trials)",
+     "A daily pill that activates the GLP-1 receptor without being a peptide.",
+     "Phase 3 trials: about 11–12% average weight loss and lower HbA1c.",
+     "Nausea, vomiting and other GI side effects similar to injectable GLP-1 drugs.", "Trial-managed", "bodycomp,metabolic"),
+]
+
+# Shown on the Peptides page and whenever someone logs an item that isn't in the catalogue.
+RESEARCH_WARNING = [
+    ("Not approved for people", "Products sold as 'research use only' or 'not for human consumption' have not been shown to be safe or effective in humans. Most have only animal or cell data."),
+    ("What's actually in the vial", "Independent testing of grey-market peptides has repeatedly found the wrong amount, different substances, bacterial endotoxin and products that were not sterile."),
+    ("Injection risks", "Non-sterile injections can cause abscesses, cellulitis and bloodstream infections. Seek care urgently for spreading redness, fever, or a hot, swollen injection site."),
+    ("Hormone and growth effects", "Anything that raises growth hormone or IGF-1 can raise blood sugar and cause fluid retention. The long-term effects of raising them are unknown, including on cancer risk."),
+    ("Sport", "Almost all unapproved peptides are banned at all times by WADA. 'Research use' labelling is no defence in an anti-doping case."),
+    ("Legal status", "In the US, selling these products for human use is illegal and the FDA has issued warning letters to sellers. Laws differ by country."),
+    ("Tell your clinician", "Tell your doctor about anything you take, including research products, so they can interpret your labs and avoid interactions. Report side effects to FDA MedWatch."),
+]
+
+RESOURCES = [
+    ("FDA: bulk drug substances for compounding", "Which substances US compounding pharmacies can and can't use, including peptides the FDA has flagged for safety.", "https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-used-compounding"),
+    ("WADA Prohibited List", "The current list of substances and methods banned in sport.", "https://www.wada-ama.org/en/prohibited-list"),
+    ("Global DRO", "Check whether a specific medicine is allowed in sport in the US, UK, Canada and other countries.", "https://www.globaldro.com"),
+    ("USADA Supplement 411", "Supplement and peptide risks for athletes, and how to choose third-party certified products.", "https://www.usada.org/athletes/substances/supplement-411/"),
+    ("ClinicalTrials.gov", "Find registered clinical trials, including peptide and longevity drug trials you could join.", "https://clinicaltrials.gov/search?term=peptide"),
+    ("FDA MedWatch", "Report a side effect or a bad product to the FDA.", "https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"),
+    ("FDA BeSafeRx", "How to tell a legitimate online pharmacy from an illegal one.", "https://www.fda.gov/drugs/quick-tips-buying-medicines-over-internet/besaferx-your-source-online-pharmacy-information"),
+    ("NIH Office of Dietary Supplements", "Independent fact sheets on vitamins, minerals and supplements.", "https://ods.od.nih.gov/factsheets/list-all/"),
+    ("Poison Control (US)", "24/7 help online or by phone at 1-800-222-1222.", "https://www.poison.org"),
 ]

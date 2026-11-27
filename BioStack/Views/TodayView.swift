@@ -107,6 +107,7 @@ struct WeekDots: View {
 }
 
 struct QuickLogView: View {
+    @Environment(Catalog.self) private var catalog
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var name = ""
@@ -121,6 +122,9 @@ struct QuickLogView: View {
                 TextField("Dose (as you took it or as prescribed)", text: $dose)
                 DatePicker("Time", selection: $time)
                 TextField("Notes", text: $note, axis: .vertical)
+                if name.count > 2 && !catalog.isListed(name) {
+                    ResearchWarningSection()
+                }
             }
             .navigationTitle("Log a dose")
             .toolbar {

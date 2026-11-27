@@ -248,6 +248,9 @@ function viewNootropics() {
   </div>`;
 }
 
+const researchCard = () => `<section class="panel" style="border-color:var(--warn)"><div><p class="eyebrow" style="color:var(--warn)">Warning</p><h2>Research peptides</h2><p class="muted" style="font-size:.88rem">Unapproved "research use only" peptides aren't listed in BioStack. If you're considering or already using one, know this:</p></div><dl class="facts">${CATALOG.research_warning.map(g => `<dt>${esc(g.title)}</dt><dd>${esc(g.text)}</dd>`).join("")}</dl><p style="font-size:.88rem">Emergency: call 911. US Poison Control: <b>1-800-222-1222</b>.</p></section>`;
+const resourcesPanel = () => `<section class="panel"><h2>Safety and regulation resources</h2><div class="apps">${CATALOG.resources.map(r => `<a class="app" href="${r.url}" target="_blank" rel="noopener"><b style="font-family:var(--display);font-weight:600">${esc(r.name)}</b><span class="muted" style="font-size:.88rem">${esc(r.description)}</span></a>`).join("")}</div></section>`;
+
 function viewPeptides() {
   const peps = ALL.filter(c => c.sections.includes("peptides"));
   const groups = [
@@ -256,7 +259,9 @@ function viewPeptides() {
   ];
   return `<div><p class="eyebrow">${peps.length} peptides</p><h1>Peptides</h1><p class="muted" style="max-width:65ch">What each peptide is, its legal and sport status, how strong the human evidence is, how it works, known risks and which labs a clinician would monitor. BioStack doesn't provide doses, administration or sourcing for peptides.</p></div>
   <section class="panel"><h2>Before you read the list</h2><dl class="facts">${CATALOG.peptide_guide.map(g => `<dt>${esc(g.title)}</dt><dd>${esc(g.text)}</dd>`).join("")}</dl></section>
-  ${groups.map(([t, d, items]) => `<section class="panel"><div><h2>${t} <span class="muted" style="font:400 .9rem var(--mono)">${items.length}</span></h2><p class="muted" style="font-size:.88rem">${d}</p></div>${rowList(items)}</section>`).join("")}`;
+  ${researchCard()}
+  ${groups.map(([t, d, items]) => `<section class="panel"><div><h2>${t} <span class="muted" style="font:400 .9rem var(--mono)">${items.length}</span></h2><p class="muted" style="font-size:.88rem">${d}</p></div>${rowList(items)}</section>`).join("")}
+  ${resourcesPanel()}`;
 }
 
 function viewGoals() {
@@ -312,7 +317,16 @@ function viewApps() {
   const cats = [...new Set(CATALOG.apps.map(a => a.category))];
   return `<div><p class="eyebrow">${CATALOG.apps.length} services</p><h1>Data apps</h1><p class="muted">Wearables, glucose monitors, lab tests and training logs that measure what your stack is supposed to change. Most sync into Apple Health, which the BioStack iPhone app reads.</p></div>
   <div class="apps">${CATALOG.apps.map(a => `<a class="app" href="${a.url}" target="_blank" rel="noopener"><span class="cat">${esc(a.category)}</span><b style="font-family:var(--display);font-weight:600">${esc(a.name)}</b><span class="muted" style="font-size:.88rem">${esc(a.description)}</span></a>`).join("")}</div>
-  <p class="muted" style="font-size:.8rem">BioStack isn't affiliated with these services. Links open their own websites.</p>`;
+  <p class="muted" style="font-size:.8rem">BioStack isn't affiliated with these services. Links open their own websites.</p>
+  ${resourcesPanel()}`;
+}
+
+function unlistedWarning(name) {
+  $("#dlgBody").innerHTML = `<div class="row" style="align-items:center"><h2 style="flex:5">"${esc(name)}" isn't in the BioStack library</h2><button data-close style="flex:0 0 auto">OK</button></div>
+  <p class="muted">It's logged. Because BioStack has no information on it, it may be an unapproved or research product. Please read this:</p>
+  <dl class="facts">${CATALOG.research_warning.map(g => `<dt>${esc(g.title)}</dt><dd>${esc(g.text)}</dd>`).join("")}</dl>
+  <p style="font-size:.88rem">Emergency: call 911. US Poison Control: <b>1-800-222-1222</b>. Report side effects at <a href="https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program" target="_blank" rel="noopener">FDA MedWatch</a>.</p>`;
+  $("#dlg").showModal();
 }
 
 function manageStack() {
@@ -371,8 +385,10 @@ document.addEventListener("submit", e => {
     state.stack.push({ uid: crypto.randomUUID(), itemId: c.id, name: c.name, dose: $("#asDose").value, time: $("#asTime").value });
     save(); $("#dlg").close(); render(); toast(`${c.name} added to your stack`);
   } else if (f.id === "quick") {
+    f.dataset.last = $("#qName").value.trim();
     state.log.push({ uid: crypto.randomUUID(), stackUid: null, name: $("#qName").value, dose: $("#qDose").value, date: today(), time: $("#qTime").value || new Date().toTimeString().slice(0, 5), note: $("#qNote").value });
     save(); render(); toast("Logged");
+    if (!ALL.some(c => c.name.toLowerCase() === f.dataset.last.toLowerCase())) unlistedWarning(f.dataset.last);
   } else if (f.id === "fx") {
     state.effects.push({ date: today(), text: $("#fxText").value, sev: $("#fxSev").value }); save(); render(); toast("Recorded");
   } else if (f.id === "labForm") {

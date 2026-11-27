@@ -55,6 +55,13 @@ struct GuideNote: Codable, Hashable {
     let text: String
 }
 
+struct Resource: Codable, Identifiable, Hashable {
+    var id: String { name }
+    let name: String
+    let description: String
+    let url: URL
+}
+
 struct DataApp: Codable, Identifiable, Hashable {
     var id: String { name }
     let name: String
@@ -70,7 +77,13 @@ final class Catalog {
     let clinical: [Compound]
     let peptides: [Compound]
     let peptideGuide: [GuideNote]
+    let researchWarning: [GuideNote]
+    let resources: [Resource]
     let apps: [DataApp]
+
+    func isListed(_ name: String) -> Bool {
+        all.contains { $0.name.caseInsensitiveCompare(name.trimmingCharacters(in: .whitespaces)) == .orderedSame }
+    }
 
     var all: [Compound] { supplements + clinical + peptides }
     func section(_ id: String) -> [Compound] { all.filter { $0.sections.contains(id) } }
@@ -81,11 +94,14 @@ final class Catalog {
     private struct File: Codable {
         let goals: [Goal]; let supplements: [Compound]; let clinical: [Compound]
         let peptides: [Compound]; let peptide_guide: [GuideNote]; let apps: [DataApp]
+        let research_warning: [GuideNote]; let resources: [Resource]
     }
 
-    init(goals: [Goal], supplements: [Compound], clinical: [Compound], peptides: [Compound], peptideGuide: [GuideNote], apps: [DataApp]) {
+    init(goals: [Goal], supplements: [Compound], clinical: [Compound], peptides: [Compound], peptideGuide: [GuideNote],
+         researchWarning: [GuideNote] = [], resources: [Resource] = [], apps: [DataApp]) {
         self.goals = goals; self.supplements = supplements; self.clinical = clinical
         self.peptides = peptides; self.peptideGuide = peptideGuide; self.apps = apps
+        self.researchWarning = researchWarning; self.resources = resources
     }
 
     static func load(bundle: Bundle = .main) -> Catalog {
@@ -96,6 +112,7 @@ final class Catalog {
             return Catalog(goals: [], supplements: [], clinical: [], peptides: [], peptideGuide: [], apps: [])
         }
         return Catalog(goals: file.goals, supplements: file.supplements, clinical: file.clinical,
-                       peptides: file.peptides, peptideGuide: file.peptide_guide, apps: file.apps)
+                       peptides: file.peptides, peptideGuide: file.peptide_guide,
+                       researchWarning: file.research_warning, resources: file.resources, apps: file.apps)
     }
 }

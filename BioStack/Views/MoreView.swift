@@ -33,6 +33,7 @@ struct MoreView: View {
                         }.navigationTitle("Side effects")
                     }
                     NavigationLink("Data apps and wearables") { AppsView() }
+                    NavigationLink("Safety and regulation resources") { List { ResourcesSection() }.navigationTitle("Resources") }
                 }
                 Section {
                     Button("Delete all my data", role: .destructive) { confirmWipe = true }

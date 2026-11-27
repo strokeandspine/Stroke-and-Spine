@@ -2927,6 +2927,108 @@
    "goals": [
     "hormones"
    ]
+  },
+  {
+   "id": "insulin-analogues",
+   "name": "Insulin analogues",
+   "kind": "peptide",
+   "category": "Peptide hormone analogues",
+   "tier": "approved",
+   "status": "Prescription (US)",
+   "sport": "Prohibited at all times outside documented medical need (WADA S4); therapeutic use exemption available for diabetes",
+   "uses": "Type 1 and type 2 diabetes",
+   "mechanism": "Replace or supplement the body's insulin to move glucose into cells.",
+   "evidence_text": "Essential, life-saving treatment in diabetes.",
+   "risks": "Severe low blood sugar, which can cause seizures, coma and death. Misuse by non-diabetic people for muscle gain has caused deaths.",
+   "labs": "Glucose (CGM or finger-prick), HbA1c",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "metabolic"
+   ]
+  },
+  {
+   "id": "pramlintide",
+   "name": "Pramlintide",
+   "kind": "peptide",
+   "category": "Amylin analogue",
+   "tier": "approved",
+   "status": "Prescription (US, approved as Symlin)",
+   "sport": "Prohibited at all times (WADA S0) outside approved medical use",
+   "uses": "Type 1 and type 2 diabetes, alongside mealtime insulin",
+   "mechanism": "Mimics amylin to slow stomach emptying, reduce glucagon and increase fullness.",
+   "evidence_text": "Lowers HbA1c modestly and reduces weight slightly in trials.",
+   "risks": "Severe low blood sugar when combined with insulin; nausea.",
+   "labs": "Glucose, HbA1c",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "metabolic",
+    "bodycomp"
+   ]
+  },
+  {
+   "id": "vosoritide",
+   "name": "Vosoritide",
+   "kind": "peptide",
+   "category": "C-type natriuretic peptide analogue",
+   "tier": "approved",
+   "status": "Prescription (US, approved as Voxzogo)",
+   "sport": "Prohibited at all times (WADA S0) outside approved medical use",
+   "uses": "Increasing growth in children with achondroplasia whose growth plates are open",
+   "mechanism": "Counteracts overactive FGFR3 signalling in growth plates.",
+   "evidence_text": "Increased yearly growth in children with achondroplasia.",
+   "risks": "Low blood pressure, injection-site reactions.",
+   "labs": "Specialist-managed",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "joints"
+   ]
+  },
+  {
+   "id": "teduglutide",
+   "name": "Teduglutide",
+   "kind": "peptide",
+   "category": "GLP-2 analogue",
+   "tier": "approved",
+   "status": "Prescription (US, approved as Gattex)",
+   "sport": "Prohibited at all times (WADA S0) outside approved medical use",
+   "uses": "Short bowel syndrome",
+   "mechanism": "Stimulates growth of the intestinal lining to improve absorption.",
+   "evidence_text": "Reduces the need for IV nutrition in short bowel syndrome.",
+   "risks": "Gut obstruction, gallbladder and pancreas problems; may speed growth of existing bowel polyps or cancers.",
+   "labs": "Colonoscopy before and during treatment",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "gut"
+   ]
+  },
+  {
+   "id": "orforglipron",
+   "name": "Orforglipron",
+   "kind": "peptide",
+   "category": "Oral GLP-1 receptor agonist (small molecule, grouped with GLP-1 peptides)",
+   "tier": "trial",
+   "status": "Investigational when this was written; the maker has applied for FDA approval. Check current status",
+   "sport": "Prohibited at all times (WADA S0) until approved",
+   "uses": "Obesity and type 2 diabetes (trials)",
+   "mechanism": "A daily pill that activates the GLP-1 receptor without being a peptide.",
+   "evidence_text": "Phase 3 trials: about 11–12% average weight loss and lower HbA1c.",
+   "risks": "Nausea, vomiting and other GI side effects similar to injectable GLP-1 drugs.",
+   "labs": "Trial-managed",
+   "sections": [
+    "peptides"
+   ],
+   "goals": [
+    "bodycomp",
+    "metabolic"
+   ]
   }
  ],
  "peptide_guide": [
@@ -2940,11 +3042,88 @@
   },
   {
    "title": "Research peptides",
-   "text": "Products labelled 'not for human consumption' have no approval, usually no controlled human data, and testing regularly finds wrong amounts, other substances and contamination. Almost all are banned in sport."
+   "text": "Products labelled 'not for human consumption' aren't listed here. See the warnings below before considering any of them."
   },
   {
    "title": "Talking to a clinician",
    "text": "Approved peptides are prescribed, dosed and monitored by a clinician. Bring this page to an appointment to discuss options and which labs to track."
+  }
+ ],
+ "research_warning": [
+  {
+   "title": "Not approved for people",
+   "text": "Products sold as 'research use only' or 'not for human consumption' have not been shown to be safe or effective in humans. Most have only animal or cell data."
+  },
+  {
+   "title": "What's actually in the vial",
+   "text": "Independent testing of grey-market peptides has repeatedly found the wrong amount, different substances, bacterial endotoxin and products that were not sterile."
+  },
+  {
+   "title": "Injection risks",
+   "text": "Non-sterile injections can cause abscesses, cellulitis and bloodstream infections. Seek care urgently for spreading redness, fever, or a hot, swollen injection site."
+  },
+  {
+   "title": "Hormone and growth effects",
+   "text": "Anything that raises growth hormone or IGF-1 can raise blood sugar and cause fluid retention. The long-term effects of raising them are unknown, including on cancer risk."
+  },
+  {
+   "title": "Sport",
+   "text": "Almost all unapproved peptides are banned at all times by WADA. 'Research use' labelling is no defence in an anti-doping case."
+  },
+  {
+   "title": "Legal status",
+   "text": "In the US, selling these products for human use is illegal and the FDA has issued warning letters to sellers. Laws differ by country."
+  },
+  {
+   "title": "Tell your clinician",
+   "text": "Tell your doctor about anything you take, including research products, so they can interpret your labs and avoid interactions. Report side effects to FDA MedWatch."
+  }
+ ],
+ "resources": [
+  {
+   "name": "FDA: bulk drug substances for compounding",
+   "description": "Which substances US compounding pharmacies can and can't use, including peptides the FDA has flagged for safety.",
+   "url": "https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-used-compounding"
+  },
+  {
+   "name": "WADA Prohibited List",
+   "description": "The current list of substances and methods banned in sport.",
+   "url": "https://www.wada-ama.org/en/prohibited-list"
+  },
+  {
+   "name": "Global DRO",
+   "description": "Check whether a specific medicine is allowed in sport in the US, UK, Canada and other countries.",
+   "url": "https://www.globaldro.com"
+  },
+  {
+   "name": "USADA Supplement 411",
+   "description": "Supplement and peptide risks for athletes, and how to choose third-party certified products.",
+   "url": "https://www.usada.org/athletes/substances/supplement-411/"
+  },
+  {
+   "name": "ClinicalTrials.gov",
+   "description": "Find registered clinical trials, including peptide and longevity drug trials you could join.",
+   "url": "https://clinicaltrials.gov/search?term=peptide"
+  },
+  {
+   "name": "FDA MedWatch",
+   "description": "Report a side effect or a bad product to the FDA.",
+   "url": "https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program"
+  },
+  {
+   "name": "FDA BeSafeRx",
+   "description": "How to tell a legitimate online pharmacy from an illegal one.",
+   "url": "https://www.fda.gov/drugs/quick-tips-buying-medicines-over-internet/besaferx-your-source-online-pharmacy-information"
+  },
+  {
+   "name": "NIH Office of Dietary Supplements",
+   "description": "Independent fact sheets on vitamins, minerals and supplements.",
+   "url": "https://ods.od.nih.gov/factsheets/list-all/"
+  },
+  {
+   "name": "Poison Control (US)",
+   "description": "24/7 help online or by phone at 1-800-222-1222.",
+   "url": "https://www.poison.org"
   }
  ],
  "apps": [
