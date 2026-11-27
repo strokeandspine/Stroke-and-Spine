@@ -1,0 +1,12 @@
+{
+  "name": "stroke-and-spine-imaging",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Find open MRI, CT, ultrasound, DEXA and X-ray slots at radiology practices, with physician, patient, medical-legal and practice portals.",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "reset": "node --disable-warning=ExperimentalWarning server/index.js --reset",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\""
+  }
+}

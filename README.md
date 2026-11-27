@@ -4,6 +4,8 @@ A direct-to-patient iPhone app for people with lower back pain. Patients track p
 
 See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LICENSING.md`](docs/LICENSING.md) for the questionnaire licences that must be in place before release, and [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) for the medical content review checklist and the video shot list.
 
+> **Also in this repo:** [`imaging/`](imaging/README.md) is a web app for finding open MRI, CT, ultrasound, DEXA and X-ray slots at radiology practices, with patient, physician, medical-legal and imaging-center portals.
+
 ## What's built (v0.2)
 
 | Area | What it does | Files |
