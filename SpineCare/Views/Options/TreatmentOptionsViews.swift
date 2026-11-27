@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-// "Offered surgery? Explore your options" — every option for a spine condition, from conservative care
+// "Offered surgery? Explore your options" — every option for a condition, from conservative care
 // to open surgery, with outcomes and side effects. Content: Core/TreatmentOptions*.swift.
 
 private let shortlistKey = "treatmentOptionsShortlist"
@@ -32,12 +32,29 @@ extension SideEffect.Severity {
 
 struct TreatmentOptionsHomeView: View {
     @AppStorage(shortlistKey) private var shortlistRaw = ""
+    @State private var query = ""
 
     var body: some View {
         List {
+            if !query.isEmpty {
+                Section("Matching conditions") {
+                    let results = TreatmentGuides.search(query)
+                    if results.isEmpty { Text("No matches. Try another word, such as the body part or operation name.").foregroundStyle(.secondary) }
+                    ForEach(results) { ConditionLinkRow(guide: $0, showSpecialty: true) }
+                }
+            } else {
+                mainSections
+            }
+        }
+        .navigationTitle("Treatment options")
+        .searchable(text: $query, prompt: "Search conditions or operations")
+    }
+
+    @ViewBuilder
+    private var mainSections: some View {
             Section {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Been offered spine surgery?", systemImage: "signpost.right.and.left").font(.title3.bold())
+                    Label("Been offered surgery?", systemImage: "signpost.right.and.left").font(.title3.bold())
                     Text("See every option for your condition — from non-operative care and injections to minimally invasive and open surgery — with how well each works and how often side effects happen.")
                         .font(.subheadline)
                     Text(TreatmentOptionsContent.disclaimer).font(.caption).foregroundStyle(.secondary)
@@ -45,19 +62,23 @@ struct TreatmentOptionsHomeView: View {
                 .padding(.vertical, 4)
             }
 
-            Section("Choose your condition") {
-                ForEach(TreatmentGuides.all) { guide in
-                    NavigationLink { ConditionGuideView(guide: guide) } label: {
-                        Label {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(guide.name).font(.body.weight(.medium))
-                                Text("\(guide.options.count) options · \(guide.alsoCalled)").font(.caption).foregroundStyle(.secondary).lineLimit(2)
+            Section {
+                ForEach(SurgicalSpecialty.allCases) { specialty in
+                    let count = TreatmentGuides.guides(for: specialty).count
+                    if count > 0 {
+                        NavigationLink { SpecialtyView(specialty: specialty) } label: {
+                            HStack {
+                                Label(specialty.label, systemImage: specialty.symbol)
+                                Spacer()
+                                Text("\(count)").foregroundStyle(.secondary)
                             }
-                        } icon: {
-                            Image(systemName: guide.symbol)
                         }
                     }
                 }
+            } header: {
+                Text("Choose a type of surgery")
+            } footer: {
+                Text("Or search above for your condition or the operation you were offered.")
             }
 
             Section("Understanding your options") {
@@ -83,12 +104,45 @@ struct TreatmentOptionsHomeView: View {
             Section {
                 Text("Treatment options content: \(TreatmentOptionsContent.version)").font(.caption).foregroundStyle(.secondary)
             }
-        }
-        .navigationTitle("Treatment options")
     }
 
     private var frequencyKey: String {
         "How often: " + FrequencyBand.allCases.reversed().map { "\($0.label) = \($0.definition)" }.joined(separator: "; ") + "."
+    }
+}
+
+struct SpecialtyView: View {
+    let specialty: SurgicalSpecialty
+
+    var body: some View {
+        List {
+            Section {
+                ForEach(TreatmentGuides.guides(for: specialty)) { ConditionLinkRow(guide: $0, showSpecialty: false) }
+            } footer: {
+                Text("Don't see your condition? More are being added. The general questions and second-opinion guidance apply to any operation.")
+            }
+        }
+        .navigationTitle(specialty.label)
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct ConditionLinkRow: View {
+    let guide: ConditionGuide
+    let showSpecialty: Bool
+
+    var body: some View {
+        NavigationLink { ConditionGuideView(guide: guide) } label: {
+            Label {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(guide.name).font(.body.weight(.medium))
+                    Text((showSpecialty ? guide.specialty.label + " · " : "") + "\(guide.options.count) options · \(guide.alsoCalled)")
+                        .font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                }
+            } icon: {
+                Image(systemName: guide.symbol)
+            }
+        }
     }
 }
 
@@ -127,7 +181,7 @@ struct TierGuideView: View {
                 }
             }
             Section {
-                Text("More invasive doesn't mean better or worse. For some conditions the simplest option works as well as surgery; for others — such as spinal cord compression — surgery is often the safest choice.")
+                Text("More invasive doesn't mean better or worse. For some conditions the simplest option works as well as surgery; for others — such as a bleeding injury, spinal cord compression or a large aneurysm — surgery is often the safest choice.")
                     .font(.footnote).foregroundStyle(.secondary)
             }
         }
@@ -155,13 +209,13 @@ struct InvasivenessDots: View {
 // MARK: - Condition
 
 struct ConditionGuideView: View {
-    let guide: SpineConditionGuide
+    let guide: ConditionGuide
 
     var body: some View {
         List {
             Section {
                 Text(guide.summary)
-                Text("Also called: \(guide.alsoCalled)").font(.caption).foregroundStyle(.secondary)
+                Text("\(guide.specialty.label) · Also called: \(guide.alsoCalled)").font(.caption).foregroundStyle(.secondary)
             }
 
             if !guide.urgentSigns.isEmpty {
@@ -266,7 +320,7 @@ struct StudyRow: View {
 // MARK: - Option detail
 
 struct OptionDetailView: View {
-    let guide: SpineConditionGuide
+    let guide: ConditionGuide
     let option: TreatmentOption
     @AppStorage(shortlistKey) private var shortlistRaw = ""
 
@@ -471,7 +525,7 @@ struct RiskBar: View {
 // MARK: - Comparison
 
 struct ComparisonView: View {
-    let guide: SpineConditionGuide
+    let guide: ConditionGuide
     @State private var measure: OutcomeMeasure = .improvement
 
     private struct Row: Identifiable {
@@ -566,11 +620,11 @@ struct ComparisonView: View {
 }
 
 struct SideBySideView: View {
-    let guide: SpineConditionGuide
+    let guide: ConditionGuide
     @State private var leftID: String
     @State private var rightID: String
 
-    init(guide: SpineConditionGuide) {
+    init(guide: ConditionGuide) {
         self.guide = guide
         _leftID = State(initialValue: guide.options.first?.id ?? "")
         _rightID = State(initialValue: guide.options.last?.id ?? "")

@@ -84,6 +84,23 @@ final class TreatmentOptionsContentTests: XCTestCase {
         }
     }
 
+    func testEverySpecialtyHasConditions() {
+        for specialty in SurgicalSpecialty.allCases {
+            XCTAssertGreaterThanOrEqual(TreatmentGuides.guides(for: specialty).count, 2, "\(specialty) has fewer than 2 conditions")
+        }
+    }
+
+    func testOptionIDsAreGloballyUniqueForShortlist() {
+        let keys = TreatmentGuides.all.flatMap { g in g.options.map { OptionShortlist.key(g, $0) } }
+        XCTAssertEqual(Set(keys).count, keys.count)
+    }
+
+    func testSearchFindsConditionsAndOperations() {
+        XCTAssertTrue(TreatmentGuides.search("microdiscectomy").contains { $0.id == "lumbar-disc-herniation" })
+        XCTAssertEqual(TreatmentGuides.search("").count, TreatmentGuides.all.count)
+        XCTAssertTrue(TreatmentGuides.search("zzzz-no-such-thing").isEmpty)
+    }
+
     func testSideEffectsSortSeriousFirst() throws {
         let option = try XCTUnwrap(TreatmentGuides.guide("lumbar-disc-herniation")?.option("microdiscectomy"))
         let sorted = option.sideEffectsByRisk

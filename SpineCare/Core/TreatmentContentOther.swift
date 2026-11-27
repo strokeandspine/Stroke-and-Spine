@@ -4,11 +4,11 @@ import Foundation
 // Percentages are approximate ranges from the cited sources and must be verified before release.
 
 extension TreatmentGuides {
-    static let otherRegions: [SpineConditionGuide] = [compressionFracture, cervicalRadiculopathy, cervicalMyelopathy, sacroiliac]
+    static let otherRegions: [ConditionGuide] = [compressionFracture, cervicalRadiculopathy, cervicalMyelopathy, sacroiliac]
 
     // MARK: - Osteoporotic vertebral compression fracture
 
-    static let compressionFracture = SpineConditionGuide(
+    static let compressionFracture = ConditionGuide(
         id: "compression-fracture",
         name: "Osteoporotic vertebral compression fracture",
         alsoCalled: "Spinal compression fracture, collapsed vertebra",
@@ -117,7 +117,7 @@ extension TreatmentGuides {
 
     // MARK: - Cervical radiculopathy
 
-    static let cervicalRadiculopathy = SpineConditionGuide(
+    static let cervicalRadiculopathy = ConditionGuide(
         id: "cervical-radiculopathy",
         name: "Cervical radiculopathy (pinched nerve in the neck)",
         alsoCalled: "Cervical disc herniation, cervical foraminal stenosis, pinched nerve",
@@ -223,7 +223,7 @@ extension TreatmentGuides {
 
     // MARK: - Cervical myelopathy
 
-    static let cervicalMyelopathy = SpineConditionGuide(
+    static let cervicalMyelopathy = ConditionGuide(
         id: "cervical-myelopathy",
         name: "Degenerative cervical myelopathy",
         alsoCalled: "Cervical spondylotic myelopathy, spinal cord compression in the neck",
@@ -311,7 +311,7 @@ extension TreatmentGuides {
 
     // MARK: - Sacroiliac joint pain
 
-    static let sacroiliac = SpineConditionGuide(
+    static let sacroiliac = ConditionGuide(
         id: "sacroiliac-joint",
         name: "Sacroiliac (SI) joint pain",
         alsoCalled: "SI joint dysfunction, sacroiliitis",

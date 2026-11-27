@@ -5,7 +5,7 @@
 > **Decisions so far**
 > - **Audience:** direct to patients (consumer app downloaded from the App Store). It is not prescribed by or tied to a clinic.
 > - **Content:** Claude drafts the medical content, exercise instructions and video scripts, and the product owner reviews them. Each item records who reviewed it, the date, and its sources, and is re-reviewed yearly.
-> - **Scope:** lower back pain and spine only. There will be no stroke module, so the app's structure is built around the spine and does not need to be condition-agnostic.
+> - **Scope:** lower back pain and spine for the tracking, exercise, medicine and history features. There will be no stroke module. **Exception (Nov 2026):** the Treatment Options guide (§9a) covers surgery in every major specialty (vascular, general, orthopedic, neurosurgery, urologic, gynecologic, ENT, eye, liver/gallbladder/pancreas, trauma, heart and chest, and children's surgery) as well as the spine. The App Store name, subtitle and description in `APP_STORE_CONNECT.md` still describe a back pain app and will need updating if this guide is promoted.
 > - **Devices:** iPhone only (iOS 17 or later). There is no iPad layout, though an Apple Watch companion is still planned for quick check-ins.
 > - **Market:** United States only at launch. This means US drug names and label doses (acetaminophen, not paracetamol), US crisis resources (988, 911), English first (Spanish is a likely second language), and US privacy and FDA rules.
 

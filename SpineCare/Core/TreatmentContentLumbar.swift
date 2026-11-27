@@ -43,11 +43,11 @@ enum SE {
 }
 
 extension TreatmentGuides {
-    static let lumbar: [SpineConditionGuide] = [discHerniation, stenosis, spondylolisthesis, chronicBackPain]
+    static let lumbar: [ConditionGuide] = [discHerniation, stenosis, spondylolisthesis, chronicBackPain]
 
     // MARK: - Lumbar disc herniation with sciatica
 
-    static let discHerniation = SpineConditionGuide(
+    static let discHerniation = ConditionGuide(
         id: "lumbar-disc-herniation",
         name: "Lumbar disc herniation with sciatica",
         alsoCalled: "Slipped disc, herniated or prolapsed disc, sciatica, lumbar radiculopathy",
@@ -226,7 +226,7 @@ extension TreatmentGuides {
 
     // MARK: - Lumbar spinal stenosis
 
-    static let stenosis = SpineConditionGuide(
+    static let stenosis = ConditionGuide(
         id: "lumbar-stenosis",
         name: "Lumbar spinal stenosis",
         alsoCalled: "Spinal stenosis, neurogenic claudication, narrowing of the spinal canal",
@@ -393,7 +393,7 @@ extension TreatmentGuides {
 
     // MARK: - Degenerative spondylolisthesis
 
-    static let spondylolisthesis = SpineConditionGuide(
+    static let spondylolisthesis = ConditionGuide(
         id: "degenerative-spondylolisthesis",
         name: "Degenerative spondylolisthesis",
         alsoCalled: "Slipped vertebra (usually at L4–L5), often with spinal stenosis",
@@ -513,7 +513,7 @@ extension TreatmentGuides {
 
     // MARK: - Chronic low back pain
 
-    static let chronicBackPain = SpineConditionGuide(
+    static let chronicBackPain = ConditionGuide(
         id: "chronic-low-back-pain",
         name: "Chronic low back pain from disc degeneration",
         alsoCalled: "Degenerative disc disease, discogenic pain, vertebrogenic pain (Modic changes), facet joint pain",
