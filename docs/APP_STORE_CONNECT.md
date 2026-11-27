@@ -6,6 +6,31 @@ You need a paid Apple Developer Program membership ($99 a year), enrolled as an 
 
 ---
 
+## 0. Join the Apple Developer Program (do this first)
+
+App Store Connect only works once your Apple ID is enrolled in the Apple Developer Program. Only you can enroll, because Apple verifies your identity, takes payment and asks you to accept a legal agreement.
+
+**Before you start**
+- An Apple ID with **two-factor authentication** turned on (iPhone Settings → [your name] → Sign-In & Security). Use the Apple ID you want to own the app long-term, ideally a business email.
+- $99 a year, paid by card.
+- Decide whether to enroll as an **individual** or an **organization**:
+
+| | Individual | Organization (recommended) |
+|---|---|---|
+| Seller name on the App Store | Your personal legal name | Your company name |
+| You need | A government photo ID | A legal entity (LLC, corporation…), a free **D-U-N-S number**, a website on the company's domain, a work email on that domain, and the legal authority to sign for the company |
+| Typical time | Same day to 2 days | 1–2 weeks (getting a D-U-N-S number can take about 5 business days) |
+| Team members | Just you | You can add colleagues and roles |
+
+**Enroll**
+1. The fastest way is the **Apple Developer** app on your iPhone (free from the App Store). Sign in, tap **Account → Enroll Now**, and follow the steps, including scanning your photo ID.
+2. Or go to https://developer.apple.com/programs/enroll/ on a computer.
+3. For an organization, Apple first checks your D-U-N-S number. If you don't have one, use Apple's free D-U-N-S lookup and request link on the enrollment page. Apple may phone you to verify the company.
+4. Pay the $99 fee and wait for the "Welcome to the Apple Developer Program" email.
+5. Sign in at https://appstoreconnect.apple.com with the same Apple ID and continue with step 1 below.
+
+While you wait, you can still build and run the app in the iPhone simulator with any Apple ID, including test purchases using the local StoreKit file.
+
 ## 1. Agreements, tax and banking
 
 App Store Connect → **Business**: accept the **Paid Applications Agreement**, then add bank and tax details. Subscriptions can't be tested in TestFlight or sold until this shows as *Active*.
