@@ -1,0 +1,50 @@
+# XcodeGen spec. On a Mac: `cd BoneHealth && brew install xcodegen && xcodegen generate`, then open BoneHealth.xcodeproj.
+name: BoneHealth
+options:
+  bundleIdPrefix: com.strokeandspine
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1" # iPhone only
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  BoneHealth:
+    type: application
+    platform: iOS
+    sources:
+      - path: BoneHealth
+    info:
+      path: BoneHealth/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "Bone Health"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+        ITSAppUsesNonExemptEncryption: false
+        NSFaceIDUsageDescription: "Use Face ID to keep your health information private."
+        NSPhotoLibraryUsageDescription: "Attach photos of DEXA scans, X-ray reports and other radiology reports to your records."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.bonehealth
+        ENABLE_PREVIEWS: true
+  BoneHealthTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: BoneHealthTests
+    dependencies:
+      - target: BoneHealth
+schemes:
+  BoneHealth:
+    build:
+      targets:
+        BoneHealth: all
+        BoneHealthTests: [test]
+    test:
+      targets:
+        - BoneHealthTests

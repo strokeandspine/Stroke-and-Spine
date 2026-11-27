@@ -4,6 +4,8 @@ A direct-to-patient iPhone app for people with lower back pain. Patients track p
 
 See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LICENSING.md`](docs/LICENSING.md) for the questionnaire licences that must be in place before release, and [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) for the medical content review checklist and the video shot list.
 
+> **Also in this repository:** [`BoneHealth/`](BoneHealth/README.md) — a separate iPhone app for people with osteoporosis or osteopenia (DEXA and radiology records, osteoporosis medicines, calcium/vitamin D/magnesium, exercise, falls and pain scores).
+
 ## What's built (v0.2)
 
 | Area | What it does | Files |
