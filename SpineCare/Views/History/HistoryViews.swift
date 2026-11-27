@@ -19,6 +19,11 @@ struct HistoryListView: View {
                         Button("Add an entry") { showingAdd = true }.buttonStyle(.borderedProminent)
                     }
                 }
+                Section {
+                    NavigationLink { TreatmentOptionsHomeView() } label: {
+                        Label("Offered surgery? Explore all your options", systemImage: "signpost.right.and.left")
+                    }
+                }
                 ForEach(HistoryKind.allCases) { kind in
                     let items = entries.filter { $0.kind == kind }
                     if !items.isEmpty {

@@ -146,6 +146,18 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
 - **Upcoming follow-ups:** reminders for post-op visits and imaging.
 - **Clinician summary:** a one-page history sorted by date that is handy for new providers and second opinions.
 
+## 9a. Treatment Options for People Offered Surgery
+
+For patients who have been offered spine surgery, a guide to every option for their condition, including ones their surgeon may not have mentioned (built in v0.3, content in draft).
+
+- **Conditions:** lumbar disc herniation with sciatica, lumbar spinal stenosis, degenerative spondylolisthesis, chronic low back pain (discogenic, vertebrogenic, facet), osteoporotic compression fracture, cervical radiculopathy, cervical myelopathy, SI joint pain.
+- **Five approach tiers:** non-operative and conservative care, interventional procedures, minimally invasive surgery, less invasive surgery, traditional open surgery.
+- **Per option:** what happens, anesthesia, hospital stay, recovery, who it suits, when it's less suitable, availability and insurance coverage, key study findings, evidence strength and sources.
+- **Side effects quantified:** each with a percentage range, a natural frequency ("about 2 to 5 in 1,000 people"), a frequency band (very common to very rare), severity (mild, moderate or serious), and a bar.
+- **Outcome comparison:** charts of meaningful improvement, serious complications and further surgery across all options, 100-person icon arrays, head-to-head trial summaries, and a side-by-side comparison of any two options.
+- **Decision support:** what happens without surgery, urgent signs where waiting is harmful, questions for the surgeon, why an option may not have been offered, second-opinion guidance, and a shareable "options to discuss" list.
+- It never recommends a treatment, and always shows the caveat that numbers come from different studies.
+
 ## 10. Dashboard, Insights & Reporting
 
 - **Home dashboard:** today's check-in, a pain trend, sleep, mood, exercise adherence, and the next scheduled task.

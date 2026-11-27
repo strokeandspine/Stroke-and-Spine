@@ -7,6 +7,9 @@ struct MoreView: View {
     var body: some View {
         NavigationStack {
             List {
+                Section("Considering surgery?") {
+                    NavigationLink { TreatmentOptionsHomeView() } label: { Label("Treatment options and outcomes", systemImage: "signpost.right.and.left") }
+                }
                 Section("Track") {
                     NavigationLink { TrendsView() } label: { Label("Trends", systemImage: "chart.xyaxis.line") }
                     NavigationLink { QuestionnaireListView() } label: { Label("Questionnaires", systemImage: "list.clipboard") }

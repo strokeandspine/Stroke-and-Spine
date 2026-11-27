@@ -12,10 +12,22 @@ All content lives in plain Swift files, so it's easy to read and edit. Change th
 | Pain "traffic light" guide and stop signs | `SpineCare/Core/ExerciseLibrary.swift` (`ExerciseContent`) | Thresholds (+2 green, +3–4 amber, +5 red) |
 | Progression rules | `SpineCare/Core/ExerciseLibrary.swift` (`RehabProgression`) | Step back if pain rises ≥3 points, an exercise hurt, or the session felt too hard. Move on after the stage's minimum sessions with the last 3 comfortable |
 | Surgery and procedure guidance | `SpineCare/Core/SpineHistoryCatalog.swift` | Recovery expectations, warning signs, NSAID-after-fusion note |
+| Treatment options (8 conditions, 46 options) | `SpineCare/Core/TreatmentContentLumbar.swift`, `SpineCare/Core/TreatmentContentOther.swift`, shared text in `SpineCare/Core/TreatmentOptions.swift` | Every percentage against its cited source; tier assignment; "best for / less suitable if"; availability and coverage statements (these change often); urgent signs; that cervical myelopathy content does not discourage timely surgery |
 | Warning signs | `SpineCare/Core/RedFlags.swift` | Questions, urgency levels, advice text, crisis numbers |
 | Medicine limits and warnings | `SpineCare/Core/MedicationSafety.swift` | Label limits, dose intervals, product presets, condition cautions |
 | Questionnaire follow-up advice | `SpineCare/Views/Questionnaires/QuestionnaireView.swift` (`followUp`) | Score cut-offs and wording |
 | Disclaimer and privacy text | `SpineCare/App/AppServices.swift` (`AppText`) | Legal review |
+
+### Checking the treatment-options numbers
+
+The outcome and side-effect figures were drafted from memory of the cited trials and reviews and **have not been checked line by line**. For each option:
+
+1. Open each source in `sources:` and confirm every number in `keyFindings`, `outcomes` and `sideEffects`. Ranges are meant to span what good studies report, not a single study.
+2. Change any figure that doesn't match, or remove it. `outcomes` values may be `nil` ("Not reported").
+3. Check `availability` against current Medicare national/local coverage decisions and major insurers.
+4. When a condition is approved, record it in the sign-off log, and when all are done change `TreatmentOptionsContent.version`.
+
+Frequency words follow the drug-leaflet convention: very common ≥1 in 10, common 1–10 in 100, uncommon 1–10 in 1,000, rare 1–10 in 10,000, very rare <1 in 10,000 (`FrequencyBand`). Severity is mild, moderate or serious (`SideEffect.Severity`).
 
 When the exercise content is approved, change `ExerciseContent.version` from "Draft 0.1 — not yet clinically reviewed" to something like "Reviewed by [name, credentials], [date]".
 
@@ -36,6 +48,7 @@ Film in priority order: the free-tier exercises first (pelvic-tilt, knee-rolls, 
 |---|---|---|---|---|
 | Exercises and programs | | | | |
 | Surgery and procedure guidance | | | | |
+| Treatment options and outcome data | | | | |
 | Warning signs | | | | |
 | Medicine limits and warnings | | | | |
 | Questionnaire advice | | | | |
