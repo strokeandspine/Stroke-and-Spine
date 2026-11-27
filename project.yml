@@ -48,7 +48,40 @@ targets:
       - path: SpineCareTests
     dependencies:
       - target: SpineCare
+  StrongerYears:
+    type: application
+    platform: iOS
+    sources:
+      - path: StrongerYears
+    info:
+      path: StrongerYears/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "Stronger Years"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.strongeryears
+        ENABLE_PREVIEWS: true
+  StrongerYearsTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: StrongerYearsTests
+    dependencies:
+      - target: StrongerYears
 schemes:
+  StrongerYears:
+    build:
+      targets:
+        StrongerYears: all
+        StrongerYearsTests: [test]
+    test:
+      targets:
+        - StrongerYearsTests
   SpineCare:
     build:
       targets:

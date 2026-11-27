@@ -22,6 +22,30 @@ See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LIC
 
 Unit tests for scoring, warning signs, medication safety and insights are in `SpineCareTests/`.
 
+## Stronger Years — strength training for older adults (second app)
+
+A separate iPhone app in the same project (target `StrongerYears`, bundle ID `com.strokeandspine.strongeryears`). It helps people aged 60+ start and keep up weight training safely. Everything is stored on the phone with SwiftData; there is no account.
+
+| Area | What it does | Files |
+|---|---|---|
+| Onboarding | Disclaimer, name, experience level (new / returning / train regularly), an 8-question "before you start" health check that recommends seeing a doctor on any "yes", training days and equipment | `StrongerYears/Views/Onboarding`, `Core/HealthCheck.swift` |
+| Weekly schedule by body part | Picks a split for 1–4 days a week (full body; A/B full body; lower / upper / full; lower / push / lower / pull). Each day can be renamed and its body parts changed. Warns when the same muscles are worked on back-to-back days, and lists body parts missing from the week | `Core/Schedule.swift`, `Views/Plan` |
+| Duration, intensity and volume | Three adjustable settings with defaults for each experience level. **Duration** 20 / 35 / 50 min, including warm-up and cool-down. **Intensity** gentle / moderate / challenging: effort 3–4, 5–6 or 7–8 out of 10, rep range and rest time. **Volume** 1–3 sets and 1–2 exercises per body part. A choice above the recommended level for the person's experience shows a caution. Settings can also be changed for one workout only | `Core/Training.swift`, `SettingsDials` in `Views/Workout/WorkoutPreviewView.swift` |
+| Workout builder | Chooses exercises for the day's body parts that match the person's experience and equipment, fits them into the time available, and rotates exercises and body-part order between sessions | `Core/WorkoutBuilder.swift` |
+| Exercise library | 41 exercises across legs, hips and glutes, back, chest, shoulders, arms and grip, core and balance. Each has steps, tips, cautions, a starting weight, and links to easier and harder versions | `Core/ExerciseCatalog.swift`, `Views/Library` |
+| Guided workout | Warm-up checklist, then one exercise at a time: log weight, reps or hold time (with a countdown timer), effort and pain. Rest timer between sets. "Make it easier" swaps in the easier version, a pain flag ends that exercise, and a "Feeling unwell" button shows stop signs and a Call 911 button. Then a cool-down with stretches for the muscles worked, and a finish screen for overall effort, how you feel and notes | `Views/Workout/WorkoutSessionView.swift` |
+| Training log | Workouts grouped by month with every set; a recovery log for sauna, cold plunge, stretching and walks (with time and temperature cautions); progress charts for each exercise | `Views/Log`, `Models/Models.swift` |
+| Progression advice | Uses the "2-for-2" idea: suggests the smallest weight step (2 lb for arms, 5 lb for legs, 5–10 lb on machines, a firmer band or a harder version) only when every set reaches the top of the rep range within the target effort. Suggests going lighter after pain or very high effort. Next session's weight is pre-filled | `Core/Progression.swift` |
+| Learn | Guides to warming up (with a routine), cooling down, stretching (13 stretches with holds and cautions), using a sauna, cold plunge, avoiding injury, and the effort scale | `Core/GuideLibrary.swift`, `Views/Learn` |
+| Senior-friendly design | Text one size larger by default (can be turned off), buttons at least 60 points tall, large +/– steppers, VoiceOver labels, and plain language | `Views/Components.swift` |
+| Settings | Equipment, health check answers, "my doctor has cleared me", JSON export, delete everything | `Views/Settings` |
+
+Unit tests for the catalog, workout builder, settings, schedule and progression rules are in `StrongerYearsTests/`. In Xcode, choose the **StrongerYears** scheme to run or test it.
+
+> **Content is a draft.** All exercise, guide and health check wording needs review by a physician and a physical therapist or exercise physiologist before release, like the back pain app's content (see `docs/CONTENT_REVIEW.md`). As with the back pain app, this code has not been compiled yet.
+
+**Not yet built for Stronger Years:** exercise videos and pictures, workout reminders, Apple Health (workouts and heart rate), Apple Watch, metric (kg) units, a printable report for the doctor, and a Premium subscription.
+
 ## Build and run (requires a Mac)
 
 1. Install Xcode 15 or later and [XcodeGen](https://github.com/yonaskolb/XcodeGen): `brew install xcodegen`
