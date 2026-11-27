@@ -1,0 +1,358 @@
+<title>BioStack</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky top bar with view tabs; single column of instrument-panel sections, two columns on wide screens. */
+:root {
+  --bg: #f3f6f5; --surface: #ffffff; --ink: #13201c; --muted: #5b6b66; --line: #d9e2df;
+  --accent: #0b6e63; --accent-soft: #dcefeb; --warn: #a15c00; --warn-soft: #fbefdc; --bad: #b42318;
+  --ev-a: #0b6e63; --ev-b: #3d7f2a; --ev-c: #8a6d00; --ev-d: #8a8f8d;
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d1513; --surface: #15201d; --ink: #e6efec; --muted: #93a6a0; --line: #273632;
+  --accent: #4fc7b5; --accent-soft: #173a34; --warn: #e5a54a; --warn-soft: #3a2a12; --bad: #f07a6e;
+  --ev-a: #4fc7b5; --ev-b: #8fcf73; --ev-c: #e1c04f; --ev-d: #8d9894; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d1513; --surface: #15201d; --ink: #e6efec; --muted: #93a6a0; --line: #273632;
+  --accent: #4fc7b5; --accent-soft: #173a34; --warn: #e5a54a; --warn-soft: #3a2a12; --bad: #f07a6e;
+  --ev-a: #4fc7b5; --ev-b: #8fcf73; --ev-c: #e1c04f; --ev-d: #8d9894; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 10px; }
+.brand { font: 800 1.35rem/1 var(--display); letter-spacing: -.02em; display: flex; gap: 8px; align-items: center; }
+.brand i { width: 12px; height: 22px; border-radius: 6px; background: linear-gradient(var(--accent) 50%, var(--ev-c) 50%); display: inline-block; }
+nav { display: flex; gap: 4px; overflow-x: auto; flex: 1; min-width: 0; }
+nav a { padding: 6px 12px; border-radius: 999px; color: var(--muted); text-decoration: none; font-weight: 500; white-space: nowrap; }
+nav a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); }
+main { padding-block: 24px 64px; display: grid; gap: 24px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -.01em; }
+h1 { font-size: 1.9rem; font-weight: 800; } h2 { font-size: 1.2rem; font-weight: 600; } h3 { font-size: 1rem; font-weight: 600; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.eyebrow { font: 500 .72rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
+.grid2 { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.notice { background: var(--warn-soft); color: var(--ink); border-radius: 10px; padding: 12px 14px; font-size: .9rem; border-left: 4px solid var(--warn); }
+button, .btn { font: 500 .9rem var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 12px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input, select, textarea { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; width: 100%; min-width: 0; }
+label { display: grid; gap: 4px; font-size: .85rem; color: var(--muted); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+.row > * { flex: 1 1 140px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { font-size: .8rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.ev { font: 600 .72rem/1 var(--mono); padding: 4px 6px; border-radius: 4px; color: var(--surface); flex: none; }
+.ev-A { background: var(--ev-a); } .ev-B { background: var(--ev-b); } .ev-C { background: var(--ev-c); } .ev-D { background: var(--ev-d); }
+.ev-Rx { background: var(--ink); }
+.list { display: grid; gap: 0; }
+.item { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 10px 4px; border-top: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-bottom: 0; border-radius: 0; text-align: left; width: 100%; }
+.item:hover { background: var(--accent-soft); }
+.item .sub { font-size: .82rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item > div { min-width: 0; }
+.dose { font: .82rem var(--mono); color: var(--muted); text-align: right; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.check { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+.check input[type=checkbox] { width: 22px; height: 22px; accent-color: var(--accent); }
+.dots { display: flex; gap: 3px; }
+.dots span { width: 9px; height: 9px; border-radius: 2px; background: var(--line); }
+.dots span.on { background: var(--accent); }
+.goals { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.goal { text-align: left; display: grid; gap: 6px; padding: 14px; border-radius: 12px; }
+.goal b { font: 600 1rem var(--display); }
+.goal .n { font: .8rem var(--mono); color: var(--muted); }
+.bars { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--line); }
+.bars span { display: block; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+.tablewrap { overflow-x: auto; }
+th, td { text-align: left; padding: 8px 6px; border-top: 1px solid var(--line); vertical-align: top; }
+th { font: 500 .72rem var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.num { font-variant-numeric: tabular-nums; font-family: var(--mono); }
+.apps { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
+.app { display: grid; gap: 4px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none; }
+.app:hover { border-color: var(--accent); }
+.app .cat { font: .72rem var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+dialog { border: 1px solid var(--line); border-radius: 14px; padding: 0; width: min(640px, calc(100vw - 32px)); background: var(--surface); color: var(--ink); }
+dialog::backdrop { background: rgb(0 0 0 / .45); }
+.dlg { padding: 20px; display: grid; gap: 14px; max-height: 85vh; overflow-y: auto; }
+.facts { display: grid; grid-template-columns: 120px 1fr; gap: 8px 14px; font-size: .92rem; }
+.facts dt { color: var(--muted); font: .78rem var(--mono); text-transform: uppercase; letter-spacing: .05em; padding-top: 3px; }
+.facts dd { margin: 0; }
+@media (max-width: 480px) { .facts { grid-template-columns: 1fr; } .facts dd { margin-bottom: 6px; } .dose { display: none; } }
+.spark { width: 120px; height: 32px; }
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-size: .9rem; z-index: 20; }
+.empty { padding: 18px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+@media (prefers-reduced-motion: no-preference) { .item, .chip, nav a { transition: background .15s; } }
+</style>
+
+<header><div class="wrap bar">
+  <div class="brand"><i></i>BioStack</div>
+  <nav aria-label="Views">
+    <a href="#today">Today</a><a href="#library">Library</a><a href="#goals">Goals</a><a href="#labs">Labs</a><a href="#log">Log</a><a href="#apps">Data apps</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="view"></main>
+
+<dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const CATALOG = __CATALOG__;
+const GOALS = Object.fromEntries(CATALOG.goals.map(g => [g.id, g]));
+const ALL = [...CATALOG.supplements, ...CATALOG.clinical];
+const BYID = Object.fromEntries(ALL.map(c => [c.id, c]));
+const EV_TEXT = { A: "Strong evidence", B: "Moderate evidence", C: "Limited or mixed evidence", D: "Weak or mostly preclinical evidence" };
+const LAB_MARKERS = ["25(OH) Vitamin D","ApoB","LDL-C","HDL-C","Triglycerides","Lp(a)","HbA1c","Fasting glucose","Fasting insulin","hs-CRP","Ferritin","Vitamin B12","Homocysteine","TSH","Free T4","Total testosterone","Estradiol","Haematocrit","Hemoglobin","ALT","AST","eGFR","Creatinine","Cystatin C","Uric acid","Omega-3 index","Resting heart rate","HRV (rMSSD)","VO2 max","Body fat %","Lean mass","Weight","Blood pressure (systolic)","Grip strength","Biological age (epigenetic)"];
+
+// ---------- storage ----------
+const KEY = "biostack.v1";
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.stack) return s; } catch {} return null; }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} }
+const today = () => new Date().toISOString().slice(0, 10);
+const daysAgo = n => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
+function seed() {
+  const mk = (id, dose, time) => ({ uid: crypto.randomUUID(), itemId: id, name: BYID[id].name, dose, time, example: true });
+  const stack = [mk("creatine-monohydrate", "5 g", "08:00"), mk("vitamin-d3", "2,000 IU", "08:00"), mk("omega-3-epa-dha", "2 g EPA+DHA", "12:30"), mk("magnesium-glycinate", "300 mg", "21:30")];
+  const log = [];
+  for (let d = 1; d <= 6; d++) stack.forEach((s, i) => { if ((d + i) % 5) log.push({ uid: crypto.randomUUID(), stackUid: s.uid, name: s.name, dose: s.dose, date: daysAgo(d), time: s.time, note: "", example: true }); });
+  const labs = [
+    { uid: crypto.randomUUID(), marker: "25(OH) Vitamin D", value: 24, unit: "ng/mL", date: daysAgo(150), example: true },
+    { uid: crypto.randomUUID(), marker: "25(OH) Vitamin D", value: 38, unit: "ng/mL", date: daysAgo(60), example: true },
+    { uid: crypto.randomUUID(), marker: "25(OH) Vitamin D", value: 46, unit: "ng/mL", date: daysAgo(5), example: true },
+    { uid: crypto.randomUUID(), marker: "Omega-3 index", value: 4.8, unit: "%", date: daysAgo(150), example: true },
+    { uid: crypto.randomUUID(), marker: "Omega-3 index", value: 7.9, unit: "%", date: daysAgo(5), example: true },
+  ];
+  return { stack, log, labs, effects: [], examples: true };
+}
+let state = load() || seed();
+
+// ---------- helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2200); }
+const evBadge = c => c.kind === "clinical" ? `<span class="ev ev-Rx" title="Clinical / prescription reference">Rx</span>` : `<span class="ev ev-${c.evidence}" title="${EV_TEXT[c.evidence]}">${c.evidence}</span>`;
+const goalChips = ids => ids.map(g => `<a class="chip" href="#library" data-goal="${g}">${esc(GOALS[g].name)}</a>`).join("");
+function clearExamples() {
+  state.stack = state.stack.filter(x => !x.example); state.log = state.log.filter(x => !x.example);
+  state.labs = state.labs.filter(x => !x.example); state.examples = false; save(); render(); toast("Example data removed");
+}
+const exampleBanner = () => state.examples ? `<div class="notice row" style="align-items:center"><span style="flex:3 1 260px">You're looking at <b>example data</b> so you can see how tracking works. Clear it when you're ready to start your own.</span><button id="clearEx" style="flex:0 0 auto">Clear example data</button></div>` : "";
+
+// ---------- views ----------
+const filters = { q: "", kind: "all", goal: null, ev: "all" };
+
+function viewToday() {
+  const t = today();
+  const taken = new Set(state.log.filter(l => l.date === t).map(l => l.stackUid));
+  const sorted = [...state.stack].sort((a, b) => a.time.localeCompare(b.time));
+  const last7 = [...Array(7)].map((_, i) => daysAgo(6 - i));
+  const rows = sorted.map(s => {
+    const dots = last7.map(d => `<span class="${state.log.some(l => l.stackUid === s.uid && l.date === d) ? "on" : ""}" title="${d}"></span>`).join("");
+    return `<div class="check"><input type="checkbox" id="tk-${s.uid}" data-take="${s.uid}" ${taken.has(s.uid) ? "checked" : ""} aria-label="Taken: ${esc(s.name)}">
+      <label for="tk-${s.uid}" style="color:var(--ink);font-size:.95rem"><b style="font-weight:600">${esc(s.name)}</b><span class="muted" style="font-size:.82rem">${esc(s.dose)} · ${esc(s.time)}</span></label>
+      <div class="dots" aria-label="Last 7 days">${dots}</div></div>`;
+  }).join("") || `<div class="empty">Your stack is empty. Add items from the <a href="#library">Library</a>.</div>`;
+  const doneN = sorted.filter(s => taken.has(s.uid)).length;
+  const adherence = state.stack.length ? Math.round(100 * state.log.filter(l => last7.includes(l.date) && state.stack.some(s => s.uid === l.stackUid)).length / (state.stack.length * 7)) : 0;
+  return `${exampleBanner()}
+  <div><p class="eyebrow">${new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}</p><h1>Today's stack</h1></div>
+  <div class="grid2">
+    <section class="panel"><div class="row" style="align-items:center"><h2 style="flex:2">Scheduled</h2><span class="muted" style="flex:0 0 auto;font-family:var(--mono)">${doneN}/${sorted.length} taken · 7-day ${adherence}%</span></div>
+      <div>${rows}</div>
+      <div class="row"><button data-manage>Edit stack</button><a class="btn" href="#library">Add from library</a></div></section>
+    <section class="panel"><h2>Log something else</h2>
+      <p class="muted" style="font-size:.9rem">Record any item, including prescriptions your clinician manages. Enter the dose you were actually given.</p>
+      <form id="quick" class="row" style="display:grid;gap:10px">
+        <label>Item<input id="qName" list="allNames" required placeholder="e.g. Electrolytes"></label>
+        <div class="row"><label>Dose<input id="qDose" placeholder="e.g. 500 mg sodium"></label><label>Time<input id="qTime" type="time"></label></div>
+        <label>Notes or side effects<input id="qNote" placeholder="Optional"></label>
+        <button class="primary" type="submit">Add to log</button>
+      </form>
+      <datalist id="allNames">${ALL.map(c => `<option value="${esc(c.name)}">`).join("")}</datalist>
+    </section>
+  </div>
+  <section class="panel"><h2>Side effects & how you feel</h2>
+    <form id="fx" class="row"><label style="flex:3 1 240px">What happened<input id="fxText" required placeholder="e.g. Tingling 20 minutes after beta-alanine"></label>
+      <label style="flex:1 1 120px">Severity<select id="fxSev"><option>Mild</option><option>Moderate</option><option>Severe</option></select></label>
+      <button type="submit" style="flex:0 0 auto">Record</button></form>
+    ${state.effects.length ? `<div class="tablewrap"><table><tr><th>Date</th><th>Note</th><th>Severity</th></tr>${state.effects.slice(-6).reverse().map(e => `<tr><td class="num">${e.date}</td><td>${esc(e.text)}</td><td>${e.sev}</td></tr>`).join("")}</table></div>` : `<p class="muted" style="font-size:.9rem">Nothing recorded. Severe or worrying symptoms: stop and contact a clinician. In the US call 911 for emergencies or Poison Control on 1-800-222-1222.</p>`}
+  </section>`;
+}
+
+function filtered() {
+  const q = filters.q.toLowerCase();
+  return ALL.filter(c => (filters.kind === "all" || c.kind === filters.kind)
+    && (!filters.goal || c.goals.includes(filters.goal))
+    && (filters.ev === "all" || c.evidence === filters.ev)
+    && (!q || (c.name + " " + c.category + " " + (c.notes || c.uses || "")).toLowerCase().includes(q)));
+}
+function viewLibrary() {
+  const items = filtered();
+  const kindBtn = (k, label) => `<button class="chip" data-kind="${k}" aria-pressed="${filters.kind === k}">${label}</button>`;
+  const evBtn = (e, label) => `<button class="chip" data-ev="${e}" aria-pressed="${filters.ev === e}">${label}</button>`;
+  return `<div><p class="eyebrow">${CATALOG.supplements.length} supplements · ${CATALOG.clinical.length} clinical references</p><h1>Library</h1></div>
+  <section class="panel">
+    <label>Search<input id="q" type="search" value="${esc(filters.q)}" placeholder="Name, category or keyword"></label>
+    <div class="chips">${kindBtn("all", "Everything")}${kindBtn("supplement", "Supplements")}${kindBtn("clinical", "Prescription & clinical")}</div>
+    <div class="chips">${evBtn("all", "Any evidence")}${["A", "B", "C", "D"].map(e => evBtn(e, `Grade ${e}`)).join("")}</div>
+    <div class="chips"><span class="eyebrow" style="align-self:center">Goal</span>${CATALOG.goals.map(g => `<button class="chip" data-goalf="${g.id}" aria-pressed="${filters.goal === g.id}">${esc(g.name)}</button>`).join("")}</div>
+    <div class="legend"><span><i class="ev ev-A">A</i>Strong</span><span><i class="ev ev-B">B</i>Moderate</span><span><i class="ev ev-C">C</i>Limited</span><span><i class="ev ev-D">D</i>Weak</span><span><i class="ev ev-Rx">Rx</i>Clinician-managed, reference only</span></div>
+  </section>
+  <section class="panel"><p class="muted" style="font-size:.85rem">${items.length} result${items.length === 1 ? "" : "s"}</p>
+    <div class="list">${items.map(c => `<button class="item" data-open="${c.id}">${evBadge(c)}<div><b style="font-weight:600">${esc(c.name)}</b><div class="sub">${esc(c.category)} · ${c.goals.map(g => GOALS[g].name).join(", ")}</div></div><span class="dose">${esc(c.kind === "clinical" ? c.status : c.dose)}</span></button>`).join("") || `<div class="empty">No matches. Try removing a filter.</div>`}</div>
+  </section>`;
+}
+
+function detail(c) {
+  const inStack = state.stack.some(s => s.itemId === c.id);
+  const facts = c.kind === "supplement"
+    ? [["Typical dose", c.dose], ["Timing", c.timing], ["Evidence", `Grade ${c.evidence}: ${EV_TEXT[c.evidence]}`], ["Notes & cautions", c.notes]]
+    : [["Status", c.status], ["Approved uses", c.uses], ["How it works", c.mechanism], ["Evidence", c.evidence_text], ["Key risks", c.risks], ["Labs to monitor", c.labs], ["Dosing", "Set by your prescribing clinician. BioStack doesn't provide doses for prescription or clinical compounds."]];
+  return `<div class="row" style="align-items:center">${evBadge(c)}<h2 style="flex:5">${esc(c.name)}</h2><button data-close style="flex:0 0 auto" aria-label="Close">Close</button></div>
+    <p class="eyebrow">${esc(c.category)}</p>
+    <dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
+    <div><p class="eyebrow" style="margin-bottom:8px">Linked goals</p><div class="chips">${goalChips(c.goals)}</div></div>
+    <form id="addStack" class="panel" style="background:var(--bg)">
+      <h3>${inStack ? "Add another schedule" : "Add to my stack"}</h3>
+      <div class="row"><label>Dose you take<input id="asDose" required placeholder="${c.kind === "supplement" ? "e.g. " + esc(c.dose.split(",")[0]) : "As prescribed"}"></label>
+      <label>Time<input id="asTime" type="time" value="08:00" required></label></div>
+      <button class="primary" type="submit">Add to stack</button>
+    </form>
+    <p class="muted" style="font-size:.8rem">General information, not medical advice. Check with a clinician before starting anything, especially if you take medication, are pregnant, or have a health condition. Choose third-party tested products (NSF Certified for Sport, Informed Sport, USP).</p>`;
+}
+
+function viewGoals() {
+  return `<div><p class="eyebrow">${CATALOG.goals.length} goals</p><h1>Goals</h1><p class="muted">Each compound is linked to the goals it has been studied for. Bars show the evidence mix.</p></div>
+  <div class="goals">${CATALOG.goals.map(g => {
+    const items = ALL.filter(c => c.goals.includes(g.id));
+    const counts = ["A", "B", "C", "D"].map(e => items.filter(c => c.evidence === e).length);
+    const rx = items.filter(c => c.kind === "clinical").length;
+    const tot = items.length || 1;
+    const top = items.filter(c => c.evidence === "A" || c.evidence === "B").slice(0, 4).map(c => c.name).join(", ");
+    return `<button class="goal panel" data-goalview="${g.id}"><b>${esc(g.name)}</b><span class="n">${items.length - rx} supplements · ${rx} clinical</span>
+      <div class="bars">${counts.map((n, i) => `<span style="width:${100 * n / tot}%;background:var(--ev-${"abcd"[i]})"></span>`).join("")}<span style="width:${100 * rx / tot}%;background:var(--ink)"></span></div>
+      <span class="muted" style="font-size:.82rem">${top ? "Best supported: " + esc(top) : "Evidence is limited for this goal."}</span></button>`;
+  }).join("")}</div>`;
+}
+
+function spark(vals) {
+  if (vals.length < 2) return "";
+  const min = Math.min(...vals), max = Math.max(...vals), r = max - min || 1;
+  const pts = vals.map((v, i) => [4 + i * 112 / (vals.length - 1), 28 - 24 * (v - min) / r]);
+  const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+  const [lx, ly] = pts[pts.length - 1];
+  return `<svg class="spark" viewBox="0 0 120 32" aria-hidden="true"><path d="${d} L${lx} 30 L4 30Z" fill="var(--accent-soft)"/><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6"/><circle cx="${lx}" cy="${ly}" r="2.6" fill="var(--accent)"/></svg>`;
+}
+function viewLabs() {
+  const by = {};
+  [...state.labs].sort((a, b) => a.date.localeCompare(b.date)).forEach(l => (by[l.marker] ||= []).push(l));
+  const markers = Object.keys(by);
+  return `${exampleBanner()}<div><p class="eyebrow">Biomarkers</p><h1>Labs & measurements</h1><p class="muted">Track blood work and body metrics next to what you take, so you can see whether a change is doing anything.</p></div>
+  <section class="panel"><h2>Add a result</h2>
+    <form id="labForm" class="row"><label style="flex:2 1 200px">Marker<input id="lMarker" list="markers" required placeholder="e.g. ApoB"></label>
+    <label>Value<input id="lValue" type="number" step="any" required></label><label>Unit<input id="lUnit" placeholder="mg/dL"></label>
+    <label>Date<input id="lDate" type="date" value="${today()}" required></label><button class="primary" type="submit" style="flex:0 0 auto">Add</button></form>
+    <datalist id="markers">${LAB_MARKERS.map(m => `<option value="${m}">`).join("")}</datalist>
+  </section>
+  <section class="panel"><h2>Trends</h2>${markers.length ? `<div class="tablewrap"><table><tr><th>Marker</th><th>Latest</th><th>Change</th><th>Trend</th><th>Results</th></tr>${markers.map(m => {
+    const r = by[m], last = r[r.length - 1], first = r[0];
+    const ch = r.length > 1 ? (last.value - first.value) : null;
+    return `<tr><td><b style="font-weight:600">${esc(m)}</b></td><td class="num">${last.value} ${esc(last.unit)}<br><span class="muted">${last.date}</span></td><td class="num">${ch === null ? "–" : (ch > 0 ? "+" : "") + +ch.toFixed(2)}</td><td>${spark(r.map(x => x.value))}</td><td class="num">${r.length}</td></tr>`;
+  }).join("")}</table></div>` : `<div class="empty">No results yet. Add your first above, or import from a lab service in <a href="#apps">Data apps</a>.</div>`}</section>`;
+}
+
+function viewLog() {
+  const rows = [...state.log].sort((a, b) => (b.date + b.time).localeCompare(a.date + a.time));
+  return `${exampleBanner()}<div><p class="eyebrow">${rows.length} entries</p><h1>Dose log</h1></div>
+  <section class="panel">${rows.length ? `<div class="tablewrap"><table><tr><th>Date</th><th>Time</th><th>Item</th><th>Dose</th><th>Note</th><th></th></tr>${rows.slice(0, 200).map(l => `<tr><td class="num">${l.date}</td><td class="num">${esc(l.time || "")}</td><td>${esc(l.name)}</td><td>${esc(l.dose)}</td><td>${esc(l.note)}</td><td><button data-dellog="${l.uid}" aria-label="Delete entry">Delete</button></td></tr>`).join("")}</table></div>` : `<div class="empty">Nothing logged yet. Tick items on <a href="#today">Today</a> to log them.</div>`}
+  <div class="row"><button id="exportBtn">Copy my data (JSON)</button><button id="wipeBtn">Delete all my data</button></div>
+  <textarea id="exportBox" rows="6" hidden readonly></textarea>
+  <p class="muted" style="font-size:.82rem">Your data stays in this browser. Nothing is sent anywhere.</p></section>`;
+}
+
+function viewApps() {
+  const cats = [...new Set(CATALOG.apps.map(a => a.category))];
+  return `<div><p class="eyebrow">${CATALOG.apps.length} services</p><h1>Data apps</h1><p class="muted">Wearables, glucose monitors, lab tests and training logs that measure what your stack is supposed to change. Most sync into Apple Health, which the BioStack iPhone app reads.</p></div>
+  <div class="apps">${CATALOG.apps.map(a => `<a class="app" href="${a.url}" target="_blank" rel="noopener"><span class="cat">${esc(a.category)}</span><b style="font-family:var(--display);font-weight:600">${esc(a.name)}</b><span class="muted" style="font-size:.88rem">${esc(a.description)}</span></a>`).join("")}</div>
+  <p class="muted" style="font-size:.8rem">BioStack isn't affiliated with these services. Links open their own websites.</p>`;
+}
+
+function manageStack() {
+  $("#dlgBody").innerHTML = `<div class="row" style="align-items:center"><h2 style="flex:5">Edit stack</h2><button data-close style="flex:0 0 auto">Done</button></div>
+  ${state.stack.length ? state.stack.map(s => `<div class="row" style="align-items:end"><label style="flex:2 1 160px">${esc(s.name)}<input data-sdose="${s.uid}" value="${esc(s.dose)}"></label><label style="flex:1 1 90px">Time<input type="time" data-stime="${s.uid}" value="${s.time}"></label><button data-sdel="${s.uid}" style="flex:0 0 auto">Remove</button></div>`).join("") : `<div class="empty">Nothing in your stack.</div>`}`;
+  $("#dlg").showModal();
+}
+
+// ---------- routing & events ----------
+const VIEWS = { today: viewToday, library: viewLibrary, goals: viewGoals, labs: viewLabs, log: viewLog, apps: viewApps };
+function route() { const h = location.hash.slice(1); return VIEWS[h] ? h : "today"; }
+function render() {
+  const r = route();
+  document.querySelectorAll("nav a").forEach(a => a.getAttribute("href") === "#" + r ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  $("#view").innerHTML = VIEWS[r]();
+  if (r === "library") { const q = $("#q"); q.oninput = () => { filters.q = q.value; const pos = q.selectionStart; render(); const nq = $("#q"); nq.focus(); nq.setSelectionRange(pos, pos); }; }
+}
+function openItem(id) { $("#dlgBody").innerHTML = detail(BYID[id]); $("#dlg").showModal(); $("#dlgBody").dataset.item = id; }
+
+document.addEventListener("click", e => {
+  const t = e.target.closest("button, a, input[type=checkbox]"); if (!t) return;
+  if (t.matches("[data-open]")) openItem(t.dataset.open);
+  else if (t.matches("[data-close]")) $("#dlg").close();
+  else if (t.matches("[data-kind]")) { filters.kind = t.dataset.kind; render(); }
+  else if (t.matches("[data-ev]")) { filters.ev = t.dataset.ev; render(); }
+  else if (t.matches("[data-goalf]")) { filters.goal = filters.goal === t.dataset.goalf ? null : t.dataset.goalf; render(); }
+  else if (t.matches("[data-goalview], [data-goal]")) { e.preventDefault(); filters.goal = t.dataset.goalview || t.dataset.goal; filters.kind = "all"; filters.ev = "all"; filters.q = ""; if ($("#dlg").open) $("#dlg").close(); location.hash === "#library" ? render() : (location.hash = "library"); }
+  else if (t.matches("[data-take]")) {
+    const s = state.stack.find(x => x.uid === t.dataset.take), d = today();
+    if (t.checked) state.log.push({ uid: crypto.randomUUID(), stackUid: s.uid, name: s.name, dose: s.dose, date: d, time: new Date().toTimeString().slice(0, 5), note: "" });
+    else state.log = state.log.filter(l => !(l.stackUid === s.uid && l.date === d));
+    save(); render();
+  }
+  else if (t.matches("[data-manage]")) manageStack();
+  else if (t.matches("[data-sdel]")) { state.stack = state.stack.filter(s => s.uid !== t.dataset.sdel); save(); manageStack(); render(); }
+  else if (t.matches("[data-dellog]")) { state.log = state.log.filter(l => l.uid !== t.dataset.dellog); save(); render(); }
+  else if (t.id === "clearEx") clearExamples();
+  else if (t.id === "exportBtn") {
+    const box = $("#exportBox"), txt = JSON.stringify(state, null, 1); box.value = txt; box.hidden = false;
+    navigator.clipboard?.writeText(txt).then(() => toast("Copied to clipboard"), () => { box.select(); toast("Select and copy the text below"); });
+  }
+  else if (t.id === "wipeBtn") {
+    if (t.dataset.armed) { state = { stack: [], log: [], labs: [], effects: [], examples: false }; save(); render(); toast("All data deleted"); }
+    else { t.dataset.armed = "1"; t.textContent = "Tap again to delete everything"; t.style.color = "var(--bad)"; }
+  }
+});
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.matches("[data-sdose]")) { state.stack.find(s => s.uid === t.dataset.sdose).dose = t.value; save(); render(); }
+  if (t.matches("[data-stime]")) { state.stack.find(s => s.uid === t.dataset.stime).time = t.value; save(); render(); }
+});
+document.addEventListener("submit", e => {
+  e.preventDefault(); const f = e.target;
+  if (f.id === "addStack") {
+    const c = BYID[$("#dlgBody").dataset.item];
+    state.stack.push({ uid: crypto.randomUUID(), itemId: c.id, name: c.name, dose: $("#asDose").value, time: $("#asTime").value });
+    save(); $("#dlg").close(); render(); toast(`${c.name} added to your stack`);
+  } else if (f.id === "quick") {
+    state.log.push({ uid: crypto.randomUUID(), stackUid: null, name: $("#qName").value, dose: $("#qDose").value, date: today(), time: $("#qTime").value || new Date().toTimeString().slice(0, 5), note: $("#qNote").value });
+    save(); render(); toast("Logged");
+  } else if (f.id === "fx") {
+    state.effects.push({ date: today(), text: $("#fxText").value, sev: $("#fxSev").value }); save(); render(); toast("Recorded");
+  } else if (f.id === "labForm") {
+    state.labs.push({ uid: crypto.randomUUID(), marker: $("#lMarker").value, value: parseFloat($("#lValue").value), unit: $("#lUnit").value, date: $("#lDate").value });
+    save(); render(); toast("Result added");
+  }
+});
+$("#dlg").addEventListener("click", e => { if (e.target.id === "dlg") e.target.close(); });
+window.addEventListener("hashchange", render);
+render();
+</script>

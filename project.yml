@@ -48,6 +48,33 @@ targets:
       - path: SpineCareTests
     dependencies:
       - target: SpineCare
+  BioStack:
+    type: application
+    platform: iOS
+    sources:
+      - path: BioStack
+        excludes:
+          - "tools/**"
+          - "web/**"
+    info:
+      path: BioStack/Info.plist
+      properties:
+        CFBundleDisplayName: "BioStack"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+        NSHealthShareUsageDescription: "BioStack reads sleep, HRV, resting heart rate, VO2 max, weight, body fat and glucose from Apple Health so you can see them next to what you take. Your data stays on your iPhone."
+        NSHealthUpdateUsageDescription: "BioStack does not write to Apple Health."
+    entitlements:
+      path: BioStack/BioStack.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.biostack
+        MARKETING_VERSION: "0.1.0"
 schemes:
   SpineCare:
     build:
@@ -59,3 +86,7 @@ schemes:
     test:
       targets:
         - SpineCareTests
+  BioStack:
+    build:
+      targets:
+        BioStack: all
