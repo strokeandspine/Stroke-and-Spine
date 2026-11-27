@@ -1,0 +1,123 @@
+[
+  {
+    "id": "strength-gain",
+    "title": "Strength Gain",
+    "subtitle": "35 g+ protein, 30%+ of calories from protein",
+    "symbol": "dumbbell.fill",
+    "colorHex": "#C2410C",
+    "sort": "proteinDesc",
+    "summary": "Protein-dense blends to help you build and keep muscle. Most include creatine or leucine-rich whey.",
+    "guidance": "Aim for roughly 0.7–1 g of protein per pound of body weight a day, spread over 3–5 meals. A smoothie with 35–45 g covers one of those meals. Creatine monohydrate at 3–5 g a day is the most studied supplement for strength; timing matters less than taking it daily.",
+    "rules": { "minProtein": 35, "minProteinPercent": 30 }
+  },
+  {
+    "id": "weight-gain",
+    "title": "Weight Gain",
+    "subtitle": "550 kcal+ with 30 g+ protein",
+    "symbol": "scalemass.fill",
+    "colorHex": "#7C3AED",
+    "sort": "kcalDesc",
+    "summary": "Calorie-dense but whole-food based: oats, nut butters, fruit and dairy rather than sugar.",
+    "guidance": "A surplus of about 250–500 kcal a day supports lean weight gain. Drinking one of these between meals adds calories without making you too full for your next meal.",
+    "rules": { "minKcal": 550, "minProtein": 30 }
+  },
+  {
+    "id": "fat-loss",
+    "title": "Fat Loss",
+    "subtitle": "350 kcal or less, 25 g+ protein, 5 g+ fiber",
+    "symbol": "flame.fill",
+    "colorHex": "#DC2626",
+    "sort": "proteinDensity",
+    "summary": "High protein and fiber keep you full on fewer calories. Vegetables add volume you won't taste.",
+    "guidance": "Protein and fiber are the two most filling nutrients. Frozen cauliflower, zucchini and spinach thicken a smoothie for almost no calories. Use these as a meal replacement, not on top of meals.",
+    "rules": { "maxKcal": 350, "minProtein": 25, "minFiber": 5 }
+  },
+  {
+    "id": "low-calorie",
+    "title": "Low Calorie",
+    "subtitle": "250 kcal or less, still 15 g+ protein",
+    "symbol": "leaf.fill",
+    "colorHex": "#16A34A",
+    "sort": "kcalAsc",
+    "summary": "Light snacks that still deliver protein, so they hold you over.",
+    "guidance": "Good as a snack or alongside a small meal. Ice and frozen fruit give a thick texture without adding calories.",
+    "rules": { "maxKcal": 250, "minProtein": 15 }
+  },
+  {
+    "id": "high-calorie",
+    "title": "High Calorie",
+    "subtitle": "650 kcal+ with 30 g+ protein",
+    "symbol": "bolt.batteryblock.fill",
+    "colorHex": "#9333EA",
+    "sort": "kcalDesc",
+    "summary": "Full meals in a glass for hard training days, hard gainers and endurance athletes.",
+    "guidance": "These are meal-sized. If one feels like too much, split it into two servings across the day.",
+    "rules": { "minKcal": 650, "minProtein": 30 }
+  },
+  {
+    "id": "energy",
+    "title": "Increased Energy",
+    "subtitle": "30 g+ carbs plus natural caffeine or nitrates",
+    "symbol": "sun.max.fill",
+    "colorHex": "#CA8A04",
+    "sort": "carbsDesc",
+    "summary": "Steady carbs paired with coffee, matcha, green tea or beets for a lift without a crash.",
+    "guidance": "Most healthy adults can have up to 400 mg of caffeine a day. A cup of cold brew has roughly 100–200 mg and a teaspoon of matcha about 70 mg. Skip caffeine within 8 hours of bedtime, and avoid it if you are pregnant or have been told to limit it.",
+    "rules": { "minCarbs": 30, "requiresAnyHighlight": ["Natural caffeine", "Nitrates"] }
+  },
+  {
+    "id": "low-carb",
+    "title": "Low Carb",
+    "subtitle": "15 g or less net carbs, 20 g+ protein",
+    "symbol": "chart.bar.doc.horizontal.fill",
+    "colorHex": "#0F766E",
+    "sort": "netCarbsAsc",
+    "summary": "Berries, avocado, greens and protein. Net carbs are total carbs minus fiber.",
+    "guidance": "If you follow a strict ketogenic diet, check the net carbs against your own daily limit. Avocado and nut butters make these creamy without fruit sugar.",
+    "rules": { "maxNetCarbs": 15, "minProtein": 20 }
+  },
+  {
+    "id": "high-carb",
+    "title": "High Carb",
+    "subtitle": "65 g+ carbs, 15 g or less fat",
+    "symbol": "takeoutbag.and.cup.and.straw.fill",
+    "colorHex": "#EA580C",
+    "sort": "carbsDesc",
+    "summary": "For carb-loading, endurance days and refilling glycogen, from fruit, oats and dates.",
+    "guidance": "Endurance athletes often need 5–10 g of carbs per kg of body weight a day on heavy training days. Lower fat keeps these quick to digest.",
+    "rules": { "minCarbs": 65, "maxFat": 15 }
+  },
+  {
+    "id": "pre-workout",
+    "title": "Pre-Workout",
+    "subtitle": "30 g+ carbs, light on fat and fiber",
+    "symbol": "figure.run",
+    "colorHex": "#2563EB",
+    "sort": "carbsDesc",
+    "summary": "Easy-to-digest fuel to drink 30–90 minutes before training.",
+    "guidance": "Fat and fiber slow digestion, so these keep both low to avoid a heavy stomach. Drink 30–90 minutes before you train. Beets and spinach supply nitrates, which may help endurance.",
+    "rules": { "minCarbs": 30, "maxFat": 10, "maxFiber": 8, "maxKcal": 400 }
+  },
+  {
+    "id": "post-workout",
+    "title": "Post-Workout",
+    "subtitle": "30 g+ protein and 35 g+ carbs",
+    "symbol": "arrow.counterclockwise.heart.fill",
+    "colorHex": "#DB2777",
+    "sort": "proteinDesc",
+    "summary": "Protein to repair muscle and carbs to refill energy stores.",
+    "guidance": "Within about two hours after training, 25–40 g of protein with some carbs supports recovery. Tart cherries have been studied for reducing muscle soreness.",
+    "rules": { "minProtein": 30, "minCarbs": 35, "maxFat": 15 }
+  },
+  {
+    "id": "intra-workout",
+    "title": "Intra-Workout",
+    "subtitle": "Light, hydrating carbs with electrolytes",
+    "symbol": "drop.fill",
+    "colorHex": "#0891B2",
+    "sort": "kcalAsc",
+    "summary": "Thin, sippable blends for sessions longer than about an hour.",
+    "guidance": "For sessions over 60–75 minutes, 30–60 g of carbs an hour plus sodium helps keep energy up. Blend with extra water or ice so they're easy to sip from a bottle. Shorter sessions only need water.",
+    "rules": { "minKcal": 80, "maxKcal": 250, "minCarbs": 20, "maxFat": 4, "maxFiber": 4, "maxProtein": 15, "requiresAnyHighlight": ["Electrolytes"] }
+  }
+]

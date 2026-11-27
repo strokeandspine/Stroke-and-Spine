@@ -1,0 +1,47 @@
+# XcodeGen spec. On a Mac: `brew install xcodegen && xcodegen generate`, then open SmoothieLab.xcodeproj.
+name: SmoothieLab
+options:
+  bundleIdPrefix: com.strokeandspine
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1" # iPhone only
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  SmoothieLab:
+    type: application
+    platform: iOS
+    sources:
+      - path: SmoothieLab
+    info:
+      path: SmoothieLab/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "Smoothie Lab"
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.smoothielab
+        ENABLE_PREVIEWS: true
+  SmoothieLabTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SmoothieLabTests
+    dependencies:
+      - target: SmoothieLab
+schemes:
+  SmoothieLab:
+    build:
+      targets:
+        SmoothieLab: all
+        SmoothieLabTests: [test]
+    test:
+      targets:
+        - SmoothieLabTests

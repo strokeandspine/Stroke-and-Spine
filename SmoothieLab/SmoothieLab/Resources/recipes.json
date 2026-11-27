@@ -1,0 +1,2837 @@
+[
+ {
+  "id": "chocolate-pb-power",
+  "name": "Chocolate Peanut Butter Power",
+  "tagline": "A peanut butter cup you can drink, with 50 g of protein.",
+  "flavor": "Rich chocolate, roasted peanut, creamy",
+  "objectives": [
+   "strength-gain",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 240,
+    "measure": "1 cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "pb-powder",
+    "grams": 16,
+    "measure": "2½ tbsp"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "cocoa",
+    "grams": 5,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Powdered peanut butter keeps the peanut flavor with about 85% less fat than regular peanut butter, so protein makes up nearly half the calories. Greek yogurt adds slow-digesting casein and the frozen banana supplies carbs to refill energy after training.",
+  "swaps": [
+   "Use 1 tbsp natural peanut butter instead of the powder (+60 kcal, +7 g fat).",
+   "Swap Greek yogurt for silken tofu and use plant protein to make it dairy-free."
+  ]
+ },
+ {
+  "id": "vanilla-berry-muscle",
+  "name": "Vanilla Berry Muscle Shake",
+  "tagline": "Cottage cheese makes it thick like a milkshake.",
+  "flavor": "Vanilla, sweet strawberry, a hint of cinnamon",
+  "objectives": [
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "cottage-cheese",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "strawberries",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "raspberries",
+    "grams": 60,
+    "measure": "½ cup, frozen"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Cottage cheese and whey together deliver both fast and slow protein. Raspberries are among the highest-fiber fruits, which keeps net carbs low and makes this filling for under 300 calories.",
+  "swaps": [
+   "Use Greek yogurt instead of cottage cheese for a tangier taste.",
+   "Any frozen berry mix works."
+  ]
+ },
+ {
+  "id": "mocha-cold-brew-protein",
+  "name": "Mocha Protein Cold Brew",
+  "tagline": "Your coffee and your protein in one glass.",
+  "flavor": "Bold coffee, dark chocolate, lightly sweet",
+  "objectives": [
+   "strength-gain",
+   "energy",
+   "pre-workout",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "cold-brew",
+    "grams": 180,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "uf-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "banana",
+    "grams": 90,
+    "measure": "1 small, frozen"
+   },
+   {
+    "id": "cocoa",
+    "grams": 5,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "oats",
+    "grams": 15,
+    "measure": "2½ tbsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Cold brew supplies about 100–150 mg of caffeine while ultra-filtered milk adds almost double the protein of regular milk. Banana and oats add enough steady carbs to keep the energy going after the caffeine peak.",
+  "swaps": [
+   "Use decaf cold brew in the afternoon.",
+   "Replace ultra-filtered milk with soy milk for dairy-free."
+  ],
+  "timing": "Morning or up to 60 minutes before training"
+ },
+ {
+  "id": "strawberry-cheesecake",
+  "name": "Strawberry Cheesecake",
+  "tagline": "Tastes like dessert, eats like a meal.",
+  "flavor": "Creamy, tangy, bright strawberry and lemon",
+  "objectives": [
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "water",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "cottage-cheese",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 25,
+    "measure": "¾ scoop"
+   },
+   {
+    "id": "strawberries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "lemon-juice",
+    "grams": 10,
+    "measure": "2 tsp + a little zest"
+   },
+   {
+    "id": "chia",
+    "grams": 6,
+    "measure": "1½ tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Two dairy proteins plus whey push protein over 40 g for about 330 calories. Lemon zest and vanilla make it taste like cheesecake with no added sugar.",
+  "swaps": [
+   "Top with a crumble of 1 graham cracker as a treat (+60 kcal)."
+  ]
+ },
+ {
+  "id": "green-machine",
+  "name": "Green Machine Protein",
+  "tagline": "A tropical green smoothie that doesn't taste green.",
+  "flavor": "Pineapple, lime, fresh ginger",
+  "objectives": [
+   "fat-loss",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "spinach",
+    "grams": 60,
+    "measure": "2 packed cups"
+   },
+   {
+    "id": "kale",
+    "grams": 20,
+    "measure": "½ cup, stems removed"
+   },
+   {
+    "id": "pineapple",
+    "grams": 120,
+    "measure": "¾ cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 40,
+    "measure": "¼ frozen"
+   },
+   {
+    "id": "plant-protein",
+    "grams": 33,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "hemp",
+    "grams": 10,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "ginger",
+    "grams": 5,
+    "measure": "1 tsp, grated"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 10,
+    "measure": "2 tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Pineapple and lime mask the greens. Pea and rice protein together give a complete amino acid profile, and hemp hearts add magnesium and more protein. Coconut water replaces potassium lost in sweat.",
+  "swaps": [
+   "Use whey isolate instead of plant protein if you eat dairy.",
+   "Swap kale for more spinach for a milder taste."
+  ]
+ },
+ {
+  "id": "cherry-almond-casein",
+  "name": "Cherry Almond Night Cap",
+  "tagline": "A slow-digesting protein for before bed.",
+  "flavor": "Tart cherry, toasted almond, vanilla",
+  "objectives": [
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "casein",
+    "grams": 33,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "tart-cherries",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "almond-butter",
+    "grams": 6,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Micellar casein digests slowly, releasing amino acids for several hours overnight. Tart cherries are a natural source of melatonin and have been studied for reducing exercise soreness.",
+  "timing": "30–60 minutes before bed"
+ },
+ {
+  "id": "pumpkin-pie-protein",
+  "name": "Pumpkin Pie Protein",
+  "tagline": "All the spice of pumpkin pie, none of the crust.",
+  "flavor": "Warm cinnamon spice, pumpkin, maple",
+  "objectives": [
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 180,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "pumpkin",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "oats",
+    "grams": 10,
+    "measure": "1½ tbsp"
+   },
+   {
+    "id": "maple",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 2,
+    "measure": "¾ tsp"
+   },
+   {
+    "id": "ginger",
+    "grams": 2,
+    "measure": "pinch, grated"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Pumpkin adds vitamin A and fiber for only 40 calories. Greek yogurt and whey give over 40 g of protein.",
+  "swaps": [
+   "Use 1 tsp pumpkin pie spice in place of the cinnamon and ginger."
+  ]
+ },
+ {
+  "id": "tofu-mango-lassi",
+  "name": "Vegan Mango Lassi",
+  "tagline": "A plant-based take on the classic Indian yogurt drink.",
+  "flavor": "Sweet mango, cardamom, lime",
+  "objectives": [
+   "strength-gain",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "soy-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "silken-tofu",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "plant-protein",
+    "grams": 33,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "mango",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "cardamom",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 10,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Silken tofu blends silky-smooth and, with soy milk and pea-rice protein, gives a complete plant protein over 35 g. Mango adds vitamin C and carbs.",
+  "swaps": [
+   "Use Greek yogurt and whey if you eat dairy."
+  ]
+ },
+ {
+  "id": "oats-pb-mass",
+  "name": "Oats & PB Mass Builder",
+  "tagline": "A real-food gainer — no tubs of sugar.",
+  "flavor": "Peanut butter, banana bread, cinnamon",
+  "objectives": [
+   "weight-gain",
+   "high-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 300,
+    "measure": "1¼ cups"
+   },
+   {
+    "id": "oats",
+    "grams": 50,
+    "measure": "½ cup"
+   },
+   {
+    "id": "peanut-butter",
+    "grams": 32,
+    "measure": "2 tbsp"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "honey",
+    "grams": 7,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   }
+  ],
+  "steps": [
+   "Add the milk and oats first and let them sit for 2 minutes to soften.",
+   "Add the remaining ingredients and blend on high for 60 seconds.",
+   "Thin with milk if needed."
+  ],
+  "whyItWorks": "Oats and banana provide slow and fast carbs, peanut butter adds healthy fats, and two proteins push the total over 55 g. It's about 770 calories from whole foods.",
+  "swaps": [
+   "Use almond butter or sunflower seed butter instead of peanut butter.",
+   "Use soy milk and plant protein for dairy-free."
+  ]
+ },
+ {
+  "id": "tropical-gainer",
+  "name": "Tropical Gainer",
+  "tagline": "Vacation flavors, serious calories.",
+  "flavor": "Mango, pineapple, toasted coconut",
+  "objectives": [
+   "weight-gain",
+   "high-calorie",
+   "high-carb",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 200,
+    "measure": "¾ cup + 2 tbsp"
+   },
+   {
+    "id": "mango",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "pineapple",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 100,
+    "measure": "1 small, frozen"
+   },
+   {
+    "id": "oats",
+    "grams": 40,
+    "measure": "⅓ cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "coconut",
+    "grams": 8,
+    "measure": "1½ tbsp"
+   },
+   {
+    "id": "chia",
+    "grams": 8,
+    "measure": "2 tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Three fruits and oats deliver over 100 g of carbs to refill glycogen after long or hard sessions. Greek yogurt and whey give about 50 g of protein, and fat stays low so it digests easily."
+ },
+ {
+  "id": "avocado-chocolate-gainer",
+  "name": "Chocolate Avocado Gainer",
+  "tagline": "Silky chocolate mousse texture with healthy fats.",
+  "flavor": "Deep chocolate, caramel date, creamy",
+  "objectives": [
+   "weight-gain",
+   "high-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 300,
+    "measure": "1¼ cups"
+   },
+   {
+    "id": "avocado",
+    "grams": 70,
+    "measure": "½ medium"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "oats",
+    "grams": 40,
+    "measure": "⅓ cup + 1 tbsp"
+   },
+   {
+    "id": "dates",
+    "grams": 24,
+    "measure": "1 Medjool, pitted"
+   },
+   {
+    "id": "cocoa",
+    "grams": 8,
+    "measure": "1½ tbsp"
+   },
+   {
+    "id": "almond-butter",
+    "grams": 16,
+    "measure": "1 tbsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Avocado and almond butter add monounsaturated fats and vitamin E, and the date sweetens it with fiber instead of added sugar."
+ },
+ {
+  "id": "sweet-potato-pie-gainer",
+  "name": "Sweet Potato Pie Gainer",
+  "tagline": "Thanksgiving dessert flavors for your bulk.",
+  "flavor": "Sweet potato, maple, toasted walnut, cinnamon",
+  "objectives": [
+   "weight-gain",
+   "high-calorie",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "sweet-potato",
+    "grams": 150,
+    "measure": "¾ cup, cooked and cooled"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 170,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "oats",
+    "grams": 40,
+    "measure": "⅓ cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "walnuts",
+    "grams": 15,
+    "measure": "2 tbsp"
+   },
+   {
+    "id": "maple",
+    "grams": 10,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 2,
+    "measure": "¾ tsp"
+   }
+  ],
+  "steps": [
+   "Bake or microwave the sweet potato ahead of time and chill it.",
+   "Add the milk, yogurt and oats, then everything else.",
+   "Blend on high for 60 seconds."
+  ],
+  "whyItWorks": "Sweet potato is a nutrient-dense carb packed with vitamin A and potassium. Walnuts add plant omega-3s.",
+  "swaps": [
+   "Use canned pumpkin for a lighter version (–80 kcal)."
+  ]
+ },
+ {
+  "id": "blueberry-muffin-mass",
+  "name": "Blueberry Muffin Mass",
+  "tagline": "Like a warm blueberry muffin, in a glass.",
+  "flavor": "Blueberry, vanilla, lemon, oat",
+  "objectives": [
+   "weight-gain",
+   "high-calorie",
+   "high-carb",
+   "post-workout",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 200,
+    "measure": "¾ cup + 2 tbsp"
+   },
+   {
+    "id": "blueberries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "oats",
+    "grams": 50,
+    "measure": "½ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "honey",
+    "grams": 7,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "lemon-juice",
+    "grams": 5,
+    "measure": "1 tsp + zest"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Wild blueberries are among the richest fruit sources of antioxidants. The oats and blueberries give nearly 80 g of carbs, while two proteins give over 60 g."
+ },
+ {
+  "id": "banana-bread-bulk",
+  "name": "Banana Bread Bulk",
+  "tagline": "Banana bread with walnuts — as a shake.",
+  "flavor": "Ripe banana, walnut, cinnamon, vanilla",
+  "objectives": [
+   "weight-gain",
+   "high-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "banana",
+    "grams": 150,
+    "measure": "1 large, frozen"
+   },
+   {
+    "id": "oats",
+    "grams": 45,
+    "measure": "½ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 170,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "walnuts",
+    "grams": 20,
+    "measure": "2½ tbsp"
+   },
+   {
+    "id": "dates",
+    "grams": 12,
+    "measure": "½ Medjool"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 2,
+    "measure": "¾ tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Spotty bananas are sweeter, so you need no added sugar. Walnuts give the classic banana-bread flavor plus omega-3 fats."
+ },
+ {
+  "id": "vegan-pb-oat-gainer",
+  "name": "Vegan PB & Oat Gainer",
+  "tagline": "A plant-based gainer with 50 g of protein.",
+  "flavor": "Peanut butter, maple, banana",
+  "objectives": [
+   "weight-gain",
+   "high-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "soy-milk",
+    "grams": 350,
+    "measure": "1½ cups"
+   },
+   {
+    "id": "oats",
+    "grams": 50,
+    "measure": "½ cup"
+   },
+   {
+    "id": "peanut-butter",
+    "grams": 32,
+    "measure": "2 tbsp"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "plant-protein",
+    "grams": 33,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "hemp",
+    "grams": 10,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "maple",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Soy milk is the only common plant milk with protein close to dairy. Hemp hearts and pea-rice protein round out a complete amino acid profile."
+ },
+ {
+  "id": "berry-spinach-lean",
+  "name": "Berry Spinach Lean",
+  "tagline": "Bright berries hide a big handful of spinach.",
+  "flavor": "Mixed berry, light and fresh",
+  "objectives": [
+   "fat-loss",
+   "low-calorie",
+   "low-carb"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "strawberries",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "raspberries",
+    "grams": 80,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "spinach",
+    "grams": 50,
+    "measure": "1½ packed cups"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "About 30 g of protein and 9 g of fiber for under 250 calories. Spinach adds iron and folate you won't taste."
+ },
+ {
+  "id": "key-lime-pie",
+  "name": "Key Lime Pie",
+  "tagline": "Tart, creamy and surprisingly green.",
+  "flavor": "Zesty lime, vanilla cream",
+  "objectives": [
+   "fat-loss",
+   "low-carb"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 170,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "avocado",
+    "grams": 30,
+    "measure": "¼ small"
+   },
+   {
+    "id": "spinach",
+    "grams": 30,
+    "measure": "1 packed cup"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 30,
+    "measure": "2 tbsp + zest"
+   },
+   {
+    "id": "chia",
+    "grams": 8,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Avocado makes it creamy and green like key lime pie filling while adding healthy fats. Lime zest gives big flavor for no calories.",
+  "swaps": [
+   "Add 1 tsp honey if you like it sweeter (+20 kcal)."
+  ]
+ },
+ {
+  "id": "cinnamon-roll",
+  "name": "Cinnamon Roll",
+  "tagline": "The bakery classic, rebuilt with protein.",
+  "flavor": "Cinnamon, vanilla icing, warm spice",
+  "objectives": [
+   "fat-loss",
+   "low-carb",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "cottage-cheese",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "cauliflower",
+    "grams": 80,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 3,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 3,
+    "measure": "¾ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Frozen cauliflower makes it thick and frosty with no vegetable taste. Cinnamon brings the flavor and the cottage cheese adds a cream-cheese tang."
+ },
+ {
+  "id": "chocolate-zucchini-fudge",
+  "name": "Chocolate Zucchini Fudge",
+  "tagline": "Thick, fudgy and secretly full of vegetables.",
+  "flavor": "Double chocolate, fudge-like",
+  "objectives": [
+   "fat-loss",
+   "low-carb"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "zucchini",
+    "grams": 100,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 40,
+    "measure": "¼ frozen"
+   },
+   {
+    "id": "cocoa",
+    "grams": 8,
+    "measure": "1½ tbsp"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Frozen zucchini has almost no flavor but makes a thick, creamy shake for 17 calories. Cocoa is surprisingly high in fiber and magnesium."
+ },
+ {
+  "id": "ginger-peach-glow",
+  "name": "Ginger Peach Glow",
+  "tagline": "A soothing, anti-inflammatory blend.",
+  "flavor": "Juicy peach, warm ginger, golden turmeric",
+  "objectives": [
+   "fat-loss",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 20,
+    "measure": "⅔ scoop"
+   },
+   {
+    "id": "peaches",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "ginger",
+    "grams": 5,
+    "measure": "1 tsp, grated"
+   },
+   {
+    "id": "turmeric",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "chia",
+    "grams": 8,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Ginger and turmeric contain compounds studied for their anti-inflammatory effects. A pinch of black pepper improves curcumin absorption.",
+  "swaps": [
+   "Add a pinch of black pepper with the turmeric."
+  ]
+ },
+ {
+  "id": "watermelon-mint-cooler",
+  "name": "Watermelon Mint Cooler",
+  "tagline": "An ultra-light sipper for hot sessions.",
+  "flavor": "Juicy watermelon, cool mint, lime",
+  "objectives": [
+   "intra-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "watermelon",
+    "grams": 250,
+    "measure": "1¾ cups, cubed"
+   },
+   {
+    "id": "coconut-water",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 15,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "mint",
+    "grams": 3,
+    "measure": "6 leaves"
+   },
+   {
+    "id": "collagen",
+    "grams": 10,
+    "measure": "1 scoop (10 g)"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.5,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "ice",
+    "grams": 120,
+    "measure": "1 cup"
+   }
+  ],
+  "steps": [
+   "Blend everything until smooth and frothy.",
+   "Pour into a water bottle and sip during training."
+  ],
+  "whyItWorks": "Watermelon is over 90% water. Coconut water and a pinch of salt provide potassium and sodium, the main electrolytes you lose in sweat.",
+  "timing": "Sip during sessions longer than 60 minutes"
+ },
+ {
+  "id": "strawberry-kefir-fizz",
+  "name": "Strawberry Kefir Fizz",
+  "tagline": "Tangy, gut-friendly and light.",
+  "flavor": "Tangy strawberry, light fizz",
+  "objectives": [
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "kefir",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "strawberries",
+    "grams": 120,
+    "measure": "¾ cup, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "chia",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "vitamin-c",
+    "grams": 0.5,
+    "measure": "⅛ tsp (500 mg)"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Kefir contains a wider variety of probiotic cultures than most yogurts. Strawberries and added vitamin C support your immune system."
+ },
+ {
+  "id": "green-detox",
+  "name": "Kiwi Green Refresher",
+  "tagline": "Crisp, clean and full of vitamin C.",
+  "flavor": "Kiwi, cucumber, lime, ginger",
+  "objectives": [
+   "low-calorie",
+   "pre-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "water",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "spinach",
+    "grams": 50,
+    "measure": "1½ packed cups"
+   },
+   {
+    "id": "cucumber",
+    "grams": 120,
+    "measure": "½ medium"
+   },
+   {
+    "id": "kiwi",
+    "grams": 75,
+    "measure": "1 kiwi, peeled"
+   },
+   {
+    "id": "pineapple",
+    "grams": 60,
+    "measure": "⅓ cup, frozen"
+   },
+   {
+    "id": "greens-powder",
+    "grams": 10,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "ginger",
+    "grams": 3,
+    "measure": "½ tsp, grated"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 10,
+    "measure": "2 tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Kiwi has more vitamin C than an orange. The greens powder tops up vitamins and minerals in case your diet is low in vegetables.",
+  "swaps": [
+   "Skip the greens powder if you already eat plenty of vegetables."
+  ]
+ },
+ {
+  "id": "iced-matcha-vanilla",
+  "name": "Iced Matcha Vanilla",
+  "tagline": "Café-style matcha latte with 30 g of protein.",
+  "flavor": "Earthy matcha, sweet vanilla",
+  "objectives": [
+   "low-calorie",
+   "low-carb"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "matcha",
+    "grams": 3,
+    "measure": "1½ tsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 25,
+    "measure": "¾ scoop"
+   },
+   {
+    "id": "banana",
+    "grams": 40,
+    "measure": "¼ frozen"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 100,
+    "measure": "¾ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Matcha delivers caffeine with L-theanine, which many people find gives calmer, more focused energy than coffee.",
+  "timing": "Morning or early afternoon"
+ },
+ {
+  "id": "pina-colada-light",
+  "name": "Piña Colada Light",
+  "tagline": "The beach-bar favorite at a third of the calories.",
+  "flavor": "Pineapple, coconut, lime",
+  "objectives": [
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "pineapple",
+    "grams": 120,
+    "measure": "¾ cup, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "coconut",
+    "grams": 5,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Shredded coconut gives real coconut flavor with fiber, unlike sweetened cream of coconut. Pineapple contains bromelain, an enzyme being studied for recovery."
+ },
+ {
+  "id": "pbj-lite",
+  "name": "PB&J Lite",
+  "tagline": "The lunchbox classic, lightened up.",
+  "flavor": "Strawberry jam, roasted peanut",
+  "objectives": [
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "pb-powder",
+    "grams": 12,
+    "measure": "2 tbsp"
+   },
+   {
+    "id": "strawberries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Powdered peanut butter gives the flavor with a fraction of the fat. Strawberries provide the jam sweetness with fiber."
+ },
+ {
+  "id": "matcha-mango-morning",
+  "name": "Matcha Mango Morning",
+  "tagline": "Sunny mango with a gentle matcha lift.",
+  "flavor": "Tropical mango, earthy matcha",
+  "objectives": [
+   "energy",
+   "pre-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "mango",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 60,
+    "measure": "½ small, frozen"
+   },
+   {
+    "id": "spinach",
+    "grams": 30,
+    "measure": "1 packed cup"
+   },
+   {
+    "id": "matcha",
+    "grams": 3,
+    "measure": "1½ tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Mango and banana give quick, easy-to-digest carbs, and matcha's caffeine with L-theanine supports focus. Low fat and moderate fiber make it gentle before training.",
+  "timing": "30–60 minutes before training"
+ },
+ {
+  "id": "beet-berry-pregame",
+  "name": "Beet Berry Pre-Game",
+  "tagline": "Nitrate-rich fuel for endurance.",
+  "flavor": "Earthy-sweet beet, mixed berry, ginger",
+  "objectives": [
+   "energy",
+   "pre-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "beet",
+    "grams": 80,
+    "measure": "½ medium, cooked"
+   },
+   {
+    "id": "blueberries",
+    "grams": 80,
+    "measure": "½ cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "ginger",
+    "grams": 3,
+    "measure": "½ tsp, grated"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Beets are rich in dietary nitrate, which the body converts to nitric oxide. Studies suggest this can improve endurance when taken 2–3 hours before exercise.",
+  "swaps": [
+   "Use 1 tbsp beetroot powder instead of whole beet."
+  ],
+  "timing": "2–3 hours before endurance training"
+ },
+ {
+  "id": "golden-oat-latte",
+  "name": "Banana Oat Latte",
+  "tagline": "Breakfast and coffee, blended.",
+  "flavor": "Toasty oats, coffee, caramel date",
+  "objectives": [
+   "energy",
+   "pre-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "cold-brew",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "uf-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "oats",
+    "grams": 30,
+    "measure": "⅓ cup"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "dates",
+    "grams": 12,
+    "measure": "½ Medjool"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 20,
+    "measure": "⅔ scoop"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Oats release carbs slowly while banana and dates give quick energy, so the caffeine lift is backed by fuel instead of an empty stomach.",
+  "timing": "Breakfast, or 60–90 minutes before training"
+ },
+ {
+  "id": "citrus-green-tea-charge",
+  "name": "Citrus Green Tea Charge",
+  "tagline": "A bright, zesty pick-me-up.",
+  "flavor": "Orange, pineapple, green tea, ginger",
+  "objectives": [
+   "energy",
+   "pre-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "green-tea",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp, chilled"
+   },
+   {
+    "id": "orange",
+    "grams": 130,
+    "measure": "1 orange, peeled"
+   },
+   {
+    "id": "pineapple",
+    "grams": 80,
+    "measure": "½ cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 50,
+    "measure": "⅓ frozen"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "ginger",
+    "grams": 3,
+    "measure": "½ tsp, grated"
+   },
+   {
+    "id": "honey",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Green tea provides a modest dose of caffeine plus antioxidants called catechins. Oranges add vitamin C and potassium."
+ },
+ {
+  "id": "espresso-banana-pre",
+  "name": "Espresso Banana Pre-Workout",
+  "tagline": "A quick caffeine and carb hit before lifting.",
+  "flavor": "Coffee, banana, vanilla",
+  "objectives": [
+   "energy",
+   "pre-workout",
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "cold-brew",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "skim-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "beet-powder",
+    "grams": 6,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Banana is one of the easiest carbs to digest before exercise. Caffeine is one of the best-studied supplements for strength and endurance, and beetroot powder adds nitrates.",
+  "timing": "30–60 minutes before training"
+ },
+ {
+  "id": "avocado-cocoa-low-carb",
+  "name": "Avocado Cocoa Cream",
+  "tagline": "Silky chocolate with almost no sugar.",
+  "flavor": "Dark chocolate, velvety avocado",
+  "objectives": [
+   "low-carb",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "avocado",
+    "grams": 60,
+    "measure": "⅓ medium"
+   },
+   {
+    "id": "cocoa",
+    "grams": 6,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "hemp",
+    "grams": 10,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.3,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Avocado and hemp hearts give a mousse-like texture with healthy fats and fiber, leaving only about 5 g of net carbs."
+ },
+ {
+  "id": "raspberry-coconut-cream",
+  "name": "Raspberry Coconut Cream",
+  "tagline": "Creamy, tart and low in sugar.",
+  "flavor": "Tart raspberry, coconut cream",
+  "objectives": [
+   "low-carb",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 170,
+    "measure": "¾ cup"
+   },
+   {
+    "id": "raspberries",
+    "grams": 100,
+    "measure": "¾ cup, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "coconut",
+    "grams": 8,
+    "measure": "1½ tbsp"
+   },
+   {
+    "id": "mct-oil",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Raspberries have 6.5 g of fiber per 100 g, more than almost any fruit, so net carbs stay low. MCT oil is a quick-burning fat that some low-carb eaters use for energy.",
+  "swaps": [
+   "Leave out the MCT oil to save 45 kcal."
+  ]
+ },
+ {
+  "id": "pb-cup-low-carb",
+  "name": "Peanut Butter Cup Low-Carb",
+  "tagline": "Chocolate and peanut butter, under 15 g net carbs.",
+  "flavor": "Chocolate, salty peanut butter",
+  "objectives": [
+   "low-carb",
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "peanut-butter",
+    "grams": 16,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "cauliflower",
+    "grams": 80,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "cocoa",
+    "grams": 5,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.3,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Cauliflower adds thickness without sugar. Real peanut butter and a pinch of salt make it taste indulgent."
+ },
+ {
+  "id": "mint-chip-green",
+  "name": "Mint Chocolate Chip",
+  "tagline": "Fresh mint and cocoa, naturally green.",
+  "flavor": "Cool mint, cocoa",
+  "objectives": [
+   "low-carb",
+   "fat-loss",
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "spinach",
+    "grams": 40,
+    "measure": "1¼ packed cups"
+   },
+   {
+    "id": "avocado",
+    "grams": 40,
+    "measure": "¼ medium"
+   },
+   {
+    "id": "mint",
+    "grams": 4,
+    "measure": "8 leaves"
+   },
+   {
+    "id": "cocoa",
+    "grams": 3,
+    "measure": "½ tbsp"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Spinach and avocado make it naturally green and creamy. Fresh mint gives the flavor without extracts or sugar.",
+  "swaps": [
+   "Blend in 1 tsp cacao nibs at the end for 'chips'."
+  ]
+ },
+ {
+  "id": "cherry-banana-carb-load",
+  "name": "Cherry Banana Carb-Load",
+  "tagline": "Refuel glycogen and calm sore legs.",
+  "flavor": "Tart cherry, sweet banana, honey",
+  "objectives": [
+   "high-carb",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "tart-cherries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "oats",
+    "grams": 40,
+    "measure": "⅓ cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "honey",
+    "grams": 10,
+    "measure": "1½ tsp"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Tart cherries have been studied for reducing muscle soreness and speeding recovery. With banana, oats and honey this gives about 95 g of carbs and very little fat.",
+  "timing": "Within 2 hours after long or hard training"
+ },
+ {
+  "id": "mango-oat-fuel",
+  "name": "Mango Oat Endurance Fuel",
+  "tagline": "Big carbs for long training days.",
+  "flavor": "Mango, orange, vanilla oat",
+  "objectives": [
+   "high-carb",
+   "energy",
+   "post-workout",
+   "weight-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "skim-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "mango",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "orange",
+    "grams": 100,
+    "measure": "1 small orange"
+   },
+   {
+    "id": "oats",
+    "grams": 40,
+    "measure": "⅓ cup + 1 tbsp"
+   },
+   {
+    "id": "banana",
+    "grams": 60,
+    "measure": "½ small, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "beet-powder",
+    "grams": 8,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Combining different carb sources — fruit sugars and oat starch — lets your body absorb more carbs at once, which is why endurance athletes mix them."
+ },
+ {
+  "id": "chocolate-cherry-recovery",
+  "name": "Chocolate Cherry Recovery",
+  "tagline": "Chocolate milk, upgraded.",
+  "flavor": "Chocolate-covered cherry",
+  "objectives": [
+   "post-workout",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "uf-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-chocolate",
+    "grams": 31,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "tart-cherries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "cocoa",
+    "grams": 5,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Chocolate milk is a well-studied recovery drink. This version doubles the protein and adds tart cherries for soreness.",
+  "timing": "Within 2 hours after training"
+ },
+ {
+  "id": "blueberry-recovery",
+  "name": "Blueberry Vanilla Recovery",
+  "tagline": "Simple, fruity and recovery-focused.",
+  "flavor": "Blueberry, vanilla, cinnamon",
+  "objectives": [
+   "post-workout",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "skim-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "blueberries",
+    "grams": 150,
+    "measure": "1 cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 60,
+    "measure": "½ small, frozen"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "creatine",
+    "grams": 5,
+    "measure": "1 tsp (5 g)"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "About 45 g of protein with 50 g of carbs is close to ideal after strength training. Creatine is easiest to remember when it's part of a routine."
+ },
+ {
+  "id": "pineapple-coconut-hydrator",
+  "name": "Pineapple Coconut Hydrator",
+  "tagline": "Thin, salty-sweet and easy to sip.",
+  "flavor": "Pineapple, coconut, lime",
+  "objectives": [
+   "intra-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "pineapple",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 10,
+    "measure": "2 tsp"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.5,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "eaa",
+    "grams": 5,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "ice",
+    "grams": 100,
+    "measure": "¾ cup"
+   }
+  ],
+  "steps": [
+   "Blend until smooth, adding water until it's thin enough to drink through a sports bottle."
+  ],
+  "whyItWorks": "Coconut water, salt and pineapple give about 25 g of carbs plus electrolytes. Essential amino acids may reduce muscle breakdown in long sessions.",
+  "timing": "Sip during sessions longer than 60 minutes"
+ },
+ {
+  "id": "orange-ginger-sipper",
+  "name": "Orange Ginger Sipper",
+  "tagline": "Like a homemade sports drink with real fruit.",
+  "flavor": "Fresh orange, ginger, honey",
+  "objectives": [
+   "intra-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "orange",
+    "grams": 120,
+    "measure": "1 orange, peeled"
+   },
+   {
+    "id": "coconut-water",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "honey",
+    "grams": 10,
+    "measure": "1½ tsp"
+   },
+   {
+    "id": "ginger",
+    "grams": 3,
+    "measure": "½ tsp, grated"
+   },
+   {
+    "id": "electrolytes",
+    "grams": 6,
+    "measure": "1 stick"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Blend until smooth.",
+   "Strain if you want it thinner, then pour into a bottle."
+  ],
+  "whyItWorks": "Orange and honey give a mix of glucose and fructose, which are absorbed through different pathways for more energy per hour. Ginger may help settle the stomach.",
+  "timing": "Sip during long or hot sessions"
+ },
+ {
+  "id": "berry-electrolyte-slush",
+  "name": "Berry Electrolyte Slush",
+  "tagline": "A frosty slush to keep you going.",
+  "flavor": "Strawberry, watermelon, lime",
+  "objectives": [
+   "intra-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "water",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "watermelon",
+    "grams": 200,
+    "measure": "1⅓ cups, cubed"
+   },
+   {
+    "id": "strawberries",
+    "grams": 80,
+    "measure": "½ cup, frozen"
+   },
+   {
+    "id": "eaa",
+    "grams": 10,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "electrolytes",
+    "grams": 6,
+    "measure": "1 stick"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 5,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 120,
+    "measure": "1 cup"
+   }
+  ],
+  "steps": [
+   "Blend until slushy.",
+   "Pour into an insulated bottle."
+  ],
+  "whyItWorks": "Cold slushies may help keep core temperature down in the heat. EAAs add a little protein without weighing down your stomach."
+ },
+ {
+  "id": "cucumber-lime-electrolyte",
+  "name": "Cucumber Lime Refresher",
+  "tagline": "Crisp and cooling with a salty edge.",
+  "flavor": "Cucumber, lime, mint, honey",
+  "objectives": [
+   "intra-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "coconut-water",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "cucumber",
+    "grams": 100,
+    "measure": "½ medium"
+   },
+   {
+    "id": "pineapple",
+    "grams": 80,
+    "measure": "½ cup, frozen"
+   },
+   {
+    "id": "lime-juice",
+    "grams": 15,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "mint",
+    "grams": 3,
+    "measure": "6 leaves"
+   },
+   {
+    "id": "honey",
+    "grams": 8,
+    "measure": "1 tsp"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.5,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Blend everything until smooth.",
+   "Strain through a fine sieve for a juice-like drink."
+  ],
+  "whyItWorks": "Cucumber and coconut water are both hydrating, and salt replaces the sodium you sweat out."
+ },
+ {
+  "id": "acai-power-bowl-shake",
+  "name": "Acai Berry Power",
+  "tagline": "An acai bowl you can drink, minus the sugar.",
+  "flavor": "Acai, blueberry, banana",
+  "objectives": [
+   "post-workout",
+   "strength-gain"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "acai",
+    "grams": 100,
+    "measure": "1 frozen pack, unsweetened"
+   },
+   {
+    "id": "blueberries",
+    "grams": 100,
+    "measure": "⅔ cup, frozen"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 30,
+    "measure": "1 scoop"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "vitamin-d",
+    "grams": 0.1,
+    "measure": "1 drop (1,000 IU)"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Unsweetened acai is rich in antioxidants and healthy fats. Many cafe acai bowls hide 50 g+ of sugar; this keeps it to fruit only."
+ },
+ {
+  "id": "omega-blueberry-brain",
+  "name": "Blueberry Omega Brain Boost",
+  "tagline": "Antioxidants and omega-3s in one glass.",
+  "flavor": "Blueberry, lemon, vanilla",
+  "objectives": [
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "blueberries",
+    "grams": 120,
+    "measure": "¾ cup, frozen"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 15,
+    "measure": "½ scoop"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "spinach",
+    "grams": 30,
+    "measure": "1 packed cup"
+   },
+   {
+    "id": "fish-oil",
+    "grams": 5,
+    "measure": "1 tsp, lemon-flavored"
+   },
+   {
+    "id": "ice",
+    "grams": 40,
+    "measure": "⅓ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Blueberries and omega-3 fats from fish oil and flax have both been studied for brain and heart health. Lemon-flavored fish oil blends in without a fishy taste.",
+  "swaps": [
+   "Use an algae-based omega-3 oil for a fish-free version."
+  ]
+ },
+ {
+  "id": "egg-white-vanilla-shake",
+  "name": "Vanilla Egg White Shake",
+  "tagline": "A whey-free shake with 35 g of protein.",
+  "flavor": "Vanilla custard, banana",
+  "objectives": [
+   "strength-gain",
+   "fat-loss"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "almond-milk",
+    "grams": 150,
+    "measure": "⅔ cup"
+   },
+   {
+    "id": "egg-whites",
+    "grams": 200,
+    "measure": "¾ cup + 1 tbsp, pasteurized"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "banana",
+    "grams": 80,
+    "measure": "½ large, frozen"
+   },
+   {
+    "id": "flax",
+    "grams": 7,
+    "measure": "1 tbsp"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "vanilla",
+    "grams": 3,
+    "measure": "¾ tsp"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Pasteurized egg whites are a complete, inexpensive protein with no fat. Only use pasteurized cartons — never raw eggs."
+ },
+ {
+  "id": "collagen-citrus-glow",
+  "name": "Citrus Collagen Glow",
+  "tagline": "Bright and creamy with collagen and vitamin C.",
+  "flavor": "Orange creamsicle",
+  "objectives": [
+   "low-calorie"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "water",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "orange",
+    "grams": 130,
+    "measure": "1 orange, peeled"
+   },
+   {
+    "id": "greek-yogurt",
+    "grams": 120,
+    "measure": "½ cup"
+   },
+   {
+    "id": "collagen",
+    "grams": 10,
+    "measure": "1 scoop (10 g)"
+   },
+   {
+    "id": "vanilla",
+    "grams": 2,
+    "measure": "½ tsp"
+   },
+   {
+    "id": "vitamin-c",
+    "grams": 0.5,
+    "measure": "⅛ tsp (500 mg)"
+   },
+   {
+    "id": "ice",
+    "grams": 80,
+    "measure": "⅔ cup"
+   }
+  ],
+  "steps": [
+   "Add the liquids to the blender first, then the soft ingredients, powders and frozen ingredients last.",
+   "Blend on high for 45–60 seconds until completely smooth.",
+   "Taste, adjust thickness with a splash of liquid or a few ice cubes, and serve."
+  ],
+  "whyItWorks": "Vitamin C is needed for your body to make collagen. Collagen isn't a complete protein, so it's paired with Greek yogurt here."
+ },
+ {
+  "id": "marathon-mocha-oat",
+  "name": "Marathon Mocha Oat",
+  "tagline": "A big-carb, coffee-kissed shake for long days.",
+  "flavor": "Coffee, caramel date, toasted oat",
+  "objectives": [
+   "high-carb",
+   "energy",
+   "post-workout"
+  ],
+  "servings": 1,
+  "prepMinutes": 5,
+  "ingredients": [
+   {
+    "id": "cold-brew",
+    "grams": 100,
+    "measure": "scant ½ cup"
+   },
+   {
+    "id": "skim-milk",
+    "grams": 250,
+    "measure": "1 cup + 1 tbsp"
+   },
+   {
+    "id": "oats",
+    "grams": 50,
+    "measure": "½ cup"
+   },
+   {
+    "id": "banana",
+    "grams": 120,
+    "measure": "1 medium, frozen"
+   },
+   {
+    "id": "dates",
+    "grams": 24,
+    "measure": "1 Medjool, pitted"
+   },
+   {
+    "id": "whey-vanilla",
+    "grams": 20,
+    "measure": "⅔ scoop"
+   },
+   {
+    "id": "cinnamon",
+    "grams": 1,
+    "measure": "¼ tsp"
+   },
+   {
+    "id": "sea-salt",
+    "grams": 0.3,
+    "measure": "1 pinch"
+   },
+   {
+    "id": "ice",
+    "grams": 60,
+    "measure": "½ cup"
+   }
+  ],
+  "steps": [
+   "Add the milk, cold brew and oats and let them soak for 2 minutes.",
+   "Add the rest and blend on high for 60 seconds."
+  ],
+  "whyItWorks": "About 90 g of carbs from oats, banana and dates with only 4 g of fat, so it digests quickly. Ideal the morning of a long run or ride, or to refuel afterward.",
+  "timing": "2–3 hours before a long session, or after it"
+ }
+]

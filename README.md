@@ -2,6 +2,8 @@
 
 A direct-to-patient iPhone app for people with lower back pain. Patients track pain, sleep and mood, complete validated questionnaires, keep over-the-counter pain relievers within label limits, check for warning signs, and keep a record of their spine surgeries and procedures.
 
+> **Also in this repository:** [`SmoothieLab/`](SmoothieLab/README.md) — a separate iPhone app with healthy smoothie recipes organized by fitness goal, with calories and macros.
+
 See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LICENSING.md`](docs/LICENSING.md) for the questionnaire licences that must be in place before release, and [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) for the medical content review checklist and the video shot list.
 
 ## What's built (v0.2)
