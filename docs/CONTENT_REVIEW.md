@@ -12,7 +12,11 @@ All content lives in plain Swift files, so it's easy to read and edit. Change th
 | Pain "traffic light" guide and stop signs | `SpineCare/Core/ExerciseLibrary.swift` (`ExerciseContent`) | Thresholds (+2 green, +3–4 amber, +5 red) |
 | Progression rules | `SpineCare/Core/ExerciseLibrary.swift` (`RehabProgression`) | Step back if pain rises ≥3 points, an exercise hurt, or the session felt too hard. Move on after the stage's minimum sessions with the last 3 comfortable |
 | Surgery and procedure guidance | `SpineCare/Core/SpineHistoryCatalog.swift` | Recovery expectations, warning signs, NSAID-after-fusion note |
-| Treatment options (8 conditions, 46 options) | `SpineCare/Core/TreatmentContentLumbar.swift`, `SpineCare/Core/TreatmentContentOther.swift`, shared text in `SpineCare/Core/TreatmentOptions.swift` | Every percentage against its cited source; tier assignment; "best for / less suitable if"; availability and coverage statements (these change often); urgent signs; that cervical myelopathy content does not discourage timely surgery |
+| Treatment options — spine (8 conditions) | `SpineCare/Core/TreatmentContentLumbar.swift`, `TreatmentContentOther.swift` | Every percentage against its cited source; tier assignment; "best for / less suitable if"; availability and coverage; that cervical myelopathy content does not discourage timely surgery |
+| Treatment options — vascular, heart and chest, trauma (9) | `SpineCare/Core/TreatmentContentVascularCardiacTrauma.swift` | As above. Flagged by the drafter: CREST-2 and EARLY TAVR figures and citations, TAVR pacemaker rate, post-splenectomy infection risk, trauma mortality ranges, Medicare statements (carotid stenting, supervised exercise, TAVR heart team) |
+| Treatment options — general, liver/gallbladder/pancreas, children (9) | `SpineCare/Core/TreatmentContentGeneralHPBPediatric.swift` | As above. Flagged: SECURE and C-GALL citations, liver cancer 5-year survival ranges (drafter's estimates), bile duct stone passage rate, tonsillectomy mortality, several trial sizes |
+| Treatment options — orthopedic, neurosurgery, ENT (9) | `SpineCare/Core/TreatmentContentOrthoNeuroENT.swift` | As above. Most citations were checked against PubMed by the drafter. Flagged: aneurysm rupture/regrowth ranges, subdural hematoma mortality, CPAP abandonment, thyroid lobectomy follow-on rates, cuff re-tear rate |
+| Treatment options — urologic, gynecologic, eye (9) | `SpineCare/Core/TreatmentContentUroGynEye.swift` | As above. Flagged: ProtecT continence and erection figures, ECLIPSE, Rezum/UroLift retreatment, PTVT 5-year citation, untreated retinal tear detachment rate, several possibly mismatched citations |
 | Warning signs | `SpineCare/Core/RedFlags.swift` | Questions, urgency levels, advice text, crisis numbers |
 | Medicine limits and warnings | `SpineCare/Core/MedicationSafety.swift` | Label limits, dose intervals, product presets, condition cautions |
 | Questionnaire follow-up advice | `SpineCare/Views/Questionnaires/QuestionnaireView.swift` (`followUp`) | Score cut-offs and wording |
@@ -20,7 +24,7 @@ All content lives in plain Swift files, so it's easy to read and edit. Change th
 
 ### Checking the treatment-options numbers
 
-The outcome and side-effect figures were drafted from memory of the cited trials and reviews and **have not been checked line by line**. For each option:
+The outcome and side-effect figures were drafted from memory of the cited trials and reviews (a few were spot-checked against PubMed while drafting) and **have not been checked line by line**. Each specialty needs a reviewer from that specialty. For each option:
 
 1. Open each source in `sources:` and confirm every number in `keyFindings`, `outcomes` and `sideEffects`. Ranges are meant to span what good studies report, not a single study.
 2. Change any figure that doesn't match, or remove it. `outcomes` values may be `nil` ("Not reported").
@@ -48,7 +52,11 @@ Film in priority order: the free-tier exercises first (pelvic-tilt, knee-rolls, 
 |---|---|---|---|---|
 | Exercises and programs | | | | |
 | Surgery and procedure guidance | | | | |
-| Treatment options and outcome data | | | | |
+| Treatment options — spine | | | | |
+| Treatment options — vascular, heart and chest, trauma | | | | |
+| Treatment options — general, liver/gallbladder/pancreas, children | | | | |
+| Treatment options — orthopedic, neurosurgery, ENT | | | | |
+| Treatment options — urologic, gynecologic, eye | | | | |
 | Warning signs | | | | |
 | Medicine limits and warnings | | | | |
 | Questionnaire advice | | | | |

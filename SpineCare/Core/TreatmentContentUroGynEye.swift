@@ -326,7 +326,7 @@ extension TreatmentGuides {
                 outcomes: OptionOutcomes(improvement: PercentRange(80, 95), seriousComplications: PercentRange(1, 4), furtherTreatment: PercentRange(5, 15)),
                 keyFindings: [
                     "In the TISU trial, about 1 in 10 people needed further treatment after ureteroscopy for ureter stones, compared with about 3 in 10 after SWL, but ureteroscopy caused more short-term side effects (Dasgupta 2021).",
-                    "For ureter stones, stone-free rates after ureteroscopy are generally about 85–95% (Assimos 2016 guideline).",
+                    "For ureter stones, stone-free rates after ureteroscopy are generally about 85–95% (Assimos 2016).",
                 ],
                 sideEffects: [
                     SE.anesthesia,
@@ -482,7 +482,7 @@ extension TreatmentGuides {
                 outcomes: OptionOutcomes(improvement: PercentRange(80, 90), seriousComplications: PercentRange(1, 3), furtherTreatment: PercentRange(15, 30)),
                 keyFindings: [
                     "In a UK registry of 625 men treated with focal HIFU, about 88 in 100 were free of radical treatment, spread and prostate cancer death at 5 years, though about 1 in 5 needed a repeat focal treatment (Guillaumier 2018).",
-                    "There are no large randomized trials comparing focal therapy with surgery or radiation yet, so long-term cancer control is uncertain (Eastham 2022 guideline).",
+                    "There are no large randomized trials comparing focal therapy with surgery or radiation yet, so long-term cancer control is uncertain (Eastham 2022).",
                 ],
                 sideEffects: [
                     SE.make("Needing a repeat focal treatment, surgery or radiation", "Because cancer is found elsewhere in the prostate or comes back.", 15, 30, .moderate),
@@ -516,7 +516,6 @@ extension TreatmentGuides {
                     SE.make("Urine leakage needing pads after the first year", "Leakage is very common for the first months; pelvic floor exercises help.", 15, 25, .moderate),
                     SE.make("Severe lasting incontinence needing surgery (sling or artificial sphincter)", "A minority of men.", 1, 5, .serious),
                     SE.make("Shorter penis or curvature", "Some men notice a small change in length.", 10, 30, .mild),
-                    SE.make("Hernia at an incision site", "May need a repair later.", 1, 5, .moderate),
                     SE.clots(0.5, 2),
                     SE.death(0.05, 0.2),
                 ],
@@ -670,7 +669,7 @@ extension TreatmentGuides {
                 outcomes: OptionOutcomes(improvement: PercentRange(70, 85), seriousComplications: PercentRange(0.5, 2), furtherTreatment: PercentRange(5, 15)),
                 keyFindings: [
                     "In single-group studies, bleeding and quality of life improved substantially at 1 year, and roughly 1 in 10 women needed another procedure within about 3 years (Chudnoff 2013; Chudnoff 2019).",
-                    "There are few trials comparing radiofrequency ablation directly with myomectomy or UAE, so how it compares is uncertain.",
+                    "These studies had no comparison group, and few trials have compared radiofrequency ablation directly with myomectomy or UAE, so how it compares is uncertain (Chudnoff 2019).",
                 ],
                 sideEffects: [
                     SE.make("Cramping and discharge", "For days to a few weeks.", 20, 40, .mild),
@@ -808,7 +807,7 @@ extension TreatmentGuides {
                 outcomes: OptionOutcomes(improvement: PercentRange(30, 50), seriousComplications: PercentRange(0, 0.5), furtherTreatment: PercentRange(30, 50)),
                 keyFindings: [
                     "In a US trial, tranexamic acid lowered menstrual blood loss by about 40% compared with about 8% with placebo, with better daily activities (Lukes 2010).",
-                    "Anti-inflammatories reduce bleeding less than tranexamic acid or a hormonal IUD but also ease period pain (Bofill Rodriguez 2019 review).",
+                    "Anti-inflammatories reduce bleeding less than tranexamic acid or a hormonal IUD but also ease period pain (Bofill Rodriguez 2019).",
                 ],
                 sideEffects: [
                     SE.make("Headache, back pain or stomach upset (tranexamic acid)", "Usually mild.", 5, 20, .mild),
@@ -842,7 +841,7 @@ extension TreatmentGuides {
 
             TreatmentOption(
                 id: "hmb-lng-iud", name: "Hormonal IUD (levonorgestrel)", tier: .conservative,
-                summary: "A small T-shaped device placed in the uterus in the office. It releases a small amount of progestogen that thins the lining, making periods much lighter or stopping them. It lasts up to 8 years and is also birth control.",
+                summary: "A small T-shaped device placed in the uterus in the office. It releases a small amount of progestogen that thins the lining, making periods much lighter or stopping them. It lasts about 5–8 years, depending on the type and purpose, and is also birth control.",
                 whatHappens: ["Placed through the cervix in a few minutes, without anesthesia or with local numbing.", "Irregular spotting is common for 3–6 months, then bleeding usually becomes much lighter.", "Can be removed at any time, and fertility returns quickly."],
                 anesthesia: "None, or local anesthetic to the cervix", hospitalStay: "Office visit", recovery: "Cramping for a day or two.",
                 bestFor: ["Most women with heavy periods, including those who may want children later"],
@@ -1176,8 +1175,7 @@ extension TreatmentGuides {
                 keyFindings: [
                     "In the HORIZON trial of 556 people, about 78 in 100 who had a Hydrus stent with cataract surgery had at least a 20% drop in pressure without drops at 2 years, compared with about 58 in 100 after cataract surgery alone (Samuelson 2019).",
                     "In a trial of the first iStent, about 72 in 100 met pressure goals without drops at 1 year with the stent plus cataract surgery, vs about 50 in 100 with cataract surgery alone (Samuelson 2011).",
-                    "One MIGS device (CyPass) was withdrawn in 2018 because of damage to the cornea found in longer-term follow-up, a reminder that long-term data matter.",
-                ],
+                                    ],
                 sideEffects: [
                     SE.make("Bleeding inside the front of the eye (hyphema)", "Usually clears within days.", 2, 10, .mild),
                     SE.make("Short-term pressure spike", "Treated with drops.", 2, 10, .moderate),
@@ -1185,7 +1183,7 @@ extension TreatmentGuides {
                     SE.make("Serious eye infection (endophthalmitis)", "Very rare but can cause severe vision loss; needs urgent treatment.", 0.02, 0.1, .serious),
                 ],
                 evidence: .moderate,
-                availability: "Offered by many cataract and glaucoma surgeons and covered by Medicare and insurers when combined with cataract surgery for mild to moderate glaucoma. Most studies were funded by manufacturers.",
+                availability: "Offered by many cataract and glaucoma surgeons and covered by Medicare and insurers when combined with cataract surgery for mild to moderate glaucoma. Most studies were funded by manufacturers, and one device (CyPass) was withdrawn in 2018 after longer follow-up found damage to the cornea, so long-term data matter.",
                 sources: ["Samuelson TW et al. Ophthalmology 2019;126:29–37", "Samuelson TW et al. Ophthalmology 2011;118:459–67"]),
 
             TreatmentOption(
@@ -1425,6 +1423,7 @@ extension TreatmentGuides {
                 sideEffects: [
                     SE.make("Detachment spreading", "Can cause permanent vision loss if not caught early.", 1, 10, .serious),
                     SE.make("Worry about symptoms", "You need to know the warning signs and act on them quickly.", 10, 30, .mild),
+                    SE.make("Needing a repair later anyway", "If the detachment grows or symptoms appear, laser, a gas bubble or surgery is needed, and the result may be worse than if treated earlier.", 5, 20, .moderate),
                 ],
                 evidence: .limited,
                 availability: "Decided by a retina specialist. It is not an option for most new detachments, and you should be cautious about anyone suggesting waiting for a detachment that causes symptoms.",

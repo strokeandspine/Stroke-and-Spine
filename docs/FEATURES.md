@@ -148,9 +148,9 @@ Chronic LBP and mood are closely linked, and psychological factors strongly pred
 
 ## 9a. Treatment Options for People Offered Surgery
 
-For patients who have been offered spine surgery, a guide to every option for their condition, including ones their surgeon may not have mentioned (built in v0.3, content in draft).
+For patients who have been offered surgery, a guide to every option for their condition, including ones their surgeon may not have mentioned (built in v0.3, content in draft).
 
-- **Conditions:** lumbar disc herniation with sciatica, lumbar spinal stenosis, degenerative spondylolisthesis, chronic low back pain (discogenic, vertebrogenic, facet), osteoporotic compression fracture, cervical radiculopathy, cervical myelopathy, SI joint pain.
+- **Conditions (44):** spine (8) plus 3 each in orthopedic, neurosurgery, vascular, heart and chest, general surgery, liver/gallbladder/pancreas, urologic, gynecologic, ENT, eye, trauma and children's surgery. Browse by specialty or search by condition or operation name.
 - **Five approach tiers:** non-operative and conservative care, interventional procedures, minimally invasive surgery, less invasive surgery, traditional open surgery.
 - **Per option:** what happens, anesthesia, hospital stay, recovery, who it suits, when it's less suitable, availability and insurance coverage, key study findings, evidence strength and sources.
 - **Side effects quantified:** each with a percentage range, a natural frequency ("about 2 to 5 in 1,000 people"), a frequency band (very common to very rare), severity (mild, moderate or serious), and a bar.
