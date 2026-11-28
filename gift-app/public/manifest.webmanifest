@@ -1,0 +1,9 @@
+{
+  "name": "MerryCart – Christmas Gift Finder",
+  "short_name": "MerryCart",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf8f3",
+  "theme_color": "#14532d",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

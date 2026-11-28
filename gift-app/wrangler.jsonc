@@ -1,0 +1,13 @@
+// Cloudflare Worker for the MerryCart gift app. Deploy from this folder with `npx wrangler deploy`.
+// Secrets (set with `npx wrangler secret put NAME`): AMAZON_ACCESS_KEY, AMAZON_SECRET_KEY.
+{
+  "name": "merrycart",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-11-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "vars": {
+    "AMAZON_ASSOCIATE_TAG": "yourtag-20"
+  }
+  // To keep click records for commission matching, create a KV namespace and add:
+  // "kv_namespaces": [{ "binding": "CLICKS", "id": "<namespace id>" }]
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MerryCart – Christmas Gift Finder</title>
+  <meta name="description" content="Find the right Christmas gift by age, relationship and budget, spot real deals, and see what arrives in time — from Amazon and other retailers.">
+  <meta name="theme-color" content="#14532d">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="logo" href="/">🎄 MerryCart</a>
+      <div class="countdown" id="countdown"></div>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <div class="banner" id="deadlines" aria-live="polite"></div>
+  <div class="sample-note wrap" id="sampleNote" hidden>Showing sample products and prices for development. Connect live retailer feeds before launch.</div>
+
+  <nav class="tabs wrap" role="tablist">
+    <button role="tab" data-tab="finder" aria-selected="true">🎁 Gift Finder</button>
+    <button role="tab" data-tab="deals" aria-selected="false">🔥 Deals</button>
+    <button role="tab" data-tab="fast" aria-selected="false">🚚 Arrives Fast</button>
+  </nav>
+
+  <main class="wrap">
+    <section id="tab-finder" class="panel">
+      <form id="finder" class="finder">
+        <div class="field">
+          <label for="age">Their age</label>
+          <input id="age" name="age" type="number" min="0" max="110" inputmode="numeric" placeholder="e.g. 35">
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="any">Any / prefer not to say</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="relationship">They're my…</label>
+          <select id="relationship" name="relationship"><option value="">Anyone</option></select>
+        </div>
+        <div class="field price">
+          <label>Price range</label>
+          <div class="price-row">
+            <input name="minPrice" type="number" min="0" step="5" placeholder="$ min" aria-label="Minimum price">
+            <span>–</span>
+            <input name="maxPrice" type="number" min="0" step="5" placeholder="$ max" aria-label="Maximum price">
+          </div>
+          <div class="chips small" id="budgetChips">
+            <button type="button" data-min="0" data-max="25">Under $25</button>
+            <button type="button" data-min="25" data-max="50">$25–50</button>
+            <button type="button" data-min="50" data-max="100">$50–100</button>
+            <button type="button" data-min="100" data-max="">$100+</button>
+          </div>
+        </div>
+        <div class="field wide">
+          <label>Into (optional)</label>
+          <div class="chips" id="interestChips"></div>
+        </div>
+        <div class="field">
+          <label for="needBy">Must arrive by</label>
+          <input id="needBy" name="needBy" type="date">
+        </div>
+        <div class="field submit">
+          <button class="primary" type="submit">Find gifts</button>
+        </div>
+      </form>
+      <div id="finderResults" class="grid"></div>
+    </section>
+
+    <section id="tab-deals" class="panel" hidden>
+      <div class="toolbar">
+        <h2>Special deals</h2>
+        <select id="dealRetailer" aria-label="Retailer"><option value="">All retailers</option></select>
+      </div>
+      <p class="hint">Only real markdowns: at least 15% off the list price, at the lowest price in 30 days, or a limited-time deal.</p>
+      <div id="dealResults" class="grid"></div>
+    </section>
+
+    <section id="tab-fast" class="panel" hidden>
+      <div class="toolbar">
+        <h2>Gifts that arrive fastest</h2>
+        <label class="switch"><input type="checkbox" id="overnightOnly"> Overnight / same-day only</label>
+        <label class="by">Arrive by <input type="date" id="fastBy"></label>
+      </div>
+      <p class="hint">Sorted by the earliest delivery date if you order now. Dates are estimates; the retailer confirms at checkout.</p>
+      <div id="fastResults" class="grid"></div>
+    </section>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-inner" role="dialog" aria-label="Your cart">
+      <div class="drawer-head">
+        <h2>Your gift list</h2>
+        <button class="icon" id="closeDrawer" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="drawer-foot">
+        <div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+        <button class="primary block" id="checkoutBtn">Check out</button>
+        <p class="fine">You'll pay on each retailer's secure checkout. We may earn a commission at no extra cost to you.</p>
+      </div>
+    </div>
+  </aside>
+
+  <dialog id="checkoutDialog">
+    <div class="dialog-head">
+      <h2>Check out by retailer</h2>
+      <button class="icon" id="closeCheckout" aria-label="Close">✕</button>
+    </div>
+    <div id="checkoutBody"></div>
+  </dialog>
+
+  <footer class="wrap foot">
+    <p id="disclosure"></p>
+    <p>Prices and delivery estimates can change. The retailer's price at checkout applies.</p>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
