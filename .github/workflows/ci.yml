@@ -1,0 +1,35 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  core-linux:
+    name: Core logic and content tests (Linux)
+    runs-on: ubuntu-latest
+    container: swift:5.10
+    steps:
+      - uses: actions/checkout@v4
+      - run: scripts/test-core-linux.sh
+
+  ios:
+    name: iOS app build and tests (simulator)
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Build and test
+        run: set -o pipefail && scripts/build-ios.sh 2>&1 | tee build.log | grep -E "error:|warning: .*deprecated|\*\* (BUILD|TEST)|Test Suite .* (passed|failed)|Executed" || true; grep -q "\*\* TEST SUCCEEDED \*\*" build.log
+      - name: Show compile errors
+        if: failure()
+        run: grep -E "error:" build.log | sort -u | head -200 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-log
+          path: build.log
