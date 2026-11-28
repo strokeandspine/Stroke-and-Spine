@@ -1,0 +1,11 @@
+// Cloudflare Workers settings for the company website (strokeandspineneuroscience.com).
+// Cloudflare runs `npx wrangler deploy`, which publishes the static files in ./website.
+{
+  "name": "strokeandspineneuroscience",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": "./website",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
