@@ -8,7 +8,7 @@
 
 ## 1. Who we are
 
-The App is provided by [LEGAL COMPANY NAME] ("we", "us"), [STREET ADDRESS, CITY, STATE ZIP], United States. You can contact us about privacy at [PRIVACY CONTACT EMAIL].
+The App is provided by Stroke and Spine Neuroscience, LLC ("we", "us"), [STREET ADDRESS, CITY, STATE ZIP], United States. You can contact us about privacy at [PRIVACY CONTACT EMAIL].
 
 ## 2. The short version
 
@@ -106,6 +106,6 @@ If we change this policy, we'll update the "Last updated" date and, for signific
 
 ## 14. Contact
 
-[LEGAL COMPANY NAME]
+Stroke and Spine Neuroscience, LLC
 [STREET ADDRESS, CITY, STATE ZIP]
 [PRIVACY CONTACT EMAIL]

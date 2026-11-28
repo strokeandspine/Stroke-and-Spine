@@ -260,10 +260,14 @@ Choose **Manually release this version** for the first launch so you control the
 
 ## 9. Hosting the privacy policy, terms and support pages
 
-`docs/site/` contains ready-to-upload pages: `privacy.html`, `terms.html` and `support.html`. Upload them to your own website, for example `https://[your-domain]/privacy`. Any static web host works. Squarespace, Wix or WordPress pages are fine too: paste the content from the Markdown files in `docs/legal/`.
+These pages are part of the company website in `website/`, at:
 
-The pages are regenerated from the Markdown with:
+- `https://strokeandspineneuroscience.com/app/privacy/`
+- `https://strokeandspineneuroscience.com/app/terms/`
+- `https://strokeandspineneuroscience.com/app/support/`
+
+The app already links to these addresses (`AppLinks` in `SpineCare/App/AppServices.swift`). They go live once the domain is bought and connected; see `website/README.md`. After editing `docs/legal/*.md`, rebuild the pages with:
 
 ```
-python3 docs/site/build.py
+python3 scripts/build_app_pages.py
 ```

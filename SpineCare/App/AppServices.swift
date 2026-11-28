@@ -20,10 +20,10 @@ enum AppText {
 
 /// Public web pages. Upload docs/site/*.html to your website, then set these URLs.
 enum AppLinks {
-    // TODO: replace example.com with your website before submitting to the App Store.
-    static let privacy = URL(string: "https://example.com/privacy")!
-    static let terms = URL(string: "https://example.com/terms")!
-    static let support = URL(string: "https://example.com/support")!
+    // Pages live in website/app/ and go live once strokeandspineneuroscience.com is connected.
+    static let privacy = URL(string: "https://strokeandspineneuroscience.com/app/privacy/")!
+    static let terms = URL(string: "https://strokeandspineneuroscience.com/app/terms/")!
+    static let support = URL(string: "https://strokeandspineneuroscience.com/app/support/")!
     static let appleEULA = URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!
 }
 

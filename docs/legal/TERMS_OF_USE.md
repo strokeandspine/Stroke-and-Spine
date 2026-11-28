@@ -5,7 +5,7 @@
 
 > DRAFT — fill in everything in [BRACKETS] and have a lawyer review this before publishing.
 
-These Terms of Use ("Terms") are an agreement between you and [LEGAL COMPANY NAME] ("we", "us"). By downloading or using the App you agree to these Terms and to Apple's Licensed Application End User License Agreement (https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). If the two conflict, these Terms apply to the extent the law allows.
+These Terms of Use ("Terms") are an agreement between you and Stroke and Spine Neuroscience, LLC ("we", "us"). By downloading or using the App you agree to these Terms and to Apple's Licensed Application End User License Agreement (https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). If the two conflict, these Terms apply to the extent the law allows.
 
 ## 1. Not medical advice — not for emergencies
 
@@ -70,4 +70,4 @@ We may update these Terms. We'll change the effective date and, for significant 
 
 ## 12. Contact
 
-[LEGAL COMPANY NAME], [STREET ADDRESS, CITY, STATE ZIP], [CONTACT EMAIL]
+Stroke and Spine Neuroscience, LLC, [STREET ADDRESS, CITY, STATE ZIP], [CONTACT EMAIL]

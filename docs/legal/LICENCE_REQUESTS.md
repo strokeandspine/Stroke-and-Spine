@@ -16,7 +16,7 @@ Expect fees for commercial use. These are often charged per year or per number o
 
 | Field | Answer |
 |---|---|
-| Organization | [LEGAL COMPANY NAME] |
+| Organization | Stroke and Spine Neuroscience, LLC |
 | Organization type | Commercial company — digital health / mobile app developer |
 | Country | United States |
 | Contact | [YOUR NAME], [TITLE], [EMAIL], [PHONE] |
@@ -59,7 +59,7 @@ Could you let me know the status of the request and the likely licence terms and
 
 Thank you,
 [YOUR NAME]
-[TITLE], [LEGAL COMPANY NAME]
+[TITLE], Stroke and Spine Neuroscience, LLC
 [EMAIL] · [PHONE]
 ```
 
