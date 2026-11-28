@@ -86,9 +86,21 @@ final class AppWalkthroughUITests: XCTestCase {
     /// SwiftUI toggles in a Form only flip when the switch itself is tapped.
     private func turnOn(_ toggle: XCUIElement) {
         XCTAssertTrue(toggle.waitForExistence(timeout: 5))
-        if (toggle.value as? String) != "1" {
-            toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.95, dy: 0.5)).tap()
+        let attempts: [() -> Void] = [
+            { toggle.switches.firstMatch.tap() },                                              // inner UISwitch (iOS 17+)
+            { toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.93, dy: 0.5)).tap() },
+            { toggle.tap() },
+        ]
+        for attempt in attempts where !isOn(toggle) {
+            attempt()
+            _ = toggle.waitForExistence(timeout: 1)
         }
+        XCTAssertTrue(isOn(toggle), "Couldn't switch on \(toggle)")
+    }
+
+    private func isOn(_ toggle: XCUIElement) -> Bool {
+        let value = toggle.value as? String
+        return value == "1" || value?.lowercased() == "on"
     }
 
     /// Scrolls until the element is on screen, then taps it.
