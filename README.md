@@ -22,6 +22,10 @@ See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LIC
 
 Unit tests for scoring, warning signs, medication safety and insights are in `SpineCareTests/`.
 
+## CoreCut (abs coaching web app)
+
+A separate installable web app in [`corecut/`](corecut/README.md) for people working toward visible abs: body-fat estimates (test results, tape measure, visual check), calorie and macro plans, scaled meal plans, lifting, ab and cardio programs, progress photos with compare, and data-driven coaching. Run it with `cd corecut && python3 -m http.server 8000`; test with `node corecut/test/calc.test.js`.
+
 ## Build and run (requires a Mac)
 
 1. Install Xcode 15 or later and [XcodeGen](https://github.com/yonaskolb/XcodeGen): `brew install xcodegen`
