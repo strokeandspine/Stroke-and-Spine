@@ -10,7 +10,8 @@ struct SpineCareApp: App {
             RootView()
                 .environment(store)
         }
-        .modelContainer(for: AppSchema.models)
+        // UI tests launch with -uiTesting so every run starts from a clean, in-memory store.
+        .modelContainer(for: AppSchema.models, inMemory: ProcessInfo.processInfo.arguments.contains("-uiTesting"))
     }
 }
 

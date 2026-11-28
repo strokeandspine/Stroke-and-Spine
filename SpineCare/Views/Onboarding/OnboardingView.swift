@@ -39,6 +39,7 @@ struct OnboardingView: View {
                 Label("Use the same questionnaires spine doctors use", systemImage: "list.clipboard")
                 Label("Keep over-the-counter medicines within label limits", systemImage: "pills")
                 Label("Keep a record of your surgeries and procedures", systemImage: "cross.case")
+                Label("Offered surgery? Compare every option and its risks", systemImage: "signpost.right.and.left")
                 Label("Your data stays on your iPhone", systemImage: "lock")
             }
             .font(.body)

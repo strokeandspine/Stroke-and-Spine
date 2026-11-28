@@ -41,6 +41,13 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.strokeandspine.spinecare
         ENABLE_PREVIEWS: true
+  SpineCareUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: SpineCareUITests
+    dependencies:
+      - target: SpineCare
   SpineCareTests:
     type: bundle.unit-test
     platform: iOS
@@ -54,8 +61,10 @@ schemes:
       targets:
         SpineCare: all
         SpineCareTests: [test]
+        SpineCareUITests: [test]
     run:
       storeKitConfiguration: SpineCare/Resources/Products.storekit
     test:
       targets:
         - SpineCareTests
+        - SpineCareUITests

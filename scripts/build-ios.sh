@@ -11,14 +11,24 @@ import json,sys
 d=json.load(sys.stdin)["devices"]
 ios=[(k,v) for k,v in d.items() if "iOS" in k]
 ios.sort(key=lambda kv: [int(x) for x in kv[0].rsplit("iOS-",1)[-1].split("-")], reverse=True)
-for k,v in ios:
-    for dev in v:
-        if dev["name"].startswith("iPhone"):
-            print(dev["udid"]); sys.exit()
+phones=[dev for k,v in ios for dev in v if dev["name"].startswith("iPhone")]
+best=[d for d in phones if "Pro Max" in d["name"]] or phones
+print(best[0]["udid"])
 ')"
 echo "Using simulator $SIM_ID"
 ACTION="${1:-test}"
+rm -rf build/TestResults.xcresult build/screenshots
+mkdir -p build
+STATUS=0
 xcodebuild -project SpineCare.xcodeproj -scheme SpineCare \
   -destination "id=$SIM_ID" \
+  -resultBundlePath build/TestResults.xcresult \
   CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
-  $([ "$ACTION" = build ] && echo build || echo "build test")
+  $([ "$ACTION" = build ] && echo build || echo "build test") || STATUS=$?
+
+# Save UI-test screenshots (Xcode 16+) to build/screenshots
+if [ "$ACTION" != build ] && [ -d build/TestResults.xcresult ]; then
+  xcrun xcresulttool export attachments --path build/TestResults.xcresult --output-path build/screenshots >/dev/null 2>&1 \
+    && echo "Screenshots saved to build/screenshots" || echo "Couldn't export screenshots (needs Xcode 16+)"
+fi
+exit $STATUS
