@@ -4,7 +4,7 @@ A direct-to-patient iPhone app for people with lower back pain. Patients track p
 
 See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LICENSING.md`](docs/LICENSING.md) for the questionnaire licences that must be in place before release, and [`docs/CONTENT_REVIEW.md`](docs/CONTENT_REVIEW.md) for the medical content review checklist and the video shot list.
 
-## What's built (v0.2)
+## What's built (v0.3)
 
 | Area | What it does | Files |
 |---|---|---|
@@ -23,16 +23,23 @@ See [`docs/FEATURES.md`](docs/FEATURES.md) for the full product plan, [`docs/LIC
 
 Unit tests for scoring, warning signs, medication safety, insights and treatment-options content are in `SpineCareTests/`.
 
-## Build and run (requires a Mac)
+## Build and run
 
-1. Install Xcode 15 or later and [XcodeGen](https://github.com/yonaskolb/XcodeGen): `brew install xcodegen`
-2. From the repository root run `xcodegen generate`. This creates `SpineCare.xcodeproj`.
+**On a Mac** (Xcode 15 or later):
+
+1. Install [XcodeGen](https://github.com/yonaskolb/XcodeGen): `brew install xcodegen`
+2. From the repository root run `xcodegen generate`. This creates `SpineCare.xcodeproj` (it isn't committed).
 3. Open `SpineCare.xcodeproj`, choose your Apple developer team under *Signing & Capabilities*, pick an iPhone simulator, and press **Run** (⌘R).
-4. Run tests with **Product → Test** (⌘U).
+4. Run tests with **Product → Test** (⌘U), or run `scripts/build-ios.sh` to generate, build and test from the command line. UI-test screenshots are saved to `build/screenshots`.
 
-> The code was written in an environment without Xcode or a Swift compiler, so it has **not yet been compiled**. Expect to fix a few small compile errors on the first build.
+**Without a Mac:** every push runs `.github/workflows/ci.yml` on GitHub Actions:
+
+- *Core logic and content tests (Linux)*: `scripts/test-core-linux.sh` builds `SpineCare/Core` and runs the unit tests with Swift 5.10. You can run it yourself with `docker run --rm -v "$PWD":/src -w /src swift:5.10 scripts/test-core-linux.sh`.
+- *iOS app build and tests*: builds the whole app on a macOS runner, runs the unit tests and the UI walkthrough on the iPhone Pro Max simulator, and uploads the build log and screenshots as downloadable artifacts.
 
 HealthKit needs a paid Apple Developer account to run on a real iPhone. The rest of the app works in the simulator without one.
+
+The app icon is a generated placeholder (`scripts/make_app_icon.py`). Replace `AppIcon.png` with a designed icon if you have one.
 
 ## Launch paperwork (drafts)
 
