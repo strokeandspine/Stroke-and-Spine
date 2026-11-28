@@ -148,6 +148,12 @@ YOUR SPINE HISTORY IN ONE PLACE
 • Attach photos of reports and discharge instructions
 • Plain-language information on what to expect and warning signs to watch for
 
+OFFERED SURGERY? SEE ALL YOUR OPTIONS
+• 44 conditions across 13 areas — spine, joints, brain and nerves, heart and arteries, general surgery, liver and gallbladder, urology, gynecology, ear nose and throat, eyes, injuries and children's surgery
+• Every option side by side: non-surgical care, interventional procedures, minimally invasive, less invasive and open surgery
+• How often each works and how often side effects happen, in plain "X in 100 people" numbers, with the studies behind them
+• Questions to ask your surgeon, second-opinion tips, and a list of options to discuss you can share
+
 KNOW WHEN TO GET HELP
 • A quick warning-sign check tells you whether to call 911, contact a doctor today, or book an appointment
 • Crisis support (988) is always one tap away
@@ -161,7 +167,7 @@ PRIVATE BY DESIGN
 • Export or delete everything at any time
 
 FREE AND PREMIUM
-Daily check-ins, questionnaires, warning-sign checks, the medicine log, your spine history, 30-day trends, the appointment report and two exercise programs are free. Stroke & Spine Premium adds all exercise programs, the full exercise library and long-term trends and insights. Premium is available as a monthly or annual subscription with a 1-week free trial.
+Daily check-ins, questionnaires, warning-sign checks, the medicine log, your spine history, the treatment options guide, 30-day trends, the appointment report and two exercise programs are free. Stroke & Spine Premium adds all exercise programs, the full exercise library and long-term trends and insights. Premium is available as a monthly or annual subscription with a 1-week free trial.
 
 Payment is charged to your Apple ID at confirmation of purchase or when the free trial ends. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel in your Apple ID settings.
 
@@ -200,6 +206,7 @@ Required: **6.9-inch iPhone** (1320 × 2868 px, e.g. iPhone 16 Pro Max simulator
 5. Spine history detail — "Your surgeries and procedures in one place"
 6. Warning-sign result — "Know when to get help"
 7. Appointment report — "Share a summary with your doctor"
+8. Treatment options comparison chart — "Offered surgery? Compare all your options"
 
 Use realistic, invented sample data. Never use a real patient's information.
 
@@ -214,7 +221,7 @@ Stroke & Spine is a self-tracking and education app for adults with lower back p
 
 HealthKit: the app reads step count and sleep analysis (read-only) to display alongside pain scores on the Today screen. HealthKit data is not stored, shared or used for advertising. Tap "Connect Apple Health" on the Today screen to see the permission request.
 
-Medical content (Guideline 1.4.1): the app does not diagnose or recommend treatment. The warning-sign check only tells users how urgently to seek care. Medicine tracking compares the user's logged doses with standard US OTC label limits and never suggests a dose. Questionnaires are validated instruments used under licence/permission. Sources and citations are listed in More → About and disclaimer → Sources. A medical disclaimer is shown and accepted at onboarding.
+Medical content (Guideline 1.4.1): the app does not diagnose or recommend treatment. The treatment options guide (More → Treatment options and outcomes) is general education: it lists the range of options for common conditions with published outcome and complication rates and their citations, never recommends one, and tells users to decide with their own surgeon. The warning-sign check only tells users how urgently to seek care. Medicine tracking compares the user's logged doses with standard US OTC label limits and never suggests a dose. Questionnaires are validated instruments used under licence/permission. Sources and citations are listed in More → About and disclaimer → Sources. A medical disclaimer is shown and accepted at onboarding.
 
 Subscriptions: Premium (monthly/annual, 1-week free trial) unlocks additional exercise programs, the full exercise library and long-term trends. All safety features are free. To see the paywall: Exercise tab → tap a program marked "Premium".
 ```
@@ -226,7 +233,8 @@ Choose **Manually release this version** for the first launch so you control the
 ## 8. Before you press "Submit for Review"
 
 - [ ] ODI and ISI licences signed (or those questionnaires replaced). See `docs/legal/LICENCE_REQUESTS.md`
-- [ ] Medical content signed off. See `docs/CONTENT_REVIEW.md`
+- [ ] Medical content signed off, including every treatment-options specialty. See `docs/CONTENT_REVIEW.md`
+- [ ] CI green: Linux core tests and the iOS simulator build (`.github/workflows/ci.yml`)
 - [ ] Privacy policy and terms published, and their URLs set in `SpineCare/App/Store.swift` (`privacyURL`, `termsURL`) and in the description
 - [ ] [BRACKETS] filled in throughout the privacy policy and terms
 - [ ] App icon added (1024 × 1024 PNG, no transparency) in `SpineCare/Resources/Assets.xcassets/AppIcon.appiconset`

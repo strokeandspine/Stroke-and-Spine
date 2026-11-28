@@ -17,6 +17,7 @@ These Terms of Use ("Terms") are an agreement between you and [LEGAL COMPANY NAM
 - Medicine limits come from standard US over-the-counter labels or limits you enter. Always follow your product label and your doctor's or pharmacist's advice. The App doesn't recommend doses.
 - Exercise programs are general and may not suit you. Check with your doctor or physical therapist before starting, especially after surgery or if your pain is severe. Stop exercising and get advice if you have any of the stop signs shown in the App.
 - Information about surgeries and procedures is general. Your own surgeon's instructions always come first.
+- The treatment options guide describes the range of treatments for common conditions, with outcome and side-effect rates from published studies. It does not recommend any treatment, the figures are averages that may not apply to you, and some options may not be suitable for you or available where you live. Make treatment decisions with your own doctors.
 - If you're having thoughts of harming yourself, call or text 988 or call 911.
 
 You are responsible for your health decisions. Never ignore professional medical advice or delay seeking it because of something in the App.
