@@ -24,10 +24,15 @@ jobs:
       - name: Install XcodeGen
         run: brew install xcodegen
       - name: Build and test
-        run: set -o pipefail && scripts/build-ios.sh 2>&1 | tee build.log | grep -E "error:|warning: .*deprecated|\*\* (BUILD|TEST)|Test Suite .* (passed|failed)|Executed" || true; grep -q "\*\* TEST SUCCEEDED \*\*" build.log
+        run: |
+          scripts/build-ios.sh > build.log 2>&1 || true
+          grep -E "error:|\*\* (BUILD|TEST)|Test Suite .* (passed|failed)|Executed" build.log || true
+          grep -q "TEST SUCCEEDED" build.log
       - name: Show compile errors
         if: failure()
-        run: grep -E "error:" build.log | sort -u | head -200 || true
+        run: |
+          grep -E "error:" build.log | sort -u | head -200 || true
+          tail -80 build.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
